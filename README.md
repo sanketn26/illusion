@@ -139,10 +139,10 @@ First milestone:
 
 ## Documentation
 
-- `/home/runner/work/illusion/illusion/docs/philosophy.md`
-- `/home/runner/work/illusion/illusion/docs/production-notes.md`
-- `/home/runner/work/illusion/illusion/docs/physics-review-checklist.md`
-- `/home/runner/work/illusion/illusion/simulations/001_brownian_motion/README.md`
+- `docs/philosophy.md`
+- `docs/production-notes.md`
+- `docs/physics-review-checklist.md`
+- `simulations/001_brownian_motion/README.md`
 
 ## License
 
