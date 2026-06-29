@@ -1,0 +1,14 @@
+[project]
+name = "illusion"
+version = "0.1.0"
+description = "Code-first physics simulations that reveal where intuition breaks."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "sanketn26" }]
+keywords = ["physics", "simulation", "education", "visualization", "manim"]
+dependencies = []
+
+[tool.illusion]
+status = "planning"
+first_milestone = "Render the first working Brownian motion scene and publish the code."
