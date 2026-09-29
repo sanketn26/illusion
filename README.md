@@ -148,3 +148,11 @@ First milestone:
 
 - MIT License for code
 - Creative Commons BY-SA for written and visual educational content
+
+## Browser lab
+
+The static site in `site/` includes a ten-topic launch catalog and five interactive demos: random walk, heat diffusion, wave interference, airplane flight, and a conceptual air-defense sequence. Each demo states the rule it uses and where that rule stops representing the physical system. The planned Brownian-motion episode remains distinct from the random-walk toy model.
+
+Preview locally with `python3 -m http.server 8000 --directory site`, then open `http://localhost:8000`. The files are plain HTML, CSS, and JavaScript and can be deployed to any static host by publishing the `site/` directory. No build step or external runtime dependency is needed.
+
+The first forty episode concepts now have real-world hooks, simulation ideas, intuitive reveals, and illustration briefs in [`docs/launch-topics.md`](docs/launch-topics.md). The site catalog shows ten foundations, twenty theoretical and applied topics, and ten physics-in-action examples with small inline diagrams.
