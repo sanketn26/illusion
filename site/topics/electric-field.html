@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Electric field around charges — illusion</title>
+  <meta name="description" content="A charged comb picks up scraps of paper without touching them. What reaches across the gap? Faraday’s answer changed physics.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-EMG">Electricity &amp; magnetism</a> / EMG02</p>
+    <p class="eyebrow">EMG02 · Electricity &amp; magnetism</p>
+    <h1>The electric <em>field</em></h1>
+    <p class="lede">Rub a comb on your hair and it lifts scraps of paper off the table without touching them. Something reaches across empty space. Michael Faraday gave that something a name and a picture, and the picture is still how we think.</p>
+    <p class="meta"><span>Reading time ≈ 10 min</span><span>Simulation: Starter (S)</span><span>Video: 8–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>A charge doesn’t push other charges directly. It changes <strong>the space around it</strong>, giving every point an arrow that says how hard, and which way, a small positive charge would be pushed there. That map of arrows is the electric field. Draw lines that follow the arrows and you get Faraday’s pictures: lines start on positive charges, end on negative ones, and pack tightly where the field is strong.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>Comb your hair on a dry day. Hold the comb an inch above some scraps of tissue paper. They leap up and cling to it, with nothing between the comb and the paper but air.</p>
+      <p>This puzzled people for more than two thousand years. The Greeks knew that amber rubbed with fur would pick up feathers (the Greek word for amber is <em>elektron</em>). But <em>how</em> does one object affect another it isn’t touching? Newton, who faced the same riddle with gravity, wrote that it was inconceivable that matter could act on distant matter “without the mediation of something else.”</p>
+      <p>Michael Faraday, a self-taught experimenter with little mathematics, had the idea that dissolved the problem. Perhaps the “something else” is <em>space itself</em>.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“Charges act directly on each other across empty space”</h2>
+      <p>Textbook pictures of two charges with an arrow of force between them suggest each charge somehow knows where the other one is. It is a tempting picture, and it works for calculation. But it leaves the puzzle: how does the information cross the gap?</p>
+      <p>Faraday’s answer is more physical. The first charge alters the space around it. The second charge responds to what is there, at its own location, and not to the first charge directly. That map of “what is there” is the field.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">c. 600 BCE</span>Thales of Miletus is traditionally credited with noticing that rubbed amber attracts light objects.</li><li><span class="year">1600</span>William Gilbert separates electric attraction from magnetism and coins <em>electricus</em>, from the Greek for amber.</li><li><span class="year">1747–52</span>Benjamin Franklin introduces positive and negative charge, and shows that lightning is electrical.</li><li><span class="year">1785</span>Charles-Augustin de Coulomb uses a delicate torsion balance to show that the force between two charges falls with the square of the distance.</li><li><span class="year">1830s–40s</span>Michael Faraday introduces <strong>lines of force</strong>: invisible lines filling the space around charges and magnets, which he makes visible with iron filings.</li><li><span class="year">1861–65</span>James Clerk Maxwell turns Faraday’s pictures into equations, and finds that disturbances in the field travel at the speed of light.</li></ol><figure class="illo"><svg viewBox="0 0 620 245" role="img" aria-label="Field arrows at distances r, 2r and 3r from a positive charge shrinking as the inverse square" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="300" y="24" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">A single positive charge: the field weakens as 1/r²</text><circle cx="80" cy="130" r="16" fill="#f5b85d"/><text x="80" y="136" fill="#10192a" font-size="20" text-anchor="middle" font-weight="bold" stroke="none">+</text><path d="M150.0 130.0L212.0 130.0" stroke="#67d4d0" stroke-width="3.5"/><path d="M212.0 130.0L203.9 133.9L203.9 126.1Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><circle cx="150" cy="130" r="3" fill="#fff"/><text x="150" y="106" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">at distance r</text><text x="150" y="162" fill="#e8edf5" font-size="13" text-anchor="start" font-weight="bold" stroke="none">strength 1</text><path d="M300.0 130.0L320.0 130.0" stroke="#67d4d0" stroke-width="3.5"/><path d="M320.0 130.0L311.9 133.9L311.9 126.1Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><circle cx="300" cy="130" r="3" fill="#fff"/><text x="300" y="106" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">at distance 2r</text><text x="300" y="162" fill="#e8edf5" font-size="13" text-anchor="start" font-weight="bold" stroke="none">strength 1/4</text><path d="M450.0 130.0L462.2 130.0" stroke="#67d4d0" stroke-width="3.5"/><path d="M462.2 130.0L454.1 133.9L454.1 126.1Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><circle cx="450" cy="130" r="3" fill="#fff"/><text x="450" y="106" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">at distance 3r</text><text x="450" y="162" fill="#e8edf5" font-size="13" text-anchor="start" font-weight="bold" stroke="none">strength 1/9</text><line x1="98" y1="190" x2="560" y2="190" stroke="#3a4b65" stroke-dasharray="4 5"/><text x="300" y="230" fill="#91a3bb" font-size="14" text-anchor="middle" font-weight="normal" stroke="none">Twice as far: a quarter as strong. Three times: a ninth.</text></svg><figcaption>The field of a single charge points straight away from it and weakens as the square of the distance.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>In the picture below, the <strong style="color:#f5b85d">amber</strong> charge is positive and the <strong style="color:#67d4d0">teal</strong> one is negative. The thin lines show the direction a small positive test charge would be pushed. The arrowheads point that way. <strong>Move your mouse over the picture</strong> to probe the field at any point, and click to add or remove charges.</p>
+      <div class="equation">E = k · q / r²    (pointing away from +, towards −)    total field = E₁ + E₂ + …<small>Strength falls as the square of the distance. With several charges you add the individual arrows.</small></div>
+<div data-sim="efield" data-alt="Electric field lines between a positive and a negative charge, with a probe arrow following the mouse" data-caption="Amber: positive charge. Teal: negative. Thin lines: the direction of the field. The white arrow is the field at your pointer."></div><div class="try"><h3>Try this</h3><ol><li>Move the mouse across the picture. The white arrow always follows the field lines, and is longer where the lines bunch up.</li><li>Click on an empty spot to add a charge. Press <strong>Next click adds: +</strong> to switch to negative. Click a charge to remove it.</li><li>Place two positive charges side by side. Their lines push each other apart and there is a quiet spot between them where the field is nearly zero.</li><li>Remove the negative charge and the lines stream off to infinity. With one positive and one negative, every line from + ends on −.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 305" role="img" aria-label="Two field arrows at a point from a positive and a negative charge, adding to a total" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="300" y="24" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Fields from two charges add like arrows</text><circle cx="150" cy="70" r="14" fill="#f5b85d"/><text x="150" y="76" fill="#10192a" font-size="18" text-anchor="middle" font-weight="bold" stroke="none">+</text><circle cx="150" cy="230" r="14" fill="#67d4d0"/><text x="150" y="237" fill="#10192a" font-size="20" text-anchor="middle" font-weight="bold" stroke="none">−</text><circle cx="300" cy="150" r="5" fill="#fff"/><text x="310" y="172" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">probe point</text><path d="M300.0 150.0L390.0 186.0" stroke="#f5b85d" stroke-width="3"/><path d="M390.0 186.0L381.0 186.6L383.9 179.4Z" fill="#f5b85d" stroke="#f5b85d" stroke-width="1"/><text x="394" y="178" fill="#f5b85d" font-size="13" text-anchor="start" font-weight="normal" stroke="none">pushed away from +</text><path d="M300.0 150.0L210.0 184.0" stroke="#67d4d0" stroke-width="3"/><path d="M210.0 184.0L216.2 177.5L219.0 184.8Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><text x="202" y="168" fill="#67d4d0" font-size="13" text-anchor="end" font-weight="normal" stroke="none">pulled towards −</text><path d="M300.0 150.0L302.0 230.0" stroke="#ffffff" stroke-width="4"/><path d="M302.0 230.0L297.9 222.0L305.7 221.8Z" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><text x="312" y="248" fill="#ffffff" font-size="14" text-anchor="start" font-weight="bold" stroke="none">total field</text><text x="300" y="292" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">Add the arrows tip to tail. No new physics: just arithmetic with arrows.</text></svg><figcaption>Fields from different charges are just added as arrows. That one rule builds every picture on this page.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>What a field picture is telling you</h2>
+      <p>Three rules cover nearly everything you see. <strong>Lines start on positive charges and end on negative ones.</strong> <strong>Lines never cross</strong>, because the field has only one direction at each point. And <strong>where the lines bunch together, the field is strong.</strong> A single charge sends its lines out evenly. A pair makes the familiar dipole pattern, with lines curving from one to the other.</p>
+      <p>The field is real in a very practical sense. It is there whether or not anything is present to feel it, and it carries energy. A field can even outlive the charge that made it. If you wiggle a charge, the change in the field doesn’t reach far-away points instantly: it travels outward at the speed of light, which is what a radio wave is. That idea, a field as a thing in its own right, is why Faraday’s picture beat the “action at a distance” one.</p><div class="callout key"><p class="beat">The surprise</p><p>The field is not just a drawing aid. It is a real, energy-carrying thing that fills space. Charges don’t talk to each other. They talk to the field, and the field talks to them.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> your touchscreen is measuring the electric field. A grid of tiny electrodes under the glass maintains a weak field, and your finger, which is conductive, distorts it. The phone finds where the field changed and calls that a touch. In a laser printer, electric fields steer the toner onto the drum, and across every nerve cell in your body, a field of about ten million volts per metre sits across a membrane only a few billionths of a metre thick.</p></div><ul class="apps"><li><strong>Touchscreens</strong>Capacitive screens detect how a fingertip distorts the electric field above the glass.</li><li><strong>Printers and photocopiers</strong>Toner particles are placed with electric fields.</li><li><strong>Air and water cleaners</strong>Electrostatic precipitators charge particles and pull them out of smoke with a field.</li><li><strong>Nerves and heartbeat</strong>Cells use fields across membranes to switch ion channels. ECGs measure the resulting fields at the skin.</li><li><strong>Spray painting</strong>Charged paint droplets follow the field to coat awkward shapes evenly.</li><li><strong>Lightning protection</strong>A pointed rod concentrates the field and gives lightning a safe path.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>This is a 2D drawing of a 3D field. Real field lines spread out in three dimensions, so how closely the lines are drawn here does not measure strength; read strength from the white probe instead. The charges are idealised points with a small smoothing so the field doesn’t blow up, and the numbers are in arbitrary units. Everything is static: nothing moves, and nothing here shows how a changing field ripples outward as a wave.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Charges act on space.</strong> Space then acts on other charges. That map is the field.</li><li><strong>Lines start on + and end on −.</strong> They never cross, and bunch up where the field is strong.</li><li><strong>Fields add as arrows.</strong> The field of many charges is the sum of the field of each.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Electric field</dt><dd>The force per unit positive charge at each point in space.</dd><dt>Field line</dt><dd>A curve that follows the field direction, showing where a small positive charge would go.</dd><dt>Dipole</dt><dd>A positive and negative charge close together.</dd><dt>Superposition</dt><dd>The total field is the vector sum of the fields from each charge.</dd></dl><ul class="refs"><li>C.-A. de Coulomb, memoirs on electricity and magnetism, <em>Histoire de l’Académie royale des sciences</em> (1785–91).</li><li>M. Faraday, <em>Experimental Researches in Electricity</em> (1839–55).</li><li>J. C. Maxwell, “On physical lines of force” (1861–62).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

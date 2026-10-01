@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Roadmap — illusion</title>
+  <meta name="description" content="Every illusion topic, organised by domain, with prerequisites and suggested learning paths.">
+  <link rel="stylesheet" href="style.css">
+  <script src="topics-data.js" defer></script>
+  <script src="roadmap.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html">illusion<span class="dot">.</span></a><nav><a href="index.html#library">Library</a><a href="roadmap.html">Roadmap</a></nav></header>
+  <main class="roadmap">
+    <p class="eyebrow">Roadmap</p>
+    <h1>Every illusion, <em>on a map.</em></h1>
+    <p class="lede" id="summary"></p>
+    <section aria-labelledby="paths-h"><h2 id="paths-h">Learning paths</h2><p class="muted">Pick a thread and read in order. Each step builds on the one before.</p><ol class="paths" id="paths"></ol></section>
+    <section aria-labelledby="browse-h"><h2 id="browse-h">Browse by domain</h2>
+      <div class="filters" role="search">
+        <input id="q" type="search" placeholder="Search topics, illusions, everyday hooks…" aria-label="Search topics">
+        <select id="level" aria-label="Level"><option value="">All levels</option></select>
+        <select id="status" aria-label="Status"><option value="">Any status</option><option value="shipped">Shipped</option><option value="idea">Planned</option></select>
+      </div>
+      <nav class="domain-nav" id="domain-nav" aria-label="Domains"></nav>
+      <p class="muted" id="count" role="status"></p>
+      <div id="domains"></div>
+    </section>
+  </main>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion/blob/main/docs/catalog.txt">Edit the catalogue ↗</a></footer>
+</body>
+</html>

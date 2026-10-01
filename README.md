@@ -94,7 +94,7 @@ illusion/
 
 ## Roadmap
 
-This is a 100-item backlog aimed at a steady sequence of visual investigations:
+The full topic catalogue ([`docs/catalog.md`](docs/catalog.md): 268 topics in 16 domains, with prerequisites and learning paths) is a backlog aimed at a steady sequence of visual investigations:
 
 - some become 5-minute shorts
 - some become 12-15 minute YouTube episodes
@@ -141,6 +141,8 @@ First milestone:
 
 - `docs/philosophy.md`
 - `docs/production-notes.md`
+- `docs/chapter-template.md`
+- `docs/catalog.md` (all topics; source `docs/catalog.txt`)
 - `docs/physics-review-checklist.md`
 - `simulations/001_brownian_motion/README.md`
 
@@ -151,7 +153,7 @@ First milestone:
 
 ## Browser lab
 
-The static site in `site/` includes a ten-topic launch catalog and five interactive demos: random walk, heat diffusion, wave interference, airplane flight, and a conceptual air-defense sequence. Each demo states the rule it uses and where that rule stops representing the physical system. The planned Brownian-motion episode remains distinct from the random-walk toy model.
+The static site in `site/` is a library of chapters: each pairs reading material (the illusion, the genesis of the idea, applications, and where the simulation lies; the same text is the video script) with an embedded interactive simulation. It also includes a ten-topic launch catalog. Five chapters ship today under `site/topics/`, covering random walk, heat diffusion, wave interference, airplane flight, and a conceptual air-defense sequence. Each demo states the rule it uses and where that rule stops representing the physical system. The planned Brownian-motion episode remains distinct from the random-walk toy model.
 
 Preview locally with `python3 -m http.server 8000 --directory site`, then open `http://localhost:8000`. The files are plain HTML, CSS, and JavaScript and can be deployed to any static host by publishing the `site/` directory. No build step or external runtime dependency is needed.
 

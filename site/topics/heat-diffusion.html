@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Heat diffusion on a grid — illusion</title>
+  <meta name="description" content="How can heat spread with no one in charge? A grid of neighbours, the heat equation, and why it shows up in chips, blurry photos and the age of the Earth.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-THM">Heat, entropy &amp; randomness</a> / THM09</p>
+    <p class="eyebrow">THM09 · Heat, entropy &amp; randomness</p>
+    <h1>Heat <em>diffusion</em> on a grid</h1>
+    <p class="lede">A hot spoon cools, a cold room warms, and nothing in between is giving orders. Heat spreads because every spot compares itself with its neighbours, nothing more.</p>
+    <p class="meta"><span>Reading time ≈ 9 min</span><span>Simulation: Starter (S)</span><span>Video: 5–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>Every cell nudges its temperature toward the <strong>average of its neighbours</strong>. Sharp hot-cold contrasts get smoothed first and fastest; the final state is an even temperature. A purely local rule produces a global, one-way smoothing, which is the heat equation.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Applications</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>You stir a mug of tea with a metal spoon and leave it there. A few seconds later, the handle, which was nowhere near the tea, is warm.</p>
+      <p>Nobody sent the heat up the handle. No molecule in the spoon knew about the tea. Each one only did something very small: it jostled its neighbours, and shared a little of its jiggle with whichever was calmer. Repeat that between neighbours enough times and a whole spoon warms.</p>
+      <p>The people who first wrote this down thought it needed deep mathematics, and it did. But the core idea fits in one picture: <em>every spot compares itself with the spots next to it.</em></p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>Heat seems to “flow” like a fluid with a purpose</h2>
+      <p>Put a hot pan on a counter and the warmth seems to <em>go</em> somewhere, as if heat were a substance pouring from hot to cold. That is a good picture, and for a long time it was the working one (the “caloric” theory). But it hides the surprising part: <strong>nobody directs it</strong>. There is no pump, no plan, and no memory of where the heat started.</p>
+      <p>So how does a lump of heat in one corner end up as an even warmth, always in that direction and never the reverse?</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+      <h2>Fourier and the problem that needed new mathematics</h2>
+      <ol class="timeline">
+        <li><span class="year">1701</span>Newton’s law of cooling: a hot object cools at a rate proportional to its temperature excess over its surroundings, a statement about <em>how fast</em>, not <em>how it spreads inside</em>.</li>
+        <li><span class="year">1807 · 1822</span>Joseph Fourier presents his work on heat conduction to the Paris Academy (1807) and publishes <em>Théorie analytique de la chaleur</em> (1822). He writes the rule for temperature varying in space and time, now the <strong>heat equation</strong>, and solves it by splitting any temperature profile into simple sine waves, which created Fourier series.</li>
+        <li><span class="year">1855</span>Adolf Fick adapts Fourier’s law to the spreading of dissolved substances: <strong>diffusion</strong>. Salt in water and heat in metal obey the same mathematics.</li>
+        <li><span class="year">1860s</span>William Thomson (Kelvin) uses the heat equation to estimate how long the Earth has been cooling, arriving at tens of millions of years. The method was correct; the answer was wrong because it missed radioactive heating and mantle convection. A model can be right and its conclusion still miss reality.</li>
+        <li><span class="year">1905</span>Einstein links diffusion to random molecular motion, connecting this chapter to <a href="random-walk.html">random walks</a>: heat spreading is the average of many tiny random hops.</li>
+      </ol>
+      <div class="callout key"><p class="beat">The idea in one line</p><p>The rate at which a spot warms is proportional to how much <em>hotter its surroundings are</em> than it is: curvature in the temperature profile is what drives change.</p></div>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <h2>A grid of cells that listen to their neighbours</h2>
+      <p>The picture below is a 90 × 50 grid. Each frame, every cell moves a little toward the average of its four neighbours. A cell hotter than its neighbours cools; a cell colder than its neighbours warms. Nothing else happens.</p>
+      <figure class="illo"><svg viewBox="0 0 600 252" role="img" aria-label="A hot cell with four neighbours of different temperatures and arrows showing heat flowing towards cooler ones" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="300" y="24" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">One cell, four neighbours, one rule</text><rect x="268" y="108" width="64" height="64" rx="8" fill="#d9722d" opacity=".9"/><rect x="194" y="108" width="64" height="64" rx="8" fill="#4aa6c9" opacity=".9"/><rect x="342" y="108" width="64" height="64" rx="8" fill="#4aa6c9" opacity=".9"/><rect x="268" y="34" width="64" height="64" rx="8" fill="#7bb7b5" opacity=".9"/><rect x="268" y="182" width="64" height="64" rx="8" fill="#e8b25a" opacity=".9"/><text x="300" y="145" fill="#10192a" font-size="15" text-anchor="middle" font-weight="bold" stroke="none">hot</text><text x="226" y="145" fill="#10192a" font-size="14" text-anchor="middle" font-weight="normal" stroke="none">cool</text><text x="374" y="145" fill="#10192a" font-size="14" text-anchor="middle" font-weight="normal" stroke="none">cool</text><text x="300" y="71" fill="#10192a" font-size="14" text-anchor="middle" font-weight="normal" stroke="none">cool</text><text x="300" y="219" fill="#10192a" font-size="14" text-anchor="middle" font-weight="normal" stroke="none">warm</text><path d="M264.0 140.0L250.0 140.0" stroke="#fff" stroke-width="2"/><path d="M250.0 140.0L258.1 136.1L258.1 143.9Z" fill="#fff" stroke="#fff" stroke-width="1"/><path d="M336.0 140.0L350.0 140.0" stroke="#fff" stroke-width="2"/><path d="M350.0 140.0L341.9 143.9L341.9 136.1Z" fill="#fff" stroke="#fff" stroke-width="1"/><path d="M300.0 104.0L300.0 90.0" stroke="#fff" stroke-width="2"/><path d="M300.0 90.0L303.9 98.1L296.1 98.1Z" fill="#fff" stroke="#fff" stroke-width="1"/><path d="M300.0 176.0L300.0 190.0" stroke="#fff" stroke-width="1.2"/><path d="M300.0 190.0L296.1 181.9L303.9 181.9Z" fill="#fff" stroke="#fff" stroke-width="1"/><text x="40" y="110" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">Heat flows toward the</text><text x="40" y="128" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">cooler neighbours, in</text><text x="40" y="146" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">proportion to how much</text><text x="40" y="164" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">cooler they are.</text><text x="560" y="120" fill="#91a3bb" font-size="13" text-anchor="end" font-weight="normal" stroke="none">The warm neighbour</text><text x="560" y="138" fill="#91a3bb" font-size="13" text-anchor="end" font-weight="normal" stroke="none">below takes little.</text></svg><figcaption>The whole simulation is this picture repeated on every cell, many times a second.</figcaption></figure>
+      <div class="equation">T<sub>new</sub> = T + r · (T<sub>left</sub> + T<sub>right</sub> + T<sub>up</sub> + T<sub>down</sub> − 4T)<small>The continuous version is ∂T/∂t = α∇²T. “r” is the Diffusion rate slider (scaled so the update stays stable).</small></div>
+      <div data-sim="heat" data-alt="A grid coloured from blue (cool) to orange (hot) with a hot patch spreading out" data-caption="Orange = hot, dark blue = cool. Click or drag to paint heat."></div>
+      <div class="try"><h3>Try this</h3><ol>
+        <li>Watch the sharp edge of the hot patch blur first, while the middle stays hot longer.</li>
+        <li>Paint a thin hot line, then a big hot blob. The thin line vanishes far faster. Small features smooth out quickest.</li>
+        <li>Raise the <strong>Diffusion rate</strong>. The pattern is the same, only sooner.</li>
+        <li>Paint two hot spots near each other. They merge into one warm region rather than passing through.</li>
+      </ol></div>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Smoothing has a direction, and it isn’t in the rule</h2>
+      <p>The rule looks the same forwards and backwards: it is just averaging. Yet watching the film in reverse looks absurd, because a smooth, even grid never spontaneously sharpens into a hot patch. The reason is counting. There are overwhelmingly more ways to be evenly warm than concentrated, so <strong>mixing is what happens by default</strong>. This is the first hint of the arrow of time (<a href="../roadmap.html#THM14">THM14</a>).</p>
+      <p>Two more things become visible:</p>
+      <ul>
+        <li><strong>Sharp is fragile.</strong> A feature half as wide smooths about four times faster, because heat only needs to travel half the distance in each direction. Time to smooth scales as <em>distance squared</em>, the same square-root law as the random walk, read backwards.</li>
+        <li><strong>Total heat is conserved.</strong> The patch fades, but the amount of heat in the grid doesn’t change. It only gets spread out.</li>
+      </ul>
+      <div class="callout key"><p class="beat">The surprise</p><p>Local, simple, symmetric rules can generate global, irreversible-looking behaviour. No coordinator is needed.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+      <h2>Anywhere something spreads or smooths</h2>
+      <div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> the processor in your phone or laptop is deciding whether to slow itself down. Chip designers run heat-diffusion calculations like this one, in three dimensions, to place cooling and decide when to throttle (most processors start slowing at around 100 °C). And every time you blur a photo, the software is literally letting brightness diffuse between neighbouring pixels.</p></div>
+      <ul class="apps">
+        <li><strong>Chips and batteries</strong>Thermal engineers solve this exact equation to place heat sinks and keep processors and cells within safe temperatures.</li>
+        <li><strong>Blurring a photo</strong>A Gaussian blur is heat diffusion run for a short time on an image’s brightness. “Sharpness” is a hot-cold edge being smoothed.</li>
+        <li><strong>Cooking and food safety</strong>The time for the centre of a roast to warm grows with the square of its thickness. Cutting a roast in half more than halves the wait.</li>
+        <li><strong>Geology</strong>The cooling of lava, the thermal history of the crust, and Kelvin’s Earth-age estimate all use conduction.</li>
+        <li><strong>Drug and dye spreading</strong>Fick’s diffusion in tissue and gels is the same maths with concentration instead of temperature.</li>
+        <li><strong>Machine learning</strong>Diffusion models for image generation add noise in a diffusion-like process and learn to reverse it, a nod to heat’s one-way smoothing.</li>
+      </ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+      <h2>What the grid leaves out</h2>
+      <div class="callout lies"><p class="beat">Honest limits</p><p>This is conduction only: no moving fluid (convection), no radiation, and the material is the same everywhere with a fixed diffusion rate. Real materials conduct heat at different rates, and conductivity can change with temperature. The edges of the grid are insulated, so heat can’t escape, and the colours show relative warmth, not real degrees. The grid itself is a coarse approximation of continuous space.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol>
+        <li><strong>Local rule, global result.</strong> Averaging with neighbours is enough to smooth any temperature landscape.</li>
+        <li><strong>Small features vanish first.</strong> Smoothing time grows with distance squared.</li>
+        <li><strong>One-way by counting.</strong> The rule is symmetric; the direction comes from there being far more even states than lumpy ones.</li>
+      </ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+      <dl class="glossary">
+        <dt>Conduction</dt><dd>Heat transfer through direct contact of neighbouring material.</dd>
+        <dt>Heat equation</dt><dd>∂T/∂t = α∇²T: temperature changes at a rate set by its spatial curvature.</dd>
+        <dt>Diffusivity (α)</dt><dd>How quickly a material smooths out temperature differences.</dd>
+        <dt>Boundary condition</dt><dd>What happens at the edges. Here: insulated.</dd>
+      </dl>
+      <ul class="refs">
+        <li>J. Fourier, <em>Théorie analytique de la chaleur</em> (1822).</li>
+        <li>A. Fick, “Über Diffusion,” <em>Annalen der Physik</em> (1855).</li>
+        <li>W. Thomson (Lord Kelvin), papers on the age of the Earth (1860s–1890s).</li>
+      </ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="random-walk.html">← Random walk</a><a href="wave-interference.html">Wave interference →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

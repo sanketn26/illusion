@@ -1,0 +1,367 @@
+# illusion topic catalogue: the single source of truth.
+#
+# Edit this file, then run:  python3 scripts/build_catalog.py
+# That validates it and regenerates site/topics-data.js and docs/catalog.md.
+#
+# Rows:   ID | Title | Level | Status | Needs | Core illusion | Everyday hook | Brief
+#   ID      stable domain-prefixed id. Never renumber or reuse; reordering rows is free.
+#   Level   S starter, M moderate, H hard, X advanced/speculative (needs careful framing)
+#   Status  idea | shipped:<slug of site/topics/<slug>.html>
+#   Needs   comma-separated ids worth knowing first ("-" for none). Soft prerequisites.
+#   Brief   number of the matching row in docs/launch-topics.md (blank if none)
+# Domains:  ## CODE | Name | what lives here
+# Paths:    @path slug | Name | who it is for | ids in reading order
+#
+# Catalogue (what exists), paths (reader order) and release plan (publish order) are
+# separate on purpose. A topic lives in exactly one domain; paths cut across domains.
+
+## FND | Foundations & method | How to think quantitatively, and how to simulate without fooling yourself.
+FND01 | Scale and the square-cube law | S | idea | - | Bigger is not just more of the same | An ant carries many times its weight, yet a giant ant could not stand. |
+FND02 | Dimensional analysis: guess a formula from units | S | idea | - | Units alone can predict physics | Estimating a pendulum's period without solving anything. |
+FND03 | Orders of magnitude | S | idea | - | Our feel for very big and very small is poor | Zooming from the Earth down to an atom, ten times at a time. |
+FND04 | Time steps and honest integrators | M | idea | MEC03 | A simulation can be wrong in a way that looks right | A simulated planet slowly spirals outward for no physical reason. |
+FND05 | Monte Carlo: computing pi with darts | S | idea | - | Randomness can compute exact things | Throwing darts at a square with a circle inside. |
+FND06 | Many small causes make a bell curve | S | idea | - | Averages calm down; extremes are rare | Balls falling through a board of pegs. |
+FND07 | Vectors: adding pushes | S | idea | - | Forces add like arrows, not like numbers | Two people pull a sled at an angle. |
+FND08 | Linear, exponential and power-law growth | S | idea | - | Doubling feels slow, then is not | A lily pad that doubles daily covers a pond. |
+FND09 | Measurement and uncertainty | S | idea | - | Every number carries an error bar | Two careful measurements never quite agree. |
+FND10 | Vector fields: arrows everywhere | S | idea | FND07 | Space itself can carry direction and size | A weather map of wind arrows. |
+
+## MEC | Motion & forces | Classical mechanics: how things move, push, spin and collide.
+MEC01 | Speed versus acceleration | S | idea | - | Speed and acceleration feel like one thing | A car cruising at 100 km/h versus one pulling away from a light. |
+MEC02 | Free fall: heavy and light together | S | idea | MEC01 | Heavier things fall faster | A hammer and a feather dropped on the Moon. |
+MEC03 | Projectile motion | S | idea | MEC02,FND07 | Sideways speed slows your fall | Drop one ball and fire another sideways at the same instant. |
+MEC04 | Newton's laws: force changes motion | S | idea | FND07,MEC01 | Motion needs a continuing push | A puck gliding on ice versus on carpet. |
+MEC05 | Friction and braking distance | S | idea | MEC04 | Twice as fast means twice the stopping distance | A wet road lengthens a car's stop. | 21
+MEC06 | Circular motion and centripetal force | M | idea | MEC04 | A turning car is pushed outward | A bucket swung overhead; mud leaving a wheel. |
+MEC07 | Conservation of momentum | S | idea | MEC04 | Motion is redistributed, not lost | Two skaters push apart on ice. | 11
+MEC08 | Elastic and inelastic collisions | S | idea | MEC07 | Energy can change form without vanishing | Billiard balls versus lumps of clay. |
+MEC09 | Impulse: seat belts and airbags | S | idea | MEC07 | The stop is the same, the force is not | A car stops suddenly but an unbelted passenger keeps moving. | 35
+MEC10 | Centre of mass | S | idea | - | A messy system has a simple summary | Balancing a hammer on one finger. |
+MEC11 | Energy conservation: the roller coaster | S | idea | MEC04 | Energy gets used up | A coaster never climbs higher than its first hill. |
+MEC12 | Potential-energy landscapes | M | idea | MEC11 | Forces point downhill in stored energy | A marble settles into a bowl. | 14
+MEC13 | Torque and levers | S | idea | MEC04 | A small force can balance a large one | A crowbar lifts the corner of a car. |
+MEC14 | Angular momentum: the spinning skater | M | idea | MEC13 | You speed up by pulling in, with no push | A skater draws in their arms mid-spin. |
+MEC15 | Gyroscopes and precession | H | idea | MEC14 | A spinning top does not fall the way you expect | A top leans yet stays up. |
+MEC16 | Rolling races: who wins the ramp? | M | idea | MEC13,MEC11 | Heavier or bigger rolls faster | A ring, a disc and a sphere released together. |
+MEC17 | Fictitious forces in rotating frames | H | idea | MEC06 | Forces can appear just because you rotate | You feel flung outward on a merry-go-round. |
+MEC18 | Symmetry and conservation (Noether in pictures) | H | idea | MEC07,MEC11,MEC14 | Conservation laws come from sameness | Why does energy stay constant at all? |
+
+## OSC | Oscillations & waves | Things that swing, and patterns that travel: springs, sound, standing waves, Fourier.
+OSC01 | Springs and Hooke's law | S | idea | MEC04 | Stretch twice, pull twice | A bathroom scale. |
+OSC02 | Pendulums and simple harmonic motion | S | idea | MEC04 | A bigger swing takes longer | A grandfather clock keeps time as its swing fades. |
+OSC03 | Damping: how a suspension smooths bumps | M | idea | OSC02 | A stiffer shock is always better | A car crosses repeated bumps. | 40
+OSC04 | Resonance | M | idea | OSC02 | Small pushes can become large effects | A playground swing rises with well-timed pushes. | 12
+OSC05 | Coupled pendulums | M | idea | OSC02 | Systems can trade energy rhythmically | Two swings joined by a rope. |
+OSC06 | Normal modes | M | idea | OSC05 | A tangled motion is a sum of simple patterns | A chain of beads wobbles in distinct patterns. |
+OSC07 | Sine wave basics | S | shipped:sine-waves | - | A wave moves a pattern, not matter | A stadium wave circles while spectators stay seated. | 06
+OSC08 | What sets a wave's speed | S | idea | OSC07 | A harder push makes a faster wave | A pulse on a taut rope; a louder shout is not faster. |
+OSC09 | Superposition | S | idea | OSC07 | Waves collide and are unharmed | Ripples cross each other and carry on. |
+OSC10 | Wave interference | M | shipped:wave-interference | OSC07 | Adding can erase | Two pebbles make overlapping ripples. | 07
+OSC11 | Standing waves | S | shipped:standing-waves | OSC07 | Boundaries create allowed patterns | A guitar string vibrates between two fixed ends. | 08
+OSC12 | Harmonics and timbre | M | idea | OSC11 | A note is only its pitch | A violin and a flute playing the same note. |
+OSC13 | Fourier decomposition | M | idea | OSC09 | Complex shapes are built from simple waves | A musical note has a distinctive tone. | 13
+OSC14 | Beats | S | idea | OSC09 | Slow patterns can arise from fast oscillations | Two guitar strings slightly out of tune. |
+OSC15 | The Doppler effect | M | idea | OSC07 | A siren changes as it passes though it does not | An ambulance drives past. |
+OSC16 | Wave packets and group velocity | M | idea | OSC13 | A localised thing can be made of spread-out waves | A single clap versus a steady hum. |
+OSC17 | Dispersion | M | idea | OSC16 | Different frequencies travel at different speeds | Deep-water waves sort themselves by wavelength. |
+OSC18 | Reflection, transmission and echoes | M | idea | OSC08 | A boundary only bounces or absorbs | A shout echoes off a cliff. |
+OSC19 | Diffraction: waves bend round corners | M | idea | OSC10 | You can hear round a corner but not see | A voice carries from behind a wall. |
+OSC20 | Shock waves and sonic booms | H | idea | OSC15 | Information can pile up into a front | A whip crack; a boat's wake. |
+OSC21 | Sampling and aliasing | M | idea | OSC13 | Too few snapshots can invent false motion | A wagon wheel appears to spin backward on film. |
+OSC22 | Chladni patterns: modes in 2D | M | idea | OSC11 | Sand sorts itself on a vibrating plate | Sand on a violin-bowed metal plate. |
+
+## OPT | Light & optics | Rays, waves and colour: from pinholes to polarisation.
+OPT01 | Light travels straight: shadows and pinholes | S | idea | - | An image needs a lens | A pinhole camera in a dark room. |
+OPT02 | Mirrors: why left and right seem to flip | S | idea | OPT01 | Mirrors swap left and right | Reading your reflection's writing. |
+OPT03 | Refraction and Fermat's principle | M | idea | OPT01 | Light takes the shortest path | A straw looks bent; a lifeguard running then swimming. |
+OPT04 | Total internal reflection and fibre optics | M | idea | OPT03 | Light cannot be trapped in glass | A laser follows a stream of water. |
+OPT05 | Lenses, cameras and the eye | M | idea | OPT03 | Focus is rays meeting at a point | A camera lens brings a distant scene into focus. | 25
+OPT06 | Why a rainbow forms | M | idea | OPT03 | White light is secretly many colours | Sunlight meets rain after a shower. | 39
+OPT07 | Why the sky is blue and sunsets are red | M | idea | OSC07 | The sky reflects the ocean | A sunset turns the horizon red. |
+OPT08 | Colour is in the eye, not the light | M | idea | OPT06 | Mixing coloured light is mixing paint | A screen up close is only red, green and blue dots. |
+OPT09 | The diffraction limit | M | idea | OSC19 | A better lens can magnify forever | Zooming in further only makes blur larger. |
+OPT10 | Young's double slit with light | M | idea | OSC10 | Light is a stream of tiny bullets | Stripes on a wall from two narrow slits. |
+OPT11 | Polarisation | M | idea | OSC07 | Light is a wave with no orientation | Sunglasses cut glare; two crossed filters go dark. |
+OPT12 | Thin films and anti-reflection coatings | M | idea | OSC10 | Colour needs pigment | A soap bubble swirls with colour. |
+OPT13 | Why hot things glow | M | idea | THM06 | Hotter just means brighter | Heated metal goes red, then orange, then white. |
+OPT14 | Mirages | M | idea | OPT03 | The road ahead really is wet | A hot road shimmers like water in the distance. |
+
+## FLU | Fluids & flight | Pressure, buoyancy, flow, drag and lift.
+FLU01 | Pressure: force spread over area | S | idea | - | Weight alone decides if you sink | Snowshoes versus boots in deep snow. |
+FLU02 | Pressure with depth | S | idea | FLU01 | Pressure depends on how much water is there | A dam is thickest at the bottom; your ears feel a deep pool. |
+FLU03 | Why ships float | S | idea | FLU02 | Heavy things sink | A steel ship floats while a steel ball sinks. | 34
+FLU04 | Hydraulics and Pascal's principle | S | idea | FLU01 | Force cannot be multiplied | A car jack lifts a vehicle with one hand. |
+FLU05 | Bernoulli: speed and pressure | M | idea | FLU01 | Fast-moving air pushes harder | A shower curtain swings inward. |
+FLU06 | How airplanes fly | M | shipped:how-airplanes-fly | FLU05 | Engines hold a plane up | A glider stays aloft with no engine. | 31
+FLU07 | Drag and terminal velocity | S | idea | MEC04 | Falling things keep speeding up | A raindrop and a parachutist stop accelerating. |
+FLU08 | Viscosity and Reynolds number | M | idea | FLU07 | Swimming works the same at every size | Honey versus water; why bacteria cannot glide. |
+FLU09 | Turbulence and vortex streets | H | idea | FLU08 | Smooth input gives smooth output | A flag flaps in a steady wind. |
+FLU10 | The Magnus effect: curveballs | M | idea | FLU05 | Spin cannot bend a flight path | A free kick curves around the wall. |
+FLU11 | Surface tension and capillarity | M | idea | FLU01 | A water surface is just water | A paper towel pulls water up; an insect walks on a pond. |
+FLU12 | Convection cells | M | idea | THM11 | Heated fluid just spreads evenly | A pot of soup rolls; a lava lamp churns. |
+FLU13 | Why helicopters hover | M | idea | FLU06 | Hovering needs no continuous push | A helicopter lifts vertically without a runway. | 33
+FLU14 | A fluid from colliding particles | H | idea | THM05,MEC08 | A smooth fluid is made of smooth stuff | Poured water is a swarm of jittery molecules. |
+FLU15 | Drinking through a straw | S | idea | FLU02 | You suck liquid up | A straw does not work if the glass is sealed. |
+
+## THM | Heat, entropy & randomness | Random walks, diffusion, gases, entropy, engines and phase change.
+THM01 | Random walk versus directed walk | S | shipped:random-walk | - | Random means going nowhere | A person wanders through a crowd while another follows a sign. | 02
+THM02 | Brownian motion in a box | S | shipped:brownian-motion | THM01 | Jitter is meaningless | A pollen grain jitters under a microscope. | 01
+THM03 | Diffusion: many walkers, one law | S | idea | THM01 | Spreading needs a push | A drop of ink in a glass of water. |
+THM04 | Ballistic versus diffusive motion | S | idea | THM03 | Not all motion scales the same way | A bouncing ball versus a dust speck: how far in ten times as long? |
+THM05 | A gas from collision rules | S | idea | - | Simple local rules create global behaviour | Balls bouncing in a box. |
+THM06 | Temperature as average kinetic energy | S | idea | THM05 | Hot and cold are different stuff | Warm air is just faster air. |
+THM07 | The ideal gas law | M | idea | THM06 | Pressure is a steady push | A balloon inflates; a heated can bulges. |
+THM08 | Maxwell-Boltzmann speed distribution | M | idea | THM06 | Everything moves at the average speed | Some air molecules are always much faster than 'room temperature'. |
+THM09 | Heat diffusion on a grid | S | shipped:heat-diffusion | - | Heat needs a coordinator | A drop of hot tea warms a cold spoon. | 05
+THM10 | Heat versus temperature | S | idea | THM06 | Same heat, same warming | Beach sand burns your feet while the sea stays cool. |
+THM11 | Conduction, convection and radiation | M | idea | THM09 | Heat moves in only one way | A campfire warms your face and hands in different ways. |
+THM12 | Thermal insulation | M | idea | THM09 | Insulation blocks cold | A thermos slows a drink cooling. | 28
+THM13 | Entropy in a two-chamber box | S | shipped:entropy-box | - | Disorder is about countable possibilities | Perfume released in one corner fills a room. | 03
+THM14 | Arrow of time from gas expansion | M | shipped:arrow-of-time | THM13 | The laws of physics have a direction | A balloon bursts; its air never reassembles. | 04
+THM15 | Reversing particle motion | M | idea | THM14 | Reversal is possible in maths, fragile in reality | Run the gas film backwards; add one tiny error. |
+THM16 | Poincare recurrence | H | idea | THM14 | Reversible systems cannot look irreversible | Wait long enough and the gas returns to its corner. |
+THM17 | The Boltzmann distribution | M | idea | THM08 | Everything settles to the lowest energy | The atmosphere thins with height instead of piling up. |
+THM18 | Entropy as missing information | M | idea | THM13 | Entropy is just mess | A shuffled deck versus a sorted one. |
+THM19 | Maxwell's demon | H | idea | THM18 | A clever sorter beats the second law | A tiny doorkeeper sorts fast from slow molecules. |
+THM20 | Heat engines and the Carnot limit | M | idea | THM14 | A perfect engine could use all its heat | A car engine's hot exhaust. |
+THM21 | Refrigerators as entropy pumps | M | idea | THM20 | Cooling removes heat from existence | The back of a fridge is warm. |
+THM22 | Phase transitions on a lattice | M | idea | THM13 | Change is always gradual | Water abruptly freezes as it cools. | 15
+THM23 | The Ising model and magnetisation | H | idea | THM22 | Order needs a boss | Many tiny magnets suddenly align. |
+THM24 | Evaporative cooling | M | idea | THM08 | Cooling needs a cold source | Sweat cools skin; you blow on hot soup. |
+THM25 | Heat death of a toy universe | X | idea | THM14,THM20 | Equilibrium is a rest, not an end of usable energy | A closed box with no temperature differences. |
+
+## EMG | Electricity & magnetism | Charge, fields, circuits, induction and electromagnetic waves.
+EMG01 | Static electricity and charge conservation | S | idea | - | Rubbing creates charge | A balloon sticks to a wall. |
+EMG02 | Electric field around charges | S | shipped:electric-field | - | Forces need contact | Tiny paper bits respond to a charged comb. | 09
+EMG03 | Fields of two charges: dipoles | S | idea | EMG02 | Fields just add as numbers | A positive and a negative charge side by side. |
+EMG04 | Coulomb's law: force and motion | S | idea | EMG02 | Invisible rules create visible motion | A charged ball is pushed or pulled across a table. |
+EMG05 | Voltage and equipotentials | M | idea | EMG03,MEC12 | Voltage is a thing that flows | Hills on a map are voltage contour lines. |
+EMG06 | Conductors and Faraday cages | M | idea | EMG05 | An outside field passes through metal | Your phone fails in an elevator; planes survive lightning. |
+EMG07 | Capacitors | M | idea | EMG05 | Charge just sits in a wire | A camera flash charges up then fires. |
+EMG08 | Current and Ohm's law | S | idea | EMG01 | Current is used up by a bulb | Water pipes as a model of a circuit. |
+EMG09 | Series and parallel circuits | S | idea | EMG08 | One dead bulb should not matter | One dead bulb darkens an entire old string of lights. |
+EMG10 | RC circuits and time constants | M | idea | EMG07,EMG08,FND08 | Things charge at a steady pace | A capacitor fills quickly then slows. |
+EMG11 | Magnets and field lines | S | idea | FND10 | A cut magnet gives separate poles | Iron filings around a bar magnet. |
+EMG12 | The magnetic field of a wire | M | idea | EMG08,EMG11 | Electricity and magnetism are separate | A compass needle twitches near a current. |
+EMG13 | The Lorentz force | M | idea | EMG12 | Forces point along the field | A moving charge curves sideways. |
+EMG14 | Electric motors | M | idea | EMG13 | Motors need magic | A loop of current turns in a magnetic field. |
+EMG15 | Faraday induction and Lenz's law | M | idea | EMG12 | Magnets only act on things that touch them | Moving a magnet through a coil lights a bulb. |
+EMG16 | Eddy currents | M | idea | EMG15 | A non-magnetic metal ignores magnets | A magnet drifts down a copper tube. |
+EMG17 | Generators and transformers | M | idea | EMG15 | Power lines use low voltage for safety | Why long-distance power lines run at very high voltage. |
+EMG18 | Electromagnetic wave propagation | H | idea | EMG15,OSC07 | Waves need a medium | Radio crosses empty space. |
+EMG19 | Antennas and radio | H | idea | EMG18 | Signals travel through wires | A phone talks to a tower. |
+EMG20 | Maxwell's four statements | X | idea | EMG18 | Electricity and light are separate subjects | Light turns out to be an electromagnetic wave. |
+
+## MAT | Matter & materials | What solids, liquids and crystals are made of, and why they behave as they do.
+MAT01 | Solids, liquids and gases from particles | S | idea | THM05 | Phases are different substances | Ice, water and steam are the same molecules. |
+MAT02 | Why ice floats | M | idea | MAT01 | Solids always sink in their own liquid | Ice cubes bob in a drink. |
+MAT03 | Thermal expansion | S | idea | THM06 | Solid objects have a fixed size | Bridges have gaps; a jar lid loosens under hot water. |
+MAT04 | Stress, strain and why things break | M | idea | OSC01 | Strong means it does not bend | A paperclip stretches, bends, then snaps. |
+MAT05 | Defects in a lattice | M | idea | MAT01 | Perfect crystals are the strongest | Why a metal can be bent and stay bent. |
+MAT06 | Crystal lattice vibrations | M | idea | OSC06 | Solids are still inside | Heat in a solid is atoms jiggling in place. |
+MAT07 | Phonons as collective modes | H | idea | MAT06 | Particles must be tiny objects | Sound in a crystal behaves like particles. |
+MAT08 | Molecular vibration modes | M | idea | OSC06 | Molecules are rigid | Why CO2 absorbs infrared light. |
+MAT09 | Conductors, insulators and band gaps | H | idea | QNT05 | Electrons in metal are marbles in a pipe | Copper conducts and glass does not. |
+MAT10 | Diodes, transistors and the p-n junction | H | idea | MAT09 | One-way valves need moving parts | A phone charger and an LED. |
+MAT11 | LEDs and solar cells | H | idea | MAT10 | Light and electricity are unrelated | A solar panel on a roof. |
+MAT12 | Superconductivity | X | idea | MAT09 | Zero resistance is just very low resistance | A magnet floats above a cold ceramic. |
+
+## QNT | Quantum | Waves of probability, discrete states, spin and measurement.
+QNT01 | Blackbody radiation and Planck's quantum | H | idea | OPT13 | Energy can be exchanged in any amount | A glowing stove ring shines red, not blue-white and endless. |
+QNT02 | The photoelectric effect | M | idea | OSC07 | Brighter light kicks out faster electrons | Light of one colour frees electrons; dimmer or brighter changes only how many. |
+QNT03 | Atomic spectra: elements' fingerprints | M | idea | QNT02 | Atoms glow in every colour | A neon sign shows a few sharp lines. |
+QNT04 | de Broglie waves: matter as waves | M | idea | QNT02,OSC11 | Electrons are tiny balls | An electron microscope sees finer than light can. |
+QNT05 | Energy levels in a box | M | idea | QNT04 | Energy comes in any amount | A guitar string only rings at certain pitches. |
+QNT06 | The quantum harmonic oscillator | M | idea | QNT05 | A vibrating system can have any energy | A molecule vibrates in steps. |
+QNT07 | The atom as a probability cloud | M | idea | QNT05 | Electrons are tiny planets | Where is the electron? Only where it is likely to be found. |
+QNT08 | The double-slit probability pattern | M | idea | OSC10,QNT04 | Particles act like tiny bullets | Electrons make stripes. |
+QNT09 | Single-particle interference build-up | M | idea | QNT08 | A pattern needs many particles interacting | One electron at a time slowly builds stripes. |
+QNT10 | Wave-packet uncertainty | M | idea | OSC16 | We could measure position and momentum perfectly if careful | A short pulse contains a range of pitches. | 19
+QNT11 | Quantum tunnelling | H | idea | QNT05 | Forbidden means impossible | Electrons cross barriers in electronic components. | 18
+QNT12 | Spin as a two-state system | H | idea | QNT09 | Spin is a tiny spinning ball | A spin is only ever found up or down. |
+QNT13 | The Stern-Gerlach experiment | H | idea | QNT12 | Measurement just reads a value | A beam of atoms splits into exactly two. |
+QNT14 | Superposition and measurement | X | idea | QNT12 | A system always has a definite state | A coin that is neither heads nor tails until looked at. |
+QNT15 | Wavefunction collapse toy model | X | idea | QNT14 | Observation is passive | Looking changes what can be predicted. |
+QNT16 | Entanglement correlations | X | idea | QNT14 | Shared state is hidden messaging | Two particles' results are linked at any distance. |
+QNT17 | The Bell inequality game | X | idea | QNT16 | Local hidden variables explain everything | A game that classical players cannot win as often. |
+QNT18 | The quantum Zeno effect | H | idea | QNT15 | Watching cannot change evolution | A watched pot never boils, literally. |
+QNT19 | Decoherence: why big things look classical | X | idea | QNT15 | Quantum rules stop above some size | Why a cat is never seen in superposition. |
+QNT20 | Qubits and a toy quantum computer | H | idea | QNT12 | A quantum computer tries every answer at once | A qubit is more than a 0 or a 1. |
+QNT21 | Electron orbitals | H | idea | QNT07 | Orbits are paths | Shapes replace circles. |
+QNT22 | Pauli exclusion: why matter is solid | H | idea | QNT07 | Matter is mostly empty space and so squashable | You cannot walk through a wall. |
+QNT23 | Lasers: stimulated emission | H | idea | QNT03 | A laser is just a bright light | A laser pointer's thin, single-colour beam. |
+
+## REL | Relativity | Special relativity: time, space and causality for moving observers.
+REL01 | Galileo's ship: motion you cannot detect | S | idea | - | You can feel steady motion | A ball falls the same on a smoothly moving ship. |
+REL02 | Light's speed is the same for everyone | M | idea | REL01 | Speeds simply add | A flashlight on a speeding train. |
+REL03 | The light clock and time dilation | M | idea | REL02 | Time is universal | Fast-moving clocks run differently. | 16
+REL04 | Muons from the sky | M | idea | REL03 | Time dilation is only a thought experiment | Particles made 15 km up reach the ground. |
+REL05 | Simultaneity fails | H | idea | REL03 | 'Now' is the same everywhere | Two lightning strikes that one observer sees as simultaneous. |
+REL06 | Length contraction | H | idea | REL05 | Length is absolute | A fast train fits in a short tunnel. |
+REL07 | Relativistic velocity addition | M | idea | REL02 | Speeds add near light speed | Throwing a ball from a nearly light-speed ship. |
+REL08 | The spacetime interval | H | idea | REL06 | Nothing is the same for every observer | Time and distance change, but one combination does not. |
+REL09 | Minkowski diagrams | H | idea | REL08 | Geometry cannot encode causality | A map with time as an axis. |
+REL10 | Light cones and causality | M | idea | REL02 | A distant event can affect you instantly | A distant flash cannot affect you immediately. | 17
+REL11 | The twin paradox as worldlines | H | idea | REL09 | The paradox shows relativity is inconsistent | One twin travels and returns younger. |
+REL12 | Relativistic Doppler shift | M | idea | REL03,OSC15 | Colour depends only on the source | A receding star turns red. |
+REL13 | Why you cannot reach light speed | M | idea | REL07 | Keep pushing and you keep speeding up | An ever-heavier push yields ever-smaller gains. |
+REL14 | E = mc^2: where mass-energy comes from | H | idea | REL13 | Mass and energy are different things | A nuclear reactor loses a tiny mass. |
+REL15 | Magnetism as relativistic electricity | X | idea | REL06,EMG13 | Magnetism is its own force | A current-carrying wire pulls a moving charge. |
+REL16 | The block universe | X | idea | REL09 | Time flows as a mechanism | A loaf of spacetime sliced differently by different observers. |
+
+## GRV | Gravity & orbits | From falling apples to curved spacetime.
+GRV01 | Gravity as a field | S | shipped:gravity-field | - | Gravity is only a pull between two things | A satellite keeps falling around Earth. | 10
+GRV02 | The inverse-square law | S | idea | - | Twice as far means half as strong | A lamp seen from twice as far. |
+GRV03 | Orbits: falling around the Earth | S | idea | MEC03,GRV01 | Orbiting things have escaped gravity | Newton's cannon fires faster and faster. |
+GRV04 | Weightlessness in orbit | S | idea | GRV03 | Astronauts float because gravity is weak | Gravity at the space station is about 90% of Earth's. |
+GRV05 | Kepler's laws | M | idea | GRV03 | Planets move at a steady pace | A planet speeds up near the Sun. |
+GRV06 | Escape velocity | M | idea | GRV03,MEC11 | You can leave Earth if you just keep going | A rocket needs a minimum speed or a continuous thrust. |
+GRV07 | Gravity assists | M | idea | GRV05,MEC08 | A spacecraft needs fuel for every speed-up | Probes gain speed from a planet's motion. |
+GRV08 | Lagrange points | H | idea | GRV05 | Gravity never balances in space | A telescope parks in a spot that stays in step with Earth. |
+GRV09 | Tides | M | idea | GRV01,GRV02 | The Moon pulls water into one bulge | Two high tides a day. |
+GRV10 | Seasons, moon phases and eclipses | S | idea | - | Seasons come from distance to the Sun | December is cold in the north and hot in the south. |
+GRV11 | The equivalence principle: the elevator | M | idea | GRV04 | Gravity and acceleration feel different | A closed lift cannot tell if it is on Earth or accelerating in space. |
+GRV12 | Gravity as curved paths | H | idea | GRV11,REL10 | A force pulls straight paths bent | Two aircraft flying 'straight' north meet at the pole. |
+GRV13 | The rubber-sheet metaphor, critiqued | M | idea | GRV12 | A useful picture is a faithful one | A bowling ball on a trampoline. |
+GRV14 | Gravitational time dilation | H | idea | GRV11,REL03 | Clocks tick at the same rate everywhere | A clock at the top of a tower runs slightly fast. |
+GRV15 | Orbit precession (Mercury) | H | idea | GRV12 | Newton's orbits are the whole story | Mercury's ellipse slowly rotates. |
+GRV16 | Gravitational lensing | H | idea | GRV12 | Light travels in straight lines in space | A galaxy bends light from a more distant galaxy. | 20
+GRV17 | Gravitational waves | H | idea | GRV12,OSC10 | Space is a fixed stage | Two black holes merge and ripple spacetime. |
+
+## COS | Stars, cosmos & black holes | Stars, galaxies, the expanding universe and black holes.
+COS01 | Why stars neither collapse nor explode | M | idea | GRV01,THM07 | Stars burn like fires | A balloon stays round because inner pressure balances the squeeze. |
+COS02 | Parallax and the distance ladder | S | idea | - | We can only guess how far stars are | Your thumb jumps against the background when you blink one eye. |
+COS03 | Stellar life cycles and the HR diagram | M | idea | COS01 | Stars stay the same | A star's colour and brightness change over its life. |
+COS04 | Exoplanet transits and wobbles | M | idea | GRV05,OSC15 | Planets are too faint to find | A star dims slightly when a planet crosses it. |
+COS05 | Why is the night sky dark? | M | idea | COS02 | An infinite universe means a bright sky | Look up at night: why is the sky not white with starlight? |
+COS06 | The expanding grid universe | M | idea | - | Expansion needs a centre | A stretching grid with no middle. |
+COS07 | Raisin-bread expansion | S | idea | - | Only one place sees galaxies recede | Every raisin sees all the others move away. |
+COS08 | Redshift from expansion | M | idea | COS06,OSC15 | Redshift is just a Doppler effect | Light stretches as space stretches. |
+COS09 | The cosmic microwave background | M | idea | COS08,OPT13 | Empty space is dark and cold | A faint hiss in a radio telescope from every direction. |
+COS10 | An N-body toy universe | H | idea | GRV03 | A structured universe needs a design | Particles pulling each other make clumps. |
+COS11 | Galaxy rotation curves | M | idea | GRV05 | Visible matter explains the motion | Stars at the edge move faster than expected. |
+COS12 | Dark-matter halos | H | idea | COS11 | Invisible means absent | A halo of unseen mass shapes visible motion. |
+COS13 | Structure formation from noise | H | idea | COS10 | Large structure needs large seeds | Tiny early differences grow into cosmic webs. |
+COS14 | Cosmic inflation | X | idea | COS09 | A universe-sized region cannot come from a tiny one | A tiny patch stretches enormously. |
+COS15 | The fate of the universe | X | idea | COS08 | The universe will just carry on as it is | Expansion history decides the end. |
+COS16 | Escape velocity and the event horizon | M | idea | GRV06 | Black holes suck things in | A boundary traps every future path. |
+COS17 | Tidal forces and spaghettification | M | idea | GRV09,COS16 | Gravity is the same across your body | A faller's feet pulled harder than their head. |
+COS18 | Light bending near a compact mass | H | idea | GRV16,COS16 | Light cannot orbit | Light grazing a black hole can circle it. |
+COS19 | Accretion disks | H | idea | COS16,MEC14 | Black holes themselves shine | Hot, spiralling gas glows brightly. |
+COS20 | Neutron stars and pulsars | H | idea | MEC14,COS03 | Stars are always smooth glowing balls | A cosmic lighthouse blinks many times a second. |
+COS21 | Hawking radiation | X | idea | COS16,THM18 | A black hole emits nothing | A vacuum is not simply empty. |
+COS22 | Where the elements come from | H | idea | NUC04,COS03 | Atoms were always here | The iron in blood was made in a star. |
+
+## NUC | Nuclear & particles | Radioactivity, binding energy, fusion and the particle world.
+NUC01 | Radioactive decay: random atoms, predictable half-life | S | idea | THM01 | An atom knows when it is due | A Geiger counter clicks at random. |
+NUC02 | Carbon dating and half-lives | M | idea | NUC01,FND08 | Old things are just old | Dating an ancient bone. |
+NUC03 | Alpha, beta, gamma: what stops what | M | idea | NUC01 | All radiation is the same | A sheet of paper stops one kind but not another. |
+NUC04 | Binding energy: why fission and fusion both release energy | M | idea | NUC01 | Splitting and joining cannot both release energy | Iron is the end of the line. |
+NUC05 | Chain reactions and the reproduction number | M | idea | NUC04 | A chain reaction is an explosion by default | Each event triggers on average fewer or more than one more. |
+NUC06 | Fusion in the Sun | H | idea | NUC04,QNT11 | The Sun is hot enough for fusion by plain collision | Quantum tunnelling gives the Sun a way. |
+NUC07 | Cloud chambers: seeing particle tracks | M | idea | NUC03 | Particles are invisible | Cosmic rays leave white threads. |
+NUC08 | Antimatter and annihilation | H | idea | REL14 | Antimatter is science fiction | A medical PET scanner uses it. |
+NUC09 | Neutrinos | H | idea | NUC04 | Solid matter blocks everything | Trillions pass through you each second. |
+NUC10 | Why smash particles together? | H | idea | REL14 | Colliders just break things | Energy becomes new mass. |
+
+## EAR | Earth & atmosphere | The planet as a physics system.
+EAR01 | The greenhouse effect: a radiative balance | M | idea | THM11,OPT13 | A greenhouse effect needs a greenhouse | A car left in the sun gets hot. |
+EAR02 | Pressure and altitude | S | idea | FLU02 | Higher means closer to the Sun, so warmer | Snow on a mountain top. |
+EAR03 | The Coriolis effect | M | idea | MEC17 | A sink drains by hemisphere | Weather systems spin, bathtubs do not. |
+EAR04 | Sea breezes and weather engines | M | idea | FLU12 | Wind is random | Wind off the sea flips from day to night. |
+EAR05 | Seismic waves: how we know the core is liquid | M | idea | OSC08,OSC18 | We have to drill to see inside the Earth | An earthquake is 'heard' on the far side of the planet. |
+EAR06 | Tsunamis and shallow-water waves | M | idea | OSC08 | A tsunami is a tall wave at sea | A wave slows and rises near the shore. |
+EAR07 | Auroras | M | idea | EMG13 | Auroras are sunlight reflecting off polar ice | Curtains of light near the poles. |
+EAR08 | Lightning | M | idea | EMG07 | Lightning strikes down from the cloud | A spark reaches up to meet it. |
+
+## CPX | Chaos & complexity | Sensitivity, self-organisation and emergence from simple rules.
+CPX01 | Cellular automata and local rules | S | idea | - | Complex behaviour needs complex rules | A simple rule draws an intricate pattern. |
+CPX02 | The Game of Life: patterns that act like objects | S | idea | CPX01 | Objects are fundamental | A glider moves across the grid. |
+CPX03 | Flocking without a leader | M | idea | - | Coordination needs a leader | A starling murmuration. |
+CPX04 | Synchronisation: fireflies and metronomes | M | idea | - | Sync needs a conductor | Metronomes on a loose board fall into step. |
+CPX05 | Phantom traffic jams | M | idea | - | A jam needs an obstacle | A jam on an empty highway. |
+CPX06 | Percolation | M | idea | - | Connection grows steadily | Coffee grounds suddenly let water through. |
+CPX07 | Epidemics on a network | M | idea | FND08 | Spread is steady | Growth is slow, then explosive, then stops. |
+CPX08 | The logistic map: order to chaos | M | idea | FND08 | Simple rules give simple behaviour | Population models that suddenly flicker. |
+CPX09 | The double pendulum | M | idea | OSC05 | Equal starts give equal ends | Two almost-identical swings drift apart. |
+CPX10 | The Lorenz attractor and the butterfly effect | H | idea | CPX08 | Weather could be predicted with better computers | Forecasts fail after about two weeks. |
+CPX11 | The three-body problem | H | idea | GRV03,CPX09 | Gravity always gives tidy orbits | Three stars do not settle. |
+CPX12 | Sandpiles and self-organised criticality | H | idea | CPX06 | Big events need big causes | One grain can trigger an avalanche. |
+CPX13 | Power laws and fat tails | H | idea | FND06 | Extremes are negligible | Earthquake sizes follow a heavy-tailed rule. |
+CPX14 | Turing patterns | H | idea | THM09 | Spots and stripes need a pattern to start from | A leopard's coat from two diffusing chemicals. |
+CPX15 | Fractals and the coastline paradox | M | idea | - | A length is a single number | A coast measured with a shorter ruler gets longer. |
+CPX16 | Universality near critical points | X | idea | THM23,CPX12 | Different things obey different laws | Magnets and fluids share the same exponents. |
+CPX17 | Information flow in physical systems | X | idea | THM19 | Physics is only about energy and matter | Constraints on information shape physics. |
+CPX18 | Layers of effective models | X | idea | - | One true model explains everything at every scale | Every model is useful at the right scale. |
+
+## CAS | Case files | Real devices and events, each combining several principles. Read the principles first.
+CAS01 | Sensing to interception | M | shipped:sensing-to-interception | OSC08 | Seeing is knowing where it is going | A projectile is launched while an area is monitored. | 32
+CAS02 | The Kalman filter: trust the model or the sensor? | H | idea | CAS01,FND06 | The best estimate is the latest measurement | A phone blends noisy GPS with its own motion model. |
+CAS03 | Noise-cancelling headphones | M | idea | OSC10 | Cancelling noise needs silence | Headphones reduce a steady background hum. | 23
+CAS04 | Bridge vibrations and resonance | M | idea | OSC04 | A bridge only fails from big loads | A bridge sways under rhythmic foot traffic. | 22
+CAS05 | Solar-panel angle | S | idea | GRV10,FND07 | A panel just needs to face the Sun | A tilted panel receives less direct noon light. | 24
+CAS06 | Fibre-optic internet | M | idea | OPT04 | Data travels as electricity | Light carries the internet under the sea. |
+CAS07 | Ultrasound echoes | M | idea | OSC18 | Imaging needs light | Medical ultrasound measures depth from returning pulses. | 26
+CAS08 | MRI signal and relaxation | H | idea | QNT12,OSC04 | MRI is a kind of X-ray | MRI distinguishes tissues using magnetic signals. | 27
+CAS09 | Power-grid frequency | H | idea | EMG17,MEC14 | The grid delivers power instantly and steadily | A grid must balance generation and demand. | 29
+CAS10 | Rocket staging | M | idea | MEC07 | Throwing away mass hurts | A launch vehicle drops an empty fuel tank. | 30
+CAS11 | Why a bicycle stays steerable | H | idea | MEC15 | Bicycles stay up because of the spinning wheels | A bicycle leans and the rider steers into the lean. | 36
+CAS12 | How GPS uses time | H | idea | REL03,GRV14 | A GPS fix is just measuring distance | A phone estimates position from satellite signals. | 37
+CAS13 | How a microwave heats food | M | idea | EMG18,OSC11 | Microwaves cook from the inside out | A microwave warms some spots faster than others. | 38
+CAS14 | Wind turbines and the Betz limit | H | idea | FLU06,EMG15 | A turbine could capture all of the wind | Slowing wind too much stops the flow. |
+CAS15 | Roller-coaster design | M | idea | MEC11,MEC06 | Thrills need big engines | A coaster loop is not circular. |
+CAS16 | Regenerative braking | M | idea | EMG15,MEC11 | Braking just wastes energy as heat | An electric car recharges as it slows. |
+CAS17 | Wireless charging | M | idea | EMG15 | Charging needs contact | A phone charges on a pad. |
+CAS18 | Buildings that ride out earthquakes | H | idea | OSC04,OSC03 | Stiffer is safer | Base isolation lets the ground move beneath a building. |
+
+@path start-here | Start here | No background needed. The ten simulations that build the visual language for everything else. | THM01 THM02 THM13 THM14 THM09 OSC07 OSC10 OSC11 EMG02 GRV01
+@path why-time-has-a-direction | Why time has a direction | From a drunkard's walk to the second law and the limits of reversibility. | THM01 THM03 THM05 THM13 THM14 THM15 THM16 THM18 THM19 THM20 THM25
+@path waves-to-light | Waves to light | One idea, superposition, followed from ripples to music to light. | OSC07 OSC09 OSC10 OSC11 OSC13 OSC19 OPT10 OPT11 OPT12 EMG18
+@path light-rays-to-quanta | Light: rays, waves and quanta | The long argument about what light is. | OPT01 OPT02 OPT03 OPT05 OPT06 OPT07 OSC10 OPT10 OPT13 QNT01 QNT02 QNT08
+@path forces-and-motion | Forces and motion | Classical mechanics from first principles. | MEC01 MEC02 MEC03 MEC04 MEC07 MEC08 MEC11 MEC13 MEC14 MEC12
+@path fluids-and-flight | Fluids and flight | Pressure to lift: how air and water push back. | FLU01 FLU02 FLU03 FLU05 FLU06 FLU07 FLU08 FLU10 FLU13
+@path electricity-to-radio | Electricity to radio | From a spark to a wireless signal. | EMG01 EMG08 EMG09 EMG07 EMG10 EMG11 EMG12 EMG13 EMG15 EMG17 EMG18 EMG19
+@path relativity-from-scratch | Relativity from scratch | Special relativity, then gravity as geometry. | REL01 REL02 REL03 REL04 REL05 REL06 REL07 REL08 REL10 REL11 REL14 GRV11 GRV12 GRV14
+@path orbits-to-black-holes | Orbits to black holes | Newton's cannonball to the event horizon. | GRV01 GRV02 GRV03 GRV05 GRV06 GRV11 GRV12 COS16 COS17 COS18 COS19
+@path quantum-gently | Quantum, gently | Wave behaviour first, then the strange parts. | OSC07 OSC10 QNT02 QNT04 QNT08 QNT09 QNT10 QNT11 QNT12 QNT14 QNT16
+@path chaos-and-complexity | Chaos and emergence | Simple rules, surprising behaviour. | CPX01 CPX02 CPX03 CPX04 CPX05 CPX06 CPX12 CPX08 CPX09 CPX10
+@path simulating-honestly | Simulating honestly | Where simulations lie, and how to catch it. | FND05 FND06 FND09 FND04 THM03 CPX08
+@path engineering-intuition | Engineering intuition | Everyday devices explained from the principles up. | MEC09 OSC03 OSC04 CAS04 CAS03 OSC18 CAS07 EMG17 CAS09
+
+# Production batches: the order chapters get written, roughly a day or two of work each.
+# Prerequisites always come first (shipped chapters are exempt). Reorder freely; the validator checks.
+@batch B01 | Start here: the first ten | THM01 THM02 THM13 THM14 THM09 OSC07 OSC10 OSC11 EMG02 GRV01 FLU06 CAS01
+@batch B02 | Everyday motion | FND07 FND10 MEC01 MEC02 MEC03 MEC04 MEC05 MEC07
+@batch B03 | Energy, collisions and spin | MEC08 MEC09 MEC10 MEC11 MEC12 MEC13 MEC14 MEC06
+@batch B04 | Gravity and orbits | GRV02 GRV03 GRV04 GRV05 GRV06 GRV09 GRV10 FND03
+@batch B05 | Oscillators | OSC01 OSC02 OSC03 OSC04 OSC05 OSC08 OSC09 OSC14
+@batch B06 | Sound and signals | OSC12 OSC13 OSC15 OSC16 OSC17 OSC18 OSC19 OSC21
+@batch B07 | Heat and randomness | THM03 THM04 THM05 THM06 THM07 THM08 THM10 THM11
+@batch B08 | Entropy and time | THM12 THM15 THM16 THM17 THM18 THM19 THM20 THM21
+@batch B09 | Light I: rays | OPT01 OPT02 OPT03 OPT04 OPT05 OPT06 OPT07 OPT14
+@batch B10 | Fluids I: pressure and buoyancy | FLU01 FLU02 FLU03 FLU04 FLU05 FLU07 FLU15 EAR02
+@batch B11 | Circuits and fields | EMG01 EMG03 EMG04 EMG05 EMG08 EMG09 EMG11 EMG07
+@batch B12 | Electromagnetism | FND08 EMG10 EMG12 EMG13 EMG14 EMG15 EMG16 EMG17
+@batch B13 | Relativity I: time and light | REL01 REL02 REL03 REL04 REL07 REL10 REL12 REL13
+@batch B14 | Relativity II: spacetime | REL05 REL06 REL08 REL09 REL11 REL14 REL15 REL16
+@batch B15 | Light II: waves, colour and heat | OPT08 OPT09 OPT10 OPT11 OPT12 OPT13 OSC20 OSC22
+@batch B16 | Fluids II: flow and flight | FLU08 FLU09 FLU10 FLU11 FLU12 FLU13 FLU14 THM24
+@batch B17 | Gravity bends | GRV07 GRV08 GRV11 GRV12 GRV13 GRV14 GRV15 GRV16
+@batch B18 | Black holes and stars I | GRV17 COS16 COS17 COS18 COS19 COS01 COS02 COS03
+@batch B19 | The expanding universe | COS04 COS05 COS06 COS07 COS08 COS09 COS10 COS11
+@batch B20 | Cosmos II: dark matter and fate | COS12 COS13 COS14 COS15 COS20 COS21
+@batch B21 | Nuclear physics | NUC01 NUC02 NUC03 NUC04 NUC05 NUC07 NUC08 NUC09
+@batch B22 | Quantum I: origins | QNT01 QNT02 QNT03 QNT04 QNT05 QNT06 QNT07 QNT08
+@batch B23 | Quantum II: strange behaviour | QNT09 QNT10 QNT11 QNT12 QNT13 QNT21 QNT22 QNT23
+@batch B24 | Quantum III: measurement | QNT14 QNT15 QNT16 QNT17 QNT18 QNT19 QNT20 NUC06
+@batch B25 | Matter I: solids | OSC06 MAT01 MAT02 MAT03 MAT04 MAT05 MAT06 MAT08
+@batch B26 | Matter II: electrons and order | MAT07 MAT09 MAT10 MAT11 MAT12 THM22 THM23 THM25
+@batch B27 | Radio, sky and the elements | EMG06 EMG18 EMG19 EMG20 EAR07 EAR08 NUC10 COS22
+@batch B28 | Spin, rotating frames and scale | MEC15 MEC16 MEC17 MEC18 EAR03 FND01 FND02 FND04
+@batch B29 | Earth, climate and honest numbers | EAR01 EAR04 EAR05 EAR06 FND05 FND06 FND09
+@batch B30 | Chaos and complexity I | CPX01 CPX02 CPX03 CPX04 CPX05 CPX06 CPX15 CPX18
+@batch B31 | Chaos and complexity II | CPX07 CPX08 CPX09 CPX10 CPX11 CPX12 CPX13 CPX14
+@batch B32 | Case files I: waves, light and signals | CPX16 CPX17 CAS02 CAS03 CAS04 CAS06 CAS07 CAS13
+@batch B33 | Case files II: machines | CAS05 CAS09 CAS10 CAS11 CAS15 CAS16
+@batch B34 | Case files III: hard systems | CAS08 CAS12 CAS14 CAS17 CAS18

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>How airplanes fly — illusion</title>
+  <meta name="description" content="Where does lift come from, and why does a steeper wing eventually lose it? The history, the intuition, and the honest limits of a force-arrow diagram.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-FLU">Fluids &amp; flight</a> / FLU06</p>
+    <p class="eyebrow">FLU06 · Fluids &amp; flight</p>
+    <h1>How airplanes <em>fly</em></h1>
+    <p class="lede">A wing doesn’t hold a plane up by magic or by a clever shape alone. It pushes air downward, and the air pushes back. The shape and the angle just decide how well that goes.</p>
+    <p class="meta"><span>Reading time ≈ 9 min</span><span>Illustration: qualitative diagram</span><span>Video: 5–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>A wing tilted into moving air <strong>turns the air downward</strong>. By Newton’s third law the air pushes the wing <strong>up</strong>: that is lift. More tilt gives more lift, up to a point; beyond it the air can no longer follow the wing’s surface and lift <strong>collapses</strong>. That’s a stall. Lift does not need the engine: a glider is held up the same way.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Applications</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>On 23 July 1983, Air Canada Flight 143, a Boeing 767 with 69 people on board, was cruising over Canada at 41,000 feet when its engines fell silent. The fuel had been loaded in the wrong units. There was none left.</p>
+      <p>A 767 weighs well over a hundred tonnes. With no thrust at all, it didn’t drop out of the sky. The pilots turned it into a glider and flew on for about seventeen minutes, steering for an old airfield at Gimli, Manitoba. They landed. Everyone survived.</p>
+      <p>What was holding that airplane up, minute after silent minute, with the engines dead?</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“It stays up because the engines push it forward”</h2>
+      <p>Engines push a plane <em>forward</em>. Gravity pulls it <em>down</em>. Something else has to push it <em>up</em>, and it isn’t the engine. Proof: a glider with no engine at all stays aloft for hours, and an airliner with failed engines can glide to a landing.</p>
+      <p>The second illusion is the “official” explanation many of us were taught: air going over the curved top must travel farther, so it must go faster to “catch up” with the air below, and faster air means lower pressure. The pressure part is real. But the “catch up” part is not: the air above the wing doesn’t wait for the air below, and in reality it arrives <em>earlier</em>. A flat plate or even a wing flying upside down can still fly, provided it is tilted into the air.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+      <h2>From curious pressure to controlled flight</h2>
+      <ol class="timeline">
+        <li><span class="year">1738</span>Daniel Bernoulli publishes <em>Hydrodynamica</em>, relating the speed of a flowing fluid to its pressure: faster flow, lower pressure. It’s true, and it is one half of the story.</li>
+        <li><span class="year">1799 – 1810</span>George Cayley sketches the modern airplane: a fixed wing for lift, separate propulsion for thrust, and a tail for control. Later gliders built to his designs carried a person aloft (1853).</li>
+        <li><span class="year">1891 – 1896</span>Otto Lilienthal flies hundreds of glider flights and publishes measured tables of lift against wing angle.</li>
+        <li><span class="year">1901 – 1903</span>The Wright brothers build a wind tunnel, find that the published lift data was wrong, and design their own wings. In December 1903 they make the first powered, controlled flights.</li>
+        <li><span class="year">1902 – 1906</span>Martin Kutta and Nikolai Zhukovsky show how a wing’s shape creates <em>circulation</em> around it, linking the pressure story and the “turn the air downward” story in a mathematical theory of lift. Around 1904, Ludwig Prandtl’s boundary-layer idea explains why air sticks to a wing and then separates at stall.</li>
+      </ol>
+      <div class="callout key"><p class="beat">The idea in one line</p><p>Lift is the reaction to turning the air downward, which can equally be described as a pressure difference between the top and bottom of the wing. Both are true at once.</p></div>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <h2>Four arrows and one slider</h2>
+      <p>This is a <strong>qualitative diagram</strong>. Drag the wing angle and watch the lift arrow. Weight, thrust and drag stay fixed so you can see what the angle alone does.</p>
+      <figure class="illo"><svg viewBox="0 0 600 292" role="img" aria-label="Streamlines bending downward behind a tilted wing, with a lift arrow upward and a downwash arrow downward" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="300" y="24" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">The wing turns the air down. The air pushes the wing up.</text><path d="M150 175 Q300 120 480 165 Q320 192 150 175Z" fill="#5a7a96" stroke="#9ee1dc" stroke-width="2.5" transform="rotate(-8 315 160)"/><path d="M30 70 C170 70 250 62 330 78  S520 130 585 140" stroke="#67d4d0" stroke-width="1.8" opacity=".85"/><path d="M30 105 C170 105 250 97 330 113  S520 165 585 175" stroke="#67d4d0" stroke-width="1.8" opacity=".85"/><path d="M30 140 C170 140 250 132 330 148  S520 200 585 210" stroke="#67d4d0" stroke-width="1.8" opacity=".85"/><path d="M30 210 C170 210 250 214 330 218  S520 280 585 280" stroke="#67d4d0" stroke-width="1.8" opacity=".85"/><path d="M30 245 C170 245 250 249 330 253  S520 315 585 315" stroke="#67d4d0" stroke-width="1.8" opacity=".85"/><path d="M470.0 215.0L470.0 275.0" stroke="#f5b85d" stroke-width="3.5"/><path d="M470.0 275.0L466.1 266.9L473.9 266.9Z" fill="#f5b85d" stroke="#f5b85d" stroke-width="1"/><text x="486" y="262" fill="#f5b85d" font-size="13" text-anchor="start" font-weight="normal" stroke="none">air pushed DOWN</text><path d="M330.0 150.0L330.0 82.0" stroke="#ffffff" stroke-width="4"/><path d="M330.0 82.0L333.9 90.1L326.1 90.1Z" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><text x="344" y="100" fill="#ffffff" font-size="15" text-anchor="start" font-weight="bold" stroke="none">LIFT</text></svg><figcaption>Not to scale and not computed: a sketch of the two views of lift (pressure difference and turning the flow) as one event seen two ways.</figcaption></figure>
+      <div class="equation">Lift ≈ ½ · ρ · v² · S · C<sub>L</sub>(angle)<small>ρ = air density, v = airspeed, S = wing area, C<sub>L</sub> = lift coefficient. For a simple wing C<sub>L</sub> rises almost in a straight line with angle, then falls at the stall.</small></div>
+      <div data-sim="flight" data-alt="A wing tilted into airflow with arrows for lift, weight, thrust and drag" data-caption="Qualitative diagram: arrow lengths are illustrative, not computed from a flow model."></div>
+      <div class="try"><h3>Try this</h3><ol>
+        <li>Start at 0°: a little lift, and the streamlines hardly bend.</li>
+        <li>Increase the angle to about 12°. The wing turns the air more and the lift arrow grows.</li>
+        <li>Push past about 15° into the <strong>stall region</strong>. The lift arrow turns red and shrinks, even though the wing is tilted more.</li>
+        <li>Keep in mind: that threshold is typical for this teaching diagram, not a universal number.</li>
+      </ol></div>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>More angle isn’t always more lift</h2>
+      <p>Tilting a wing deflects more air downward, so lift grows with angle. But the air has to bend around the top surface to stay attached. Past a certain angle it can’t, and the flow <strong>separates</strong>, leaving a messy wake over the top. The smooth downward turning is lost, lift drops sharply, and drag jumps. That is the stall, and it has nothing to do with the engine stopping.</p>
+      <p>The v² in the equation explains something else: speed matters enormously. Double the airspeed and you get four times the lift at the same angle. That’s why aircraft need a long runway to reach flying speed, and why they must fly <em>faster</em> when the wings are small or the air is thin.</p>
+      <div class="callout key"><p class="beat">The surprise</p><p>Pilots recover from a stall by <em>lowering</em> the nose, which reduces the angle. The fix for “not enough lift” is less tilt, not more.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+      <h2>Wings are everywhere</h2>
+      <div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> thousands of airliners are in the air, each one held up by exactly the mechanism in this chapter. Pilots watch an “angle of attack” indicator because the stall in the simulation is a real limit; modern jets even have a stick-shaker that warns the crew when the wing is near it. Wind turbines turning in the next county are doing the same trick, using blades as rotating wings.</p></div>
+      <ul class="apps">
+        <li><strong>Airliners and gliders</strong>Wing area, shape and angle are chosen so the plane makes enough lift at takeoff speed without stalling.</li>
+        <li><strong>Wind turbines and propellers</strong>Each blade is a rotating wing. Its lift is what turns the rotor, or what pushes the aircraft or boat forward.</li>
+        <li><strong>Helicopters</strong>The rotor is a spinning wing. Tilting it changes the lift direction, so the aircraft can move sideways.</li>
+        <li><strong>Sailing</strong>A sail is a wing standing upright. Sailboats can make progress <em>upwind</em> because the sail produces a sideways lift force.</li>
+        <li><strong>Race cars</strong>An upside-down wing makes “downforce,” pressing the car into the road for grip.</li>
+        <li><strong>Birds and drones</strong>Flapping or rotating wings change angle continuously. The same stall limit applies, and they work around it.</li>
+      </ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+      <h2>What the diagram simplifies</h2>
+      <div class="callout lies"><p class="beat">Honest limits</p><p>This is a teaching diagram, not a flow solver. The arrow lengths are not measured forces, and the airflow lines are decorative rather than computed. Real lift depends on airspeed, air density, wing geometry, and the state of the flow around the wing, and the stall angle varies between wings and conditions. A complete aircraft also needs control surfaces, a tail, and stability, none of which are shown. Thrust and drag are held fixed, so the picture can’t show flight performance.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol>
+        <li><strong>Lift comes from turning air downward.</strong> Engines supply thrust, not lift.</li>
+        <li><strong>More tilt gives more lift… until it doesn’t.</strong> Past the stall angle the flow detaches.</li>
+        <li><strong>Speed counts squared.</strong> Twice the airspeed means four times the lift.</li>
+      </ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+      <dl class="glossary">
+        <dt>Lift / weight / thrust / drag</dt><dd>The four forces on an aircraft in steady flight.</dd>
+        <dt>Angle of attack</dt><dd>The angle between the wing and the oncoming air. The “wing angle” here.</dd>
+        <dt>Stall</dt><dd>Sudden loss of lift when airflow separates from the wing’s upper surface.</dd>
+        <dt>Circulation</dt><dd>A net swirl of air around a wing, linked mathematically to lift.</dd>
+      </dl>
+      <ul class="refs">
+        <li>D. Bernoulli, <em>Hydrodynamica</em> (1738).</li>
+        <li>G. Cayley, “On Aerial Navigation” (1809–1810).</li>
+        <li>O. Lilienthal, <em>Der Vogelflug als Grundlage der Fliegekunst</em> (1889).</li>
+        <li>L. Prandtl, “Über Flüssigkeitsbewegung bei sehr kleiner Reibung” (1904).</li>
+      </ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="wave-interference.html">← Wave interference</a><a href="sensing-to-interception.html">Sensing to interception →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

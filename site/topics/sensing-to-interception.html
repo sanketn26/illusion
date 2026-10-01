@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Sensing to interception — illusion</title>
+  <meta name="description" content="Why is detecting something different from knowing where it is going? A conceptual look at radar, tracking and prediction, and the Kalman filter behind them.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-CAS">Case files</a> / CAS01</p>
+    <p class="eyebrow">CAS01 · Case files</p>
+    <h1>Sensing to <em>interception</em></h1>
+    <p class="lede">Seeing something is not the same as knowing where it will be. Between “there is an echo” and “it will be here, then” sits a chain of inference, and every link depends on the one before.</p>
+    <p class="meta"><span>Reading time ≈ 8 min</span><span>Illustration: conceptual sequence</span><span>Video: 5–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>A single sensor reading is a <strong>dot</strong>. Repeated readings make a <strong>track</strong>. A track plus a rule for how things move gives a <strong>prediction</strong>. Only a prediction can tell you where to act. Each step adds usefulness and adds uncertainty, so good systems say not just <em>where</em>, but <em>how sure</em>.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Applications</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>Someone throws you a ball. You do not move to where it <em>is</em>. You move to where it is <em>going to be</em>. Your brain takes a few glimpses of the ball, makes a guess about its path, and sends your hand to the guess.</p>
+      <p>Now suppose you had to do this with a computer, a radio echo and a fast-moving object that may not be a ball. A single echo says <em>something is there</em>. It does not say which way it is going. Turning a handful of echoes into a reliable guess about where it will be, a few seconds from now, is a whole discipline.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“If you can see it, you know where it’s going”</h2>
+      <p>Catching a ball feels effortless, so it is natural to assume that detecting a moving object and predicting its path are one step. They aren’t. One glimpse of a ball tells you where it <em>is</em>. It takes several glimpses, plus a sense of how balls move, for your brain to know where it <em>will be</em>.</p>
+      <p>Machines face the same problem, and a harder one: their measurements are noisy, they arrive in discrete pulses, and the target keeps moving while the system is still thinking.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+      <h2>Echoes, then estimation</h2>
+      <ol class="timeline">
+        <li><span class="year">1886</span>Heinrich Hertz shows that radio waves reflect from solid objects, the physical basis of radar.</li>
+        <li><span class="year">1904</span>Christian Hülsmeyer patents a ship-detection device that listens for radio echoes to avoid collisions in fog.</li>
+        <li><span class="year">1935</span>Robert Watson-Watt’s team demonstrates, at Daventry, that a radio echo from an aircraft can be detected. Within a few years, Britain builds a chain of stations that can warn of approaching aircraft.</li>
+        <li><span class="year">1960</span>Rudolf Kálmán publishes a method for combining a model of motion with noisy measurements to get a best estimate of position and velocity: the <strong>Kalman filter</strong>. It was used in spacecraft navigation, including Apollo.</li>
+        <li><span class="year">Today</span>The same chain, sense, track, predict, then decide, runs behind air traffic control, weather forecasting from radar, collision warning in cars, and satellite tracking.</li>
+      </ol>
+      <div class="callout key"><p class="beat">The idea in one line</p><p>Measurement tells you where something <em>was</em>. A model of motion, applied to several measurements, estimates where it <em>will be</em>.</p></div>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <h2>Four stages, each needing the one before</h2>
+      <p>This picture is <strong>conceptual</strong>. Step through the stages with the slider. It shows how information builds up, not how any real system is built or how well it works.</p>
+      <figure class="illo"><svg viewBox="0 0 600 298" role="img" aria-label="Four observation points leading to a dashed predicted path inside a widening cone of uncertainty" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="300" y="24" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">The longer the prediction, the wider the uncertainty</text><circle cx="70" cy="215" r="6" fill="#f5b85d"/><circle cx="120" cy="192" r="6" fill="#f5b85d"/><circle cx="170" cy="172" r="6" fill="#f5b85d"/><circle cx="220" cy="156" r="6" fill="#f5b85d"/><polyline points="70,215 120,192 170,172 220,156" stroke="#f5b85d" stroke-width="1.8"/><path d="M220 156 L560 60 L560 190 Z" fill="#67d4d0" opacity=".22"/><line x1="220" y1="156" x2="560" y2="125" stroke="#67d4d0" stroke-width="2.5" stroke-dasharray="8 6"/><text x="145" y="245" fill="#f5b85d" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">past observations</text><text x="400" y="52" fill="#67d4d0" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">where it might be</text><text x="500" y="168" fill="#67d4d0" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">best guess</text><text x="300" y="285" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">A prediction is a range. It widens the farther ahead you look.</text></svg><figcaption>The honest version of the “predict” stage. The dashed line is the best guess; the shaded cone is how sure we are.</figcaption></figure>
+      <div class="equation">estimate = prediction from motion model + correction from new measurement<small>This predict–correct loop is the core of tracking filters such as the Kalman filter. The picture shows only the first half, in cartoon form.</small></div>
+      <div data-sim="defense" data-alt="Four stages: detect an echo, build a track, predict a path, symbolic interception" data-caption="Conceptual sequence. No scale, timing, or real system is represented."></div>
+      <div class="try"><h3>Try this</h3><ol>
+        <li><strong>Stage 1.</strong> One echo. You know <em>something is there</em>, and roughly where, but not which way it’s moving.</li>
+        <li><strong>Stage 2.</strong> Several dots. Now there’s a pattern: you can tell speed and direction, but only about the past.</li>
+        <li><strong>Stage 3.</strong> A dashed future path appears. It’s a guess based on an assumption about how the object moves.</li>
+        <li><strong>Stage 4.</strong> Only with a prediction can anything be placed to meet the object, and this is shown symbolically.</li>
+      </ol></div>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Every step buys usefulness with uncertainty</h2>
+      <p>A <strong>detection</strong> says “something is there.” It has no direction. A <strong>track</strong> links detections over time and so reveals velocity. A <strong>prediction</strong> extends the track forward, but the further forward it reaches, the less reliable it is, because small errors in the measured speed grow into larger errors in future position.</p>
+      <p>That is why real systems keep re-observing: each new measurement shrinks the uncertainty again. The long dashed line in the picture should really be a widening cone, narrow where it’s near and wide where it’s far. The honest answer to “where will it be?” is a <em>range</em>, not a point.</p>
+      <div class="callout key"><p class="beat">The surprise</p><p>Prediction depends on an assumption about how the object moves. If the object turns or accelerates unexpectedly, the model is wrong, and the prediction fails even when every measurement was perfect.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+      <h2>Wherever something moving must be anticipated</h2>
+      <div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> weather radars around the world are tracking storm cells from one sweep to the next, and forecasting where each will be in the next hour. Air traffic controllers are watching predicted paths of aircraft to keep them apart. And the collision-warning system in a modern car is deciding, ten times a second, whether the object ahead will still be in your way.</p></div>
+      <ul class="apps">
+        <li><strong>Air traffic control</strong>Radar tracks aircraft and predicts conflicts several minutes ahead, giving controllers time to separate flights.</li>
+        <li><strong>Weather radar</strong>Echoes from raindrops are tracked frame to frame to forecast where a storm cell will be in the next hour.</li>
+        <li><strong>Driver assistance</strong>Cars track the vehicle ahead and predict whether to brake.</li>
+        <li><strong>Navigation and spaceflight</strong>GPS receivers and spacecraft blend noisy measurements with motion models to estimate position.</li>
+        <li><strong>Sports and robotics</strong>Ball-tracking systems and robot arms predict where an object will be a moment from now.</li>
+        <li><strong>Space debris</strong>Tracking catalogues of orbiting objects predicts close approaches with satellites.</li>
+      </ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+      <h2>What this sequence deliberately leaves out</h2>
+      <div class="callout lies"><p class="beat">Honest limits</p><p>This is an information-flow illustration only. It does not model the hardware, timing, engagement logic, guidance, or effectiveness of any real defensive system, and it is not a claim about how well any such system works. There is no noise, no scale, and no uncertainty cone, and the path shown is one tidy curve. Real tracking handles many objects at once, false echoes, and objects that manoeuvre.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol>
+        <li><strong>A detection is not a track.</strong> One dot has no direction.</li>
+        <li><strong>A prediction is an assumption.</strong> It’s only as good as the motion model behind it.</li>
+        <li><strong>Uncertainty grows with distance ahead.</strong> Good systems report the range, and keep re-measuring.</li>
+      </ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+      <dl class="glossary">
+        <dt>Radar</dt><dd>Radio detection and ranging: send a pulse, time the echo to find distance.</dd>
+        <dt>Track</dt><dd>A sequence of linked detections believed to belong to one object.</dd>
+        <dt>State estimate</dt><dd>A best guess of position and velocity, with an uncertainty.</dd>
+        <dt>Kalman filter</dt><dd>A predict-and-correct algorithm that merges a motion model with noisy measurements.</dd>
+      </dl>
+      <ul class="refs">
+        <li>R. E. Kálmán, “A New Approach to Linear Filtering and Prediction Problems,” <em>Journal of Basic Engineering</em> (1960).</li>
+        <li>H. Hertz, experiments on electromagnetic waves (1886–1889).</li>
+        <li>Public histories of the Daventry experiment and Chain Home radar (1935–1939).</li>
+      </ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="how-airplanes-fly.html">← How airplanes fly</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

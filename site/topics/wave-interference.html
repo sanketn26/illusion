@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Wave interference — illusion</title>
+  <meta name="description" content="Two waves can add up to stillness. Young's experiment, the path-difference rule, and why it powers noise-cancelling headphones and gravitational-wave detectors.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-OSC">Oscillations &amp; waves</a> / OSC10</p>
+    <p class="eyebrow">OSC10 · Oscillations &amp; waves</p>
+    <h1>Wave <em>interference</em></h1>
+    <p class="lede">Add two disturbances and sometimes you get nothing at all. That one fact turned light from a stream of particles into a wave, and now cancels the engine noise in your headphones.</p>
+    <p class="meta"><span>Reading time ≈ 9 min</span><span>Simulation: Moderate (M)</span><span>Video: 5–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>Waves from two sources <strong>add</strong> wherever they meet. If a peak meets a peak, they reinforce; if a peak meets a trough, they cancel. Which one happens at a point depends only on the <strong>difference in distance</strong> to the two sources, measured in wavelengths.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Applications</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>You are on a long flight. The cabin roars, a steady, tiring drone from the engines. You put on noise-cancelling headphones and flip the switch. The roar fades to almost nothing.</p>
+      <p>Here is the odd part. Those headphones don’t <em>block</em> the sound the way earplugs do. They <em>add</em> sound. A tiny microphone listens to the engine noise, and a speaker plays back a carefully made copy of it, upside down.</p>
+      <p>How can adding more sound make less? That is the question that ended a hundred-year argument about the nature of light.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>Two disturbances can’t add up to <em>less</em>… can they?</h2>
+      <p>Drop one pebble in a pond and you get ripples. Drop two, and your instinct says: twice the disturbance. Yet along certain lines in the water the surface stays <strong>perfectly calm</strong>, even though two sets of ripples are crossing it. Adding two things and getting nothing seems like a violation of arithmetic.</p>
+      <p>It isn’t. A wave isn’t an amount, it is a <em>swing up and down</em>. And swings can be added with signs.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+      <h2>The argument about light</h2>
+      <ol class="timeline">
+        <li><span class="year">1600s</span>Newton champions light as a stream of particles (“corpuscles”); Huygens argues for waves. Newton’s authority wins for a century.</li>
+        <li><span class="year">1801 – 1803</span>Thomas Young shines light through two narrow openings and sees alternating bright and dark stripes on a screen. Particles landing in two heaps would not do this; overlapping waves would. He explains the stripes with the principle of <strong>interference</strong>, borrowing the idea from ripples and sound.</li>
+        <li><span class="year">1818</span>Augustin Fresnel develops a full wave theory of light. Simeon Poisson objects that it predicts an absurd bright spot at the centre of a round shadow; François Arago tests it, and the spot is there. The wave theory wins.</li>
+        <li><span class="year">1887</span>Michelson and Morley build an interferometer, splitting a beam and recombining it, to detect motion through the supposed “ether”. Their null result helped open the road to relativity.</li>
+        <li><span class="year">2015</span>LIGO detects gravitational waves with a 4-km interferometer, measuring a change in length thousands of times smaller than a proton by watching two beams cancel or not.</li>
+      </ol>
+      <div class="callout key"><p class="beat">The idea in one line</p><p>At every point, add the waves arriving from each source: the result depends on whether they arrive <em>in step</em> or <em>out of step</em>.</p></div>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <h2>Two identical sources, one rule</h2>
+      <p>Each white dot emits a circular wave that spreads outward with the same wavelength and the same timing. The picture shows the <strong>sum</strong> of the two waves at every pixel, as it evolves. Bright is a high swing, dark is a low swing.</p>
+      <figure class="illo"><svg viewBox="0 0 600 308" role="img" aria-label="Two sources and a point P with two path lengths; the difference decides bright or dark" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="300" y="24" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Why path difference decides</text><line x1="150" y1="250" x2="470" y2="140" stroke="#f5b85d" stroke-width="2.5"/><line x1="150" y1="90" x2="470" y2="140" stroke="#67d4d0" stroke-width="2.5"/><circle cx="150" cy="250" r="9" fill="#fff"/><text x="134" y="255" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">S₂</text><circle cx="150" cy="90" r="9" fill="#fff"/><text x="134" y="95" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">S₁</text><circle cx="470" cy="140" r="7" fill="#f18a76"/><text x="484" y="145" fill="#f18a76" font-size="15" text-anchor="start" font-weight="bold" stroke="none">P</text><text x="300" y="130" fill="#67d4d0" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">distance r₁</text><text x="300" y="222" fill="#f5b85d" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">distance r₂ (longer)</text><text x="300" y="275" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">r₂ − r₁ = 0, λ, 2λ …  → crest meets crest: bright.</text><text x="300" y="295" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">r₂ − r₁ = ½λ, 1½λ …  → crest meets trough: calm.</text></svg><figcaption>At any point, compare the two travel distances. Whole wavelengths apart means in step; half a wavelength off means out of step.</figcaption></figure>
+      <div class="equation">field(x, y, t) = ½ [ sin(k·r₁ − ωt) + sin(k·r₂ − ωt) ]<small>r₁, r₂ = distances to each source. Peaks reinforce where r₁ − r₂ = 0, ±λ, ±2λ…; they cancel where r₁ − r₂ = ±½λ, ±1½λ…  Here λ ≈ 84 px.</small></div>
+      <div data-sim="waves" data-alt="Two point sources emitting circular waves producing a pattern of bright and dark bands" data-caption="Each white dot is a source. Watch for lines where the pattern never changes: those are the cancellation lines."></div>
+      <div class="try"><h3>Try this</h3><ol>
+        <li>Look for the lines that stay <strong>flat grey</strong> while everything around them pulses. That is destructive interference.</li>
+        <li>Slide <strong>Source spacing</strong> up. More lines of cancellation fan out between the same two sources.</li>
+        <li>Slide it to the minimum, with the sources closer than one wavelength. Only a single central band survives.</li>
+        <li>Pause and compare the pattern on the left and right of the sources. It is perfectly mirrored.</li>
+      </ol></div>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Where the stillness hides</h2>
+      <p>Pick any point. The wave from the nearer source arrives slightly ahead of the one from the farther source. If the extra distance is a whole number of wavelengths, the two arrive <em>in step</em>: peak with peak, always. If the extra distance is a half wavelength more, they arrive <em>out of step</em>: peak with trough, always.</p>
+      <p>Those two conditions carve the plane into fans of bright and dark lines, the interference pattern. Because it depends only on distances, the pattern is <strong>fixed in space</strong> even as the waves themselves move. That is why the cancellation lines are the easiest things to spot: they are the only places where nothing moves.</p>
+      <p>Energy isn’t destroyed at the dark lines. It is redistributed, so the bright regions are brighter than either source alone would make them.</p>
+      <div class="callout key"><p class="beat">The surprise</p><p>Spacing matters in wavelength units. Move the sources by half a wavelength and every bright place becomes dark. Tiny geometry changes, big pattern changes.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+      <h2>Cancelling and reinforcing on purpose</h2>
+      <div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> the Wi-Fi in your home is full of interference. Signals bounce off walls and furniture and reach your phone along many paths, so there are spots in the room where they cancel and spots where they add. That is why moving a few centimetres can fix a bad connection. Meanwhile the LIGO detectors are running, using the same two-path cancelling trick to sense distortions of space smaller than a thousandth of a proton.</p></div>
+      <ul class="apps">
+        <li><strong>Noise-cancelling headphones</strong>A microphone hears the noise, and the speaker plays the inverted wave. At your ear, peak meets trough.</li>
+        <li><strong>Soap bubbles and oil films</strong>Light reflects from the front and back of a thin film. Their path difference depends on thickness and colour, so different thicknesses show different colours.</li>
+        <li><strong>Anti-reflective coatings</strong>A lens coating is a film of just the right thickness so that reflected light cancels itself.</li>
+        <li><strong>Phased-array radar and 5G</strong>Many antennas, each delayed slightly, steer a beam by arranging interference so that signal reinforces in one direction and cancels elsewhere.</li>
+        <li><strong>LIGO and interferometers</strong>The same two-path idea measures lengths to a tiny fraction of an atom’s width.</li>
+        <li><strong>Wi-Fi dead spots</strong>Signals bouncing off walls arrive by different paths and can cancel at some positions. Moving a few centimetres can fix the signal.</li>
+      </ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+      <h2>What the picture simplifies</h2>
+      <div class="callout lies"><p class="beat">Honest limits</p><p>This is a 2D scalar wave with a fixed amplitude. Real light is a 3D vector wave, and real water ripples fade with distance and depend on depth, which this model ignores (so does it drop energy loss and reflections from walls). The colours show the instantaneous swing, not a time-averaged intensity, which is what a camera or eye would register. And the sources are idealised points that never run out of energy.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol>
+        <li><strong>Waves add with signs.</strong> Peak + peak is bigger; peak + trough is nothing.</li>
+        <li><strong>Path difference decides.</strong> A whole number of wavelengths reinforces; half-odd numbers cancel.</li>
+        <li><strong>The pattern stands still</strong> while the waves move, so look for what stays flat.</li>
+      </ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+      <dl class="glossary">
+        <dt>Wavelength (λ)</dt><dd>Distance between neighbouring peaks.</dd>
+        <dt>Superposition</dt><dd>Where waves overlap, the total is the sum of each wave’s swing.</dd>
+        <dt>Constructive / destructive</dt><dd>Interference that increases / decreases the combined swing.</dd>
+        <dt>Path difference</dt><dd>The difference in distance from each source to a point.</dd>
+      </dl>
+      <ul class="refs">
+        <li>T. Young, Bakerian Lectures to the Royal Society (1801–1803) and subsequent <em>Philosophical Transactions</em> papers on light.</li>
+        <li>A. Fresnel, memoir on diffraction (1818).</li>
+        <li>LIGO Scientific Collaboration and Virgo, “Observation of Gravitational Waves from a Binary Black Hole Merger,” <em>Physical Review Letters</em> (2016).</li>
+      </ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="heat-diffusion.html">← Heat diffusion</a><a href="how-airplanes-fly.html">How airplanes fly →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>
