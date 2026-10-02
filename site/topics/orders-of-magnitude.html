@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Orders of magnitude — illusion</title>
+  <meta name="description" content="A million seconds is under two weeks; a billion is thirty-two years. Why our feel for big and small numbers fails, and the tool, powers of ten, that fixes it.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-FND">Foundations &amp; method</a> / FND03</p>
+    <p class="eyebrow">FND03 · Foundations &amp; method</p>
+    <h1>Orders of <em>magnitude</em></h1>
+    <p class="lede">A million seconds is about eleven and a half days. A billion seconds is about thirty-two years. A trillion is about thirty-two thousand. We say “million, billion, trillion” as if they were neighbours. They are in different worlds.</p>
+    <p class="meta"><span>Reading time ≈ 9 min</span><span>Simulation: Starter (S)</span><span>Video: 5–9 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>To compare things that differ by a factor of a thousand or a billion, count in <strong>powers of ten</strong>. Each step up is ten times bigger. Across the whole of known physics, from a proton to the observable universe, there are only about <strong>42 steps</strong>. Thinking this way lets you estimate almost anything and spot nonsense at a glance.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>Suppose someone offered to give you a million seconds of free time, or a billion. Which would you rather have? Most people feel that a billion is “more” but not how much more. Do the arithmetic. A million seconds is a fortnight’s holiday. A billion seconds is a whole working life, thirty-two years.</p>
+      <p>Now a trillion. A trillion seconds ago, which is about thirty-two thousand years, humans were painting on cave walls in the Ice Age, and farming had not yet begun.</p>
+      <p>Politicians and newspapers say “million,” “billion” and “trillion” in the same breath. The words sound alike, but they hide factors of a thousand each. The human mind simply was not built to feel the difference. Physics, which routinely deals with sizes from the proton to the cosmos, needed a better way.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“Big numbers are just bigger”</h2>
+      <p>We handle ordinary quantities, the number of people in a room, the length of a table, with an instinctive sense of scale. But that sense runs out quickly. Ask people to place a million and a billion on a line from zero to a trillion and many put the billion near the middle.</p>
+      <p>The fix is to measure not by <em>how much</em>, but by <em>how many times ten</em>.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">c. 216 BCE</span>In <em>The Sand Reckoner</em>, Archimedes invents a system for naming enormous numbers, to show that even the number of grains of sand needed to fill the universe could be counted.</li><li><span class="year">1945</span>Enrico Fermi, watching the Trinity test, drops scraps of paper and estimates the blast’s strength from how far the air pushes them. He is within a factor of two. “Fermi estimates” become a way of thinking.</li><li><span class="year">1957</span>Dutch educator Kees Boeke publishes <em>Cosmic View</em>, a picture book zooming out by powers of ten.</li><li><span class="year">1968–77</span>Charles and Ray Eames make the film <em>Powers of Ten</em>: it zooms out by a factor of ten every ten seconds to 10²⁵ metres, then plunges in to 10⁻¹⁶ metres, covering 41 powers of ten in about nine minutes.</li></ol><figure class="illo"><svg viewBox="0 0 620 268" role="img" aria-label="Three bars showing a million seconds is 11.6 days, a billion seconds is 31.7 years, and a trillion seconds is 31,700 years" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">How long is a million, a billion, a trillion seconds?</text><text x="170" y="68" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">a million seconds</text><rect x="180" y="46" width="150" height="34" rx="5" fill="#67d4d0"/><text x="338.0" y="68" fill="#e8edf5" font-size="15" text-anchor="start" font-weight="bold" stroke="none">11.6 days</text><text x="170" y="124" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">a billion seconds</text><rect x="180" y="102" width="225" height="34" rx="5" fill="#f5b85d"/><text x="413.0" y="124" fill="#e8edf5" font-size="15" text-anchor="start" font-weight="bold" stroke="none">31.7 years</text><text x="170" y="180" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">a trillion seconds</text><rect x="180" y="158" width="300" height="34" rx="5" fill="#f18a76"/><text x="488.0" y="180" fill="#e8edf5" font-size="15" text-anchor="start" font-weight="bold" stroke="none">31,700 years</text><text x="310" y="232" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">Each is 1,000 times the one before. Bar lengths are logarithmic.</text><text x="310" y="252" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">A trillion seconds ago, ice sheets covered much of Europe and nobody had farmed.</text></svg><figcaption>A million, a billion and a trillion seconds. Each is a thousand times the last.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>The bars show a list of things, from a proton to the observable universe, as a <strong>fraction of the width of the view</strong>. Slide the width up or down by powers of ten. Anything wider than the view is drawn as a full bar with an arrow, and anything too small to see is a hair-thin line. Press <strong>Zoom out automatically</strong> and watch the objects drop into view one by one.</p>
+      <div class="equation">size = 10^x metres         x = log₁₀(size)         one order of magnitude = one step of x = a factor of 10<small>The slider is on a logarithmic (powers-of-ten) scale. The bars are on an ordinary linear scale. That combination is how you see very different sizes together.</small></div>
+<div data-sim="orders" data-alt="A list of objects from a proton to the observable universe shown as bars against an adjustable view width" data-caption="The slider sets the view width as a power of ten. Teal bars fit in the view; amber bars are bigger than the view; thin grey lines are too small to see."></div><div class="try"><h3>Try this</h3><ol><li>Start at a view width of <strong>1 metre</strong>. You are bigger than the view; an ant is a tiny sliver; an atom is invisible.</li><li>Slide the width <strong>up to 10 km</strong>. Now you are invisible and Mount Everest fills about 90% of the view.</li><li>Press <strong>Zoom out automatically</strong>. Watch the Earth, the Sun and the Solar System each take their turn.</li><li>Slide <strong>down</strong> to 100 nanometres. A virus fills the view, and your hair is hopelessly larger.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 350" role="img" aria-label="A vertical ladder of sizes from a proton to the observable universe, spanning 42 powers of ten" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">The ladder of sizes (every step is 1,000 times)</text><line x1="310" y1="44" x2="310" y2="330" stroke="#51627a" stroke-width="2"/><circle cx="310" cy="330.0" r="5" fill="#67d4d0"/><text x="324" y="334.0" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">proton  (10^-15 m)</text><circle cx="310" cy="289.1" r="5" fill="#67d4d0"/><text x="296" y="293.14285714285717" fill="#91a3bb" font-size="13" text-anchor="end" font-weight="normal" stroke="none">DNA width  (10^-9 m)</text><circle cx="310" cy="268.7" r="5" fill="#67d4d0"/><text x="324" y="272.7142857142857" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">bacterium  (10^-6 m)</text><circle cx="310" cy="248.3" r="5" fill="#67d4d0"/><text x="296" y="252.28571428571428" fill="#91a3bb" font-size="13" text-anchor="end" font-weight="normal" stroke="none">ant  (10^-3 m)</text><circle cx="310" cy="227.9" r="5" fill="#f5b85d"/><text x="324" y="231.85714285714286" fill="#ffffff" font-size="13" text-anchor="start" font-weight="bold" stroke="none">you  (10^0 m)</text><circle cx="310" cy="207.4" r="5" fill="#67d4d0"/><text x="296" y="211.42857142857144" fill="#91a3bb" font-size="13" text-anchor="end" font-weight="normal" stroke="none">a mountain  (10^3 m)</text><circle cx="310" cy="180.2" r="5" fill="#67d4d0"/><text x="324" y="184.19047619047618" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">the Earth  (10^7 m)</text><circle cx="310" cy="166.6" r="5" fill="#67d4d0"/><text x="296" y="170.57142857142858" fill="#91a3bb" font-size="13" text-anchor="end" font-weight="normal" stroke="none">the Sun  (10^9 m)</text><circle cx="310" cy="146.1" r="5" fill="#67d4d0"/><text x="324" y="150.14285714285714" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">the Solar System  (10^12 m)</text><circle cx="310" cy="118.9" r="5" fill="#67d4d0"/><text x="296" y="122.9047619047619" fill="#91a3bb" font-size="13" text-anchor="end" font-weight="normal" stroke="none">a light-year  (10^16 m)</text><circle cx="310" cy="84.9" r="5" fill="#67d4d0"/><text x="324" y="88.85714285714286" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">the Milky Way  (10^21 m)</text><circle cx="310" cy="44.0" r="5" fill="#67d4d0"/><text x="296" y="48.0" fill="#91a3bb" font-size="13" text-anchor="end" font-weight="normal" stroke="none">the observable universe  (10^27 m)</text></svg><figcaption>From a proton to the universe is about 42 steps of ten, and you are about one-third of the way up.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Counting in tens</h2>
+      <p>An <strong>order of magnitude</strong> is a factor of ten. If one thing is two orders of magnitude bigger than another, it is a hundred times bigger. Writing a number as a power of ten, like 10⁶ for a million, 10⁹ for a billion, turns multiplication into addition: the exponents simply add. Suddenly a million (6) and a billion (9) are three steps apart, and a trillion (12) is three steps beyond that.</p>
+      <p>Seen this way, the whole known universe fits on one short ladder. The proton is about 10⁻¹⁵ metres across. You are about 10⁰. The Earth is about 10⁷. The observable universe is about 10²⁷. That is only 42 steps from the size of a proton to the width of the observable universe, and each step is an idea you can hold in your head.</p>
+      <h3>Estimating like Fermi</h3>
+      <p>The great practical use of this is the quick estimate: to find an answer to within a factor of ten, break a question into pieces you can guess to the nearest power of ten, and multiply. Physicists use it to check whether a result is even plausible before doing the detail. How many piano tuners in Chicago? How much oil does a country use in a day? Any answer within a factor of a few is already far better than a guess.</p><div class="callout key"><p class="beat">The surprise</p><p>Our everyday sense of number is linear, but the world is multiplicative. Learning to count in tens turns the impossible-to-imagine into a short list of steps, and lets you spot, at a glance, whether a claim is off by a factor of a thousand.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> your body contains roughly 30 to 40 trillion cells, and every cell that has a nucleus holds about two metres of DNA (red blood cells have none), so that all the DNA laid end to end would reach to the Sun and back dozens of times. The processor in your phone is switching billions of times a second. And at this moment, light that left the Sun eight minutes ago is falling on the Earth, light that left the nearest star over four years ago is only now arriving, and light from the farthest galaxies has been on its way for over thirteen billion years.</p></div><ul class="apps"><li><strong>Scientific notation</strong>Every science uses powers of ten to handle sizes from atoms to galaxies.</li><li><strong>Estimation and sanity checks</strong>Engineers and scientists check answers to within a factor of ten before trusting them.</li><li><strong>Computing</strong>Memory and speed are measured in powers of ten: kilo-, mega-, giga-, tera-.</li><li><strong>Finance and policy</strong>Understanding “million” versus “billion” is basic financial literacy.</li><li><strong>Medicine and biology</strong>Cells, bacteria and viruses span about four orders of magnitude, which dictates which instrument sees them.</li><li><strong>Cosmology</strong>The universe’s scales are only meaningful as ratios of tens.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>The sizes are rounded: “the Earth” is its diameter, “a proton” is an approximate charge radius doubled, and “the observable universe” is the diameter of the region we can see, a convention rather than an edge. Each bar is drawn on an ordinary linear scale against the view; objects are shown as bars, not shapes. Very small things are drawn as the thinnest line, which isn’t their real size. The zoom runs continuously, but there is nothing special about powers of ten except that we count in tens.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Count in tens.</strong> One order of magnitude is a factor of ten.</li><li><strong>A million, a billion and a trillion are far apart.</strong> Each is a thousand times the last: 12 days, 32 years, 32,000 years of seconds.</li><li><strong>42 steps cover everything.</strong> From a proton to the observable universe.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Order of magnitude</dt><dd>A factor of ten. “Two orders of magnitude bigger” means a hundred times.</dd><dt>Scientific notation</dt><dd>Writing a number as a decimal times a power of ten, like 3 × 10⁸.</dd><dt>Logarithmic scale</dt><dd>A scale where each equal step multiplies the value by a fixed factor, such as ten.</dd><dt>Fermi estimate</dt><dd>A quick estimate that breaks a problem into parts guessed to the nearest power of ten.</dd></dl><ul class="refs"><li>Archimedes, <em>The Sand Reckoner</em> (c. 216 BCE).</li><li>K. Boeke, <em>Cosmic View: The Universe in 40 Jumps</em> (1957).</li><li>C. and R. Eames, <em>Powers of Ten</em> (film, 1977).</li><li>E. Fermi, notes on the Trinity test (1945).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

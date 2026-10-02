@@ -18,57 +18,57 @@
 ## FND | Foundations & method | How to think quantitatively, and how to simulate without fooling yourself.
 FND01 | Scale and the square-cube law | S | idea | - | Bigger is not just more of the same | An ant carries many times its weight, yet a giant ant could not stand. |
 FND02 | Dimensional analysis: guess a formula from units | S | idea | - | Units alone can predict physics | Estimating a pendulum's period without solving anything. |
-FND03 | Orders of magnitude | S | idea | - | Our feel for very big and very small is poor | Zooming from the Earth down to an atom, ten times at a time. |
+FND03 | Orders of magnitude | S | shipped:orders-of-magnitude | - | Our feel for very big and very small is poor | Zooming from the Earth down to an atom, ten times at a time. |
 FND04 | Time steps and honest integrators | M | idea | MEC03 | A simulation can be wrong in a way that looks right | A simulated planet slowly spirals outward for no physical reason. |
 FND05 | Monte Carlo: computing pi with darts | S | idea | - | Randomness can compute exact things | Throwing darts at a square with a circle inside. |
 FND06 | Many small causes make a bell curve | S | idea | - | Averages calm down; extremes are rare | Balls falling through a board of pegs. |
-FND07 | Vectors: adding pushes | S | idea | - | Forces add like arrows, not like numbers | Two people pull a sled at an angle. |
+FND07 | Vectors: adding pushes | S | shipped:vectors | - | Forces add like arrows, not like numbers | Two people pull a sled at an angle. |
 FND08 | Linear, exponential and power-law growth | S | idea | - | Doubling feels slow, then is not | A lily pad that doubles daily covers a pond. |
 FND09 | Measurement and uncertainty | S | idea | - | Every number carries an error bar | Two careful measurements never quite agree. |
-FND10 | Vector fields: arrows everywhere | S | idea | FND07 | Space itself can carry direction and size | A weather map of wind arrows. |
+FND10 | Vector fields: arrows everywhere | S | shipped:vector-fields | FND07 | Space itself can carry direction and size | A weather map of wind arrows. |
 
 ## MEC | Motion & forces | Classical mechanics: how things move, push, spin and collide.
-MEC01 | Speed versus acceleration | S | idea | - | Speed and acceleration feel like one thing | A car cruising at 100 km/h versus one pulling away from a light. |
-MEC02 | Free fall: heavy and light together | S | idea | MEC01 | Heavier things fall faster | A hammer and a feather dropped on the Moon. |
-MEC03 | Projectile motion | S | idea | MEC02,FND07 | Sideways speed slows your fall | Drop one ball and fire another sideways at the same instant. |
-MEC04 | Newton's laws: force changes motion | S | idea | FND07,MEC01 | Motion needs a continuing push | A puck gliding on ice versus on carpet. |
-MEC05 | Friction and braking distance | S | idea | MEC04 | Twice as fast means twice the stopping distance | A wet road lengthens a car's stop. | 21
-MEC06 | Circular motion and centripetal force | M | idea | MEC04 | A turning car is pushed outward | A bucket swung overhead; mud leaving a wheel. |
-MEC07 | Conservation of momentum | S | idea | MEC04 | Motion is redistributed, not lost | Two skaters push apart on ice. | 11
-MEC08 | Elastic and inelastic collisions | S | idea | MEC07 | Energy can change form without vanishing | Billiard balls versus lumps of clay. |
-MEC09 | Impulse: seat belts and airbags | S | idea | MEC07 | The stop is the same, the force is not | A car stops suddenly but an unbelted passenger keeps moving. | 35
-MEC10 | Centre of mass | S | idea | - | A messy system has a simple summary | Balancing a hammer on one finger. |
-MEC11 | Energy conservation: the roller coaster | S | idea | MEC04 | Energy gets used up | A coaster never climbs higher than its first hill. |
-MEC12 | Potential-energy landscapes | M | idea | MEC11 | Forces point downhill in stored energy | A marble settles into a bowl. | 14
-MEC13 | Torque and levers | S | idea | MEC04 | A small force can balance a large one | A crowbar lifts the corner of a car. |
-MEC14 | Angular momentum: the spinning skater | M | idea | MEC13 | You speed up by pulling in, with no push | A skater draws in their arms mid-spin. |
+MEC01 | Speed versus acceleration | S | shipped:speed-and-acceleration | - | Speed and acceleration feel like one thing | A car cruising at 100 km/h versus one pulling away from a light. |
+MEC02 | Free fall: heavy and light together | S | shipped:free-fall | MEC01 | Heavier things fall faster | A hammer and a feather dropped on the Moon. |
+MEC03 | Projectile motion | S | shipped:projectile-motion | MEC02,FND07 | Sideways speed slows your fall | Drop one ball and fire another sideways at the same instant. |
+MEC04 | Newton's laws: force changes motion | S | shipped:newtons-laws | FND07,MEC01 | Motion needs a continuing push | A puck gliding on ice versus on carpet. |
+MEC05 | Friction and braking distance | S | shipped:friction-and-braking | MEC04 | Twice as fast means twice the stopping distance | A wet road lengthens a car's stop. | 21
+MEC06 | Circular motion and centripetal force | M | shipped:circular-motion | MEC04 | A turning car is pushed outward | A bucket swung overhead; mud leaving a wheel. |
+MEC07 | Conservation of momentum | S | shipped:momentum | MEC04 | Motion is redistributed, not lost | Two skaters push apart on ice. | 11
+MEC08 | Elastic and inelastic collisions | S | shipped:collisions | MEC07 | Energy can change form without vanishing | Billiard balls versus lumps of clay. |
+MEC09 | Impulse: seat belts and airbags | S | shipped:impulse | MEC07 | The stop is the same, the force is not | A car stops suddenly but an unbelted passenger keeps moving. | 35
+MEC10 | Centre of mass | S | shipped:centre-of-mass | - | A messy system has a simple summary | Balancing a hammer on one finger. |
+MEC11 | Energy conservation: the roller coaster | S | shipped:energy-conservation | MEC04 | Energy gets used up | A coaster never climbs higher than its first hill. |
+MEC12 | Potential-energy landscapes | M | shipped:potential-energy-landscapes | MEC11 | Forces point downhill in stored energy | A marble settles into a bowl. | 14
+MEC13 | Torque and levers | S | shipped:torque-and-levers | MEC04 | A small force can balance a large one | A crowbar lifts the corner of a car. |
+MEC14 | Angular momentum: the spinning skater | M | shipped:angular-momentum | MEC13 | You speed up by pulling in, with no push | A skater draws in their arms mid-spin. |
 MEC15 | Gyroscopes and precession | H | idea | MEC14 | A spinning top does not fall the way you expect | A top leans yet stays up. |
 MEC16 | Rolling races: who wins the ramp? | M | idea | MEC13,MEC11 | Heavier or bigger rolls faster | A ring, a disc and a sphere released together. |
 MEC17 | Fictitious forces in rotating frames | H | idea | MEC06 | Forces can appear just because you rotate | You feel flung outward on a merry-go-round. |
 MEC18 | Symmetry and conservation (Noether in pictures) | H | idea | MEC07,MEC11,MEC14 | Conservation laws come from sameness | Why does energy stay constant at all? |
 
 ## OSC | Oscillations & waves | Things that swing, and patterns that travel: springs, sound, standing waves, Fourier.
-OSC01 | Springs and Hooke's law | S | idea | MEC04 | Stretch twice, pull twice | A bathroom scale. |
-OSC02 | Pendulums and simple harmonic motion | S | idea | MEC04 | A bigger swing takes longer | A grandfather clock keeps time as its swing fades. |
-OSC03 | Damping: how a suspension smooths bumps | M | idea | OSC02 | A stiffer shock is always better | A car crosses repeated bumps. | 40
-OSC04 | Resonance | M | idea | OSC02 | Small pushes can become large effects | A playground swing rises with well-timed pushes. | 12
-OSC05 | Coupled pendulums | M | idea | OSC02 | Systems can trade energy rhythmically | Two swings joined by a rope. |
+OSC01 | Springs and Hooke's law | S | shipped:springs | MEC04 | A bigger stretch takes longer to come back | A bathroom scale. |
+OSC02 | Pendulums and simple harmonic motion | S | shipped:pendulums | MEC04 | A bigger swing takes longer | A grandfather clock keeps time as its swing fades. |
+OSC03 | Damping: how a suspension smooths bumps | M | shipped:damping | OSC02 | A stiffer shock is always better | A car crosses repeated bumps. | 40
+OSC04 | Resonance | M | shipped:resonance | OSC02 | Small pushes can become large effects | A playground swing rises with well-timed pushes. | 12
+OSC05 | Coupled pendulums | M | shipped:coupled-pendulums | OSC02 | Systems can trade energy rhythmically | Two swings joined by a rope. |
 OSC06 | Normal modes | M | idea | OSC05 | A tangled motion is a sum of simple patterns | A chain of beads wobbles in distinct patterns. |
 OSC07 | Sine wave basics | S | shipped:sine-waves | - | A wave moves a pattern, not matter | A stadium wave circles while spectators stay seated. | 06
-OSC08 | What sets a wave's speed | S | idea | OSC07 | A harder push makes a faster wave | A pulse on a taut rope; a louder shout is not faster. |
-OSC09 | Superposition | S | idea | OSC07 | Waves collide and are unharmed | Ripples cross each other and carry on. |
+OSC08 | What sets a wave's speed | S | shipped:wave-speed | OSC07 | A harder push makes a faster wave | A pulse on a taut rope; a louder shout is not faster. |
+OSC09 | Superposition | S | shipped:superposition | OSC07 | Waves collide and are unharmed | Ripples cross each other and carry on. |
 OSC10 | Wave interference | M | shipped:wave-interference | OSC07 | Adding can erase | Two pebbles make overlapping ripples. | 07
 OSC11 | Standing waves | S | shipped:standing-waves | OSC07 | Boundaries create allowed patterns | A guitar string vibrates between two fixed ends. | 08
-OSC12 | Harmonics and timbre | M | idea | OSC11 | A note is only its pitch | A violin and a flute playing the same note. |
-OSC13 | Fourier decomposition | M | idea | OSC09 | Complex shapes are built from simple waves | A musical note has a distinctive tone. | 13
-OSC14 | Beats | S | idea | OSC09 | Slow patterns can arise from fast oscillations | Two guitar strings slightly out of tune. |
-OSC15 | The Doppler effect | M | idea | OSC07 | A siren changes as it passes though it does not | An ambulance drives past. |
-OSC16 | Wave packets and group velocity | M | idea | OSC13 | A localised thing can be made of spread-out waves | A single clap versus a steady hum. |
-OSC17 | Dispersion | M | idea | OSC16 | Different frequencies travel at different speeds | Deep-water waves sort themselves by wavelength. |
-OSC18 | Reflection, transmission and echoes | M | idea | OSC08 | A boundary only bounces or absorbs | A shout echoes off a cliff. |
-OSC19 | Diffraction: waves bend round corners | M | idea | OSC10 | You can hear round a corner but not see | A voice carries from behind a wall. |
+OSC12 | Harmonics and timbre | M | shipped:harmonics-and-timbre | OSC11 | A note is only its pitch | A violin and a flute playing the same note. |
+OSC13 | Fourier decomposition | M | shipped:fourier-decomposition | OSC09 | Complex shapes are built from simple waves | A musical note has a distinctive tone. | 13
+OSC14 | Beats | S | shipped:beats | OSC09 | Slow patterns can arise from fast oscillations | Two guitar strings slightly out of tune. |
+OSC15 | The Doppler effect | M | shipped:doppler-effect | OSC07 | A siren changes as it passes though it does not | An ambulance drives past. |
+OSC16 | Wave packets and group velocity | M | shipped:wave-packets | OSC13 | A localised thing can be made of spread-out waves | A single clap versus a steady hum. |
+OSC17 | Dispersion | M | shipped:dispersion | OSC16 | Different frequencies travel at different speeds | Deep-water waves sort themselves by wavelength. |
+OSC18 | Reflection, transmission and echoes | M | shipped:reflection-and-echoes | OSC08 | A boundary only bounces or absorbs | A shout echoes off a cliff. |
+OSC19 | Diffraction: waves bend round corners | M | shipped:diffraction | OSC10 | You can hear round a corner but not see | A voice carries from behind a wall. |
 OSC20 | Shock waves and sonic booms | H | idea | OSC15 | Information can pile up into a front | A whip crack; a boat's wake. |
-OSC21 | Sampling and aliasing | M | idea | OSC13 | Too few snapshots can invent false motion | A wagon wheel appears to spin backward on film. |
+OSC21 | Sampling and aliasing | M | shipped:sampling-and-aliasing | OSC13 | Too few snapshots can invent false motion | A wagon wheel appears to spin backward on film. |
 OSC22 | Chladni patterns: modes in 2D | M | idea | OSC11 | Sand sorts itself on a vibrating plate | Sand on a violin-bowed metal plate. |
 
 ## OPT | Light & optics | Rays, waves and colour: from pinholes to polarisation.
@@ -212,15 +212,15 @@ REL16 | The block universe | X | idea | REL09 | Time flows as a mechanism | A lo
 
 ## GRV | Gravity & orbits | From falling apples to curved spacetime.
 GRV01 | Gravity as a field | S | shipped:gravity-field | - | Gravity is only a pull between two things | A satellite keeps falling around Earth. | 10
-GRV02 | The inverse-square law | S | idea | - | Twice as far means half as strong | A lamp seen from twice as far. |
-GRV03 | Orbits: falling around the Earth | S | idea | MEC03,GRV01 | Orbiting things have escaped gravity | Newton's cannon fires faster and faster. |
-GRV04 | Weightlessness in orbit | S | idea | GRV03 | Astronauts float because gravity is weak | Gravity at the space station is about 90% of Earth's. |
-GRV05 | Kepler's laws | M | idea | GRV03 | Planets move at a steady pace | A planet speeds up near the Sun. |
-GRV06 | Escape velocity | M | idea | GRV03,MEC11 | You can leave Earth if you just keep going | A rocket needs a minimum speed or a continuous thrust. |
+GRV02 | The inverse-square law | S | shipped:inverse-square-law | - | Twice as far means half as strong | A lamp seen from twice as far. |
+GRV03 | Orbits: falling around the Earth | S | shipped:orbits | MEC03,GRV01 | Orbiting things have escaped gravity | Newton's cannon fires faster and faster. |
+GRV04 | Weightlessness in orbit | S | shipped:weightlessness | GRV03 | Astronauts float because gravity is weak | Gravity at the space station is about 90% of Earth's. |
+GRV05 | Kepler's laws | M | shipped:keplers-laws | GRV03 | Planets move at a steady pace | A planet speeds up near the Sun. |
+GRV06 | Escape velocity | M | shipped:escape-velocity | GRV03,MEC11 | You can leave Earth if you just keep going | A rocket needs a minimum speed or a continuous thrust. |
 GRV07 | Gravity assists | M | idea | GRV05,MEC08 | A spacecraft needs fuel for every speed-up | Probes gain speed from a planet's motion. |
 GRV08 | Lagrange points | H | idea | GRV05 | Gravity never balances in space | A telescope parks in a spot that stays in step with Earth. |
-GRV09 | Tides | M | idea | GRV01,GRV02 | The Moon pulls water into one bulge | Two high tides a day. |
-GRV10 | Seasons, moon phases and eclipses | S | idea | - | Seasons come from distance to the Sun | December is cold in the north and hot in the south. |
+GRV09 | Tides | M | shipped:tides | GRV01,GRV02 | The Moon pulls water into one bulge | Two high tides a day. |
+GRV10 | Seasons, moon phases and eclipses | S | shipped:seasons-and-eclipses | - | Seasons come from distance to the Sun | December is cold in the north and hot in the south. |
 GRV11 | The equivalence principle: the elevator | M | idea | GRV04 | Gravity and acceleration feel different | A closed lift cannot tell if it is on Earth or accelerating in space. |
 GRV12 | Gravity as curved paths | H | idea | GRV11,REL10 | A force pulls straight paths bent | Two aircraft flying 'straight' north meet at the pole. |
 GRV13 | The rubber-sheet metaphor, critiqued | M | idea | GRV12 | A useful picture is a faithful one | A bowling ball on a trampoline. |

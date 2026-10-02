@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Vectors: adding pushes — illusion</title>
+  <meta name="description" content="Two people each pull a sled with 100 newtons. Does the sled feel 200? It depends entirely on the angle. The arrow arithmetic behind every force.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-FND">Foundations &amp; method</a> / FND07</p>
+    <p class="eyebrow">FND07 · Foundations &amp; method</p>
+    <h1>Vectors: adding <em>pushes</em></h1>
+    <p class="lede">Two tugboats each pull a ship with the strength of fifty tonnes. How hard is the ship pulled? Not a hundred, unless they pull the same way. The arithmetic of arrows is the first tool of all of mechanics.</p>
+    <p class="meta"><span>Reading time ≈ 9 min</span><span>Simulation: Starter (S)</span><span>Video: 5–9 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>A force has a size <strong>and</strong> a direction, so forces add like <strong>arrows</strong>, not like numbers. Put the arrows tip to tail and the net force runs from the first tail to the last tip. Two equal pulls give twice the force only when they point the same way, and <strong>nothing at all</strong> when they point opposite ways.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>A container ship is sliding out of a harbour. It cannot steer on its own at walking pace, so two tugboats, one on each side, are pulling it with long steel cables. Each tug is rated at fifty tonnes of pull. The harbour pilot has a question every time: <em>how hard is the ship actually being pulled forward?</em></p>
+      <p>The naive answer, a hundred tonnes, is right only when both tugs are pulling straight ahead along the same line. In practice they pull from the sides, at an angle. Each one is wasting some of its strength tugging sideways against the other. Move them out to a wide angle and the sum falls, and at the extreme, with the tugs on opposite sides pulling in opposite directions, the ship goes nowhere at all, with two engines roaring.</p>
+      <p>Knowing exactly how much of each pull survives is not a detail. It is how ships are docked, bridges are designed, and sails are trimmed.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“Two pulls of 100 make a pull of 200”</h2>
+      <p>We learn to add numbers early, and we learn that force is measured in numbers (newtons, or pounds). So we carry the habit over: 100 + 100 = 200. But a force is not just a number. It is a number <em>pointing somewhere</em>, and that changes what “adding” means.</p>
+      <p>The simulation lets you break the habit. Two people pull a sled with ropes. You choose the angle between the ropes. Watch what the total does.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">c. 300 BCE</span>Aristotle’s school treats a combined motion as made of two separate ones, an early hint that directions combine.</li><li><span class="year">1586</span>Simon Stevin, studying weights on an inclined plane, uses the “triangle of forces”: forces that can be arranged as the sides of a closed triangle are in balance.</li><li><span class="year">1687</span>Isaac Newton, in the <em>Principia</em>, and Pierre Varignon independently, state the <strong>parallelogram rule</strong>: two forces acting at a point are equivalent to one force along the diagonal.</li><li><span class="year">1840s</span>William Rowan Hamilton introduces the word <em>vector</em> while developing his “quaternions”.</li><li><span class="year">1880s</span>Josiah Willard Gibbs and Oliver Heaviside strip quaternions down to the arrow arithmetic physicists use today, and vector notation becomes the language of physics.</li></ol><figure class="illo"><svg viewBox="0 0 620 300" role="img" aria-label="Two force arrows drawn as a parallelogram with the diagonal as their sum" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="300" y="24" fill="#e8edf5" font-size="15" text-anchor="middle" font-weight="bold" stroke="none">The parallelogram rule</text><path d="M70 150 L195 70 L350 150 L225 230 Z" fill="#1d2f47" stroke="#5a6f8c" stroke-dasharray="6 5"/><path d="M70.0 150.0L195.0 70.0" stroke="#f5b85d" stroke-width="4"/><path d="M195.0 70.0L190.3 77.7L186.1 71.1Z" fill="#f5b85d" stroke="#f5b85d" stroke-width="1"/><path d="M70.0 150.0L225.0 230.0" stroke="#67d4d0" stroke-width="4"/><path d="M225.0 230.0L216.0 229.8L219.6 222.8Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><path d="M70.0 150.0L350.0 150.0" stroke="#ffffff" stroke-width="5.5"/><path d="M350.0 150.0L341.9 153.9L341.9 146.1Z" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><circle cx="70" cy="150" r="6" fill="#fff"/><text x="191" y="58" fill="#f5b85d" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">pull A</text><text x="219" y="254" fill="#67d4d0" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">pull B</text><text x="364" y="155" fill="#ffffff" font-size="15" text-anchor="start" font-weight="bold" stroke="none">net pull</text><text x="385" y="195" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">Slide B along the dotted</text><text x="385" y="214" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">edge so its tail meets the</text><text x="385" y="233" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">tip of A. The sum runs from</text><text x="385" y="252" fill="#91a3bb" font-size="13" text-anchor="start" font-weight="normal" stroke="none">the start to the far corner.</text></svg><figcaption>Two forces from the same point. Complete the parallelogram, and the diagonal is the net force.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>Person <strong style="color:#f5b85d">A</strong> always pulls with 100 N. Person <strong style="color:#67d4d0">B</strong> pulls with the strength you choose. You choose the angle between the ropes. The <strong>white</strong> arrow is the net pull, found by the parallelogram rule. The sled moves along it, and its speed in this picture is proportional to its size.</p>
+      <div class="equation">net pull = √( F₁² + F₂² + 2·F₁·F₂·cos θ )     (θ = angle between the pulls)<small>For two equal pulls this simplifies to 2F·cos(θ/2). At θ = 0 you get 2F; at θ = 180° you get 0.</small></div>
+<div data-sim="vectors" data-alt="Two people pulling a sled with ropes at an adjustable angle, with the net pull shown as an arrow" data-caption="Amber: A (100 N). Teal: B. White: the net pull. Dashed lines complete the parallelogram."></div><div class="try"><h3>Try this</h3><ol><li>Set the angle to 0°. Both pulls point the same way, and the numbers add: <strong>200 N</strong>.</li><li>Open the angle to 120°. The net pull falls to <strong>100 N</strong>, only half of what the two people can supply together.</li><li>Open it to 180°. They pull against each other and the net is <strong>zero</strong>. The sled doesn’t move, and the grid stops scrolling.</li><li>Make B weaker (say 50 N) at 90°. The net arrow tilts towards the stronger puller, A.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 290" role="img" aria-label="Curve of net pull falling from 200 newtons at zero degrees to zero at 180 degrees" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="22" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Two equal pulls of 100 N: the net pull depends on the angle between them</text><rect x="70" y="70" width="480" height="160" stroke="#3a4b65" stroke-width="1.3"/><polyline points="70.0,70.0 78.0,70.1 86.0,70.2 94.0,70.5 102.0,70.9 110.0,71.4 118.0,72.0 126.0,72.7 134.0,73.5 142.0,74.4 150.0,75.5 158.0,76.6 166.0,77.8 174.0,79.2 182.0,80.6 190.0,82.2 198.0,83.8 206.0,85.6 214.0,87.4 222.0,89.4 230.0,91.4 238.0,93.6 246.0,95.8 254.0,98.1 262.0,100.6 270.0,103.1 278.0,105.7 286.0,108.3 294.0,111.1 302.0,113.9 310.0,116.9 318.0,119.9 326.0,122.9 334.0,126.1 342.0,129.3 350.0,132.6 358.0,136.0 366.0,139.4 374.0,142.9 382.0,146.4 390.0,150.0 398.0,153.7 406.0,157.4 414.0,161.1 422.0,164.9 430.0,168.8 438.0,172.7 446.0,176.6 454.0,180.6 462.0,184.6 470.0,188.6 478.0,192.6 486.0,196.7 494.0,200.8 502.0,205.0 510.0,209.1 518.0,213.3 526.0,217.4 534.0,221.6 542.0,225.8 550.0,230.0" stroke="#f5b85d" stroke-width="3" /><circle cx="70.0" cy="70.0" r="5" fill="#fff"/><text x="70.0" y="58.0" fill="#fff" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">200 N</text><text x="70.0" y="248" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">0°</text><circle cx="230.0" cy="91.4" r="5" fill="#fff"/><text x="230.0" y="79.43593539448977" fill="#fff" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">173</text><text x="230.0" y="248" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">60°</text><circle cx="310.0" cy="116.9" r="5" fill="#fff"/><text x="310.0" y="104.86291501015239" fill="#fff" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">141</text><text x="310.0" y="248" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">90°</text><circle cx="390.0" cy="150.0" r="5" fill="#fff"/><text x="390.0" y="138.0" fill="#fff" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">100</text><text x="390.0" y="248" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">120°</text><circle cx="550.0" cy="230.0" r="5" fill="#fff"/><text x="550.0" y="218.0" fill="#fff" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">0</text><text x="550.0" y="248" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">180°</text><text x="310.0" y="270" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">angle between the two ropes</text><text x="62" y="78" fill="#91a3bb" font-size="12" text-anchor="end" font-weight="normal" stroke="none">200</text><text x="62" y="234" fill="#91a3bb" font-size="12" text-anchor="end" font-weight="normal" stroke="none">0</text></svg><figcaption>For two equal pulls the net force falls smoothly from double to nothing as the ropes open out.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Some of every pull is wasted</h2>
+      <p>Think of each pull as having two parts: the part along the direction you care about, and the part sideways. Only the first part moves the sled forward. When the ropes are wide apart, each person’s sideways part is large, and the two sideways parts cancel each other out, a pure waste of effort. As the angle closes, the sideways part shrinks and more of the effort goes forward. That is why a sled team lines up in front of the sled, and why a sail trimmed at the wrong angle only slides the boat sideways.</p>
+      <p>The rule is precise: the net pull is the diagonal of the parallelogram. At 60° between two equal pulls you keep 87% of the sum (173 of 200 N). At 90°, 71% (141 N). At 120°, exactly half. Remember the picture and you can estimate any of these in your head.</p><div class="callout key"><p class="beat">The surprise</p><p>The size of a force is only half its story. Two forces can add, partly cancel, or completely cancel, and the only way to know which is to track direction. That one idea, arrows not numbers, runs through all of mechanics, electricity and relativity.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> your phone is doing arrow arithmetic. Its accelerometer measures a three-part arrow, and the phone splits the pull of gravity into “along the screen’s long edge,” “along its short edge,” and “straight out of it” to decide whether to rotate the picture. Out in the harbour, tugboats are quoted by their “bollard pull”, tens of tonnes each, and pilots position them at angles that waste as little of it as possible. And an airliner flying in a crosswind points its nose slightly into the wind, a “crab angle”, so that the arrow of its own velocity plus the arrow of the wind add up to a track along the runway.</p></div><ul class="apps"><li><strong>Ships and tugs</strong>Tugs at an angle to the ship’s heading trade a bit of pulling power for steering.</li><li><strong>Sailing</strong>A sail makes a force at an angle to the wind. The keel supplies another sideways. Their arrows sum to a push forward, even against the wind.</li><li><strong>Navigation</strong>Pilots and sailors add the velocity of the vehicle to the velocity of the wind or current.</li><li><strong>Structures</strong>Engineers add the force arrows in every beam and cable of a bridge to check that they sum to zero.</li><li><strong>Computer graphics</strong>Every lit surface in a video game uses the “dot product” of two arrows to decide how bright to draw it.</li><li><strong>Drones and robots</strong>A quadcopter hovers or tilts by adding four thrust arrows, one per rotor.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>This is a flat, top-down picture with two people and a rope each. The ropes are straight and weightless, and the people pull at a steady size however the sled moves. The sled’s speed is set to be proportional to the net pull, as if it were being dragged through thick syrup. Real sleds follow Newton’s second law: a net force changes <em>acceleration</em>, not speed (see <a href="newtons-laws.html">Newton’s laws</a>). The parallelogram rule is exact; the motion of the sled is a convenience.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Forces are arrows.</strong> A number plus a direction.</li><li><strong>Add tip to tail.</strong> The net force goes from the first tail to the last tip.</li><li><strong>Direction matters as much as size.</strong> Equal pulls can double, partly cancel, or cancel exactly.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Vector</dt><dd>A quantity with both size and direction, such as force or velocity.</dd><dt>Scalar</dt><dd>A quantity with size only, such as mass or temperature.</dd><dt>Resultant (net force)</dt><dd>The single arrow equivalent to several combined ones.</dd><dt>Component</dt><dd>The part of an arrow along a chosen direction.</dd></dl><ul class="refs"><li>S. Stevin, <em>De Beghinselen der Weeghconst</em> (1586).</li><li>I. Newton, <em>Philosophiæ Naturalis Principia Mathematica</em> (1687), Corollary I to the Laws of Motion.</li><li>J. W. Gibbs, <em>Elements of Vector Analysis</em> (1881–84).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

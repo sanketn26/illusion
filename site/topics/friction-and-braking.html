@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Friction and braking distance — illusion</title>
+  <meta name="description" content="Twice as fast does not mean twice the stopping distance. Skid marks, physics, and why a few km/h can be the difference between a close call and a crash.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-MEC">Motion &amp; forces</a> / MEC05</p>
+    <p class="eyebrow">MEC05 · Motion &amp; forces</p>
+    <h1>Friction and <em>braking</em> distance</h1>
+    <p class="lede">A police officer measures a skid mark 40 metres long on a dry road and, with a pencil and one formula, tells the court how fast the car was going. The same formula explains why speed is more dangerous than it feels.</p>
+    <p class="meta"><span>Reading time ≈ 10 min</span><span>Simulation: Starter (S)</span><span>Video: 8–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>Brakes work by turning movement energy into heat through friction. Movement energy goes as <strong>speed squared</strong>, so a car going twice as fast needs <strong>four times</strong> the braking distance. Add the distance covered while the driver is still reacting, which grows with speed, and a small increase in speed makes a big difference to whether you stop in time.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>It is a dry afternoon on a straight road. A car has skidded to a stop, leaving a black mark on the asphalt, forty metres long. The driver, sure that they were “only doing the limit,” disputes the ticket. An accident investigator walks the length of the mark with a measuring wheel, then pulls out a pocket calculator.</p>
+      <p>He multiplies the length by the road’s grip, a number he has measured for exactly this kind of surface, by a constant, and takes the square root. The answer is on the screen before the driver has finished arguing: about 84 kilometres per hour. The mark was longer than the driver had admitted. The formula does not lie. It comes straight from the laws of friction.</p>
+      <p>Behind it is a fact most of us never quite believe. When you double your speed, you do not double the distance you need to stop. You <em>quadruple</em> it.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“Twice as fast, twice the stopping distance”</h2>
+      <p>It sounds right. Go twice as fast, take twice as long to stop. And it is right for one part of the journey: the distance you travel before your foot even reaches the brake. But the part where the brakes are working is different. It grows much faster.</p>
+      <p>The simulation breaks the total into those two pieces so that you can see which one is responsible for the explosion in distance at high speed.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">c. 1493</span>Leonardo da Vinci experiments with sliding blocks and finds that friction doesn’t depend on how large the contact area is. His notes lie unpublished.</li><li><span class="year">1699</span>Guillaume Amontons rediscovers the rules: friction is proportional to the load pressing the surfaces together, and independent of the apparent area.</li><li><span class="year">1785</span>Charles-Augustin de Coulomb confirms them and separates friction when sliding from friction when stuck.</li><li><span class="year">1950</span>Frank Bowden and David Tabor explain why: surfaces touch only at microscopic bumps, and the real contact area is a tiny fraction of the apparent one.</li><li><span class="year">1978</span>The first mass-produced anti-lock braking system (ABS) arrives on a Mercedes-Benz S-Class, keeping wheels at the edge of skidding where grip is greatest.</li></ol><figure class="illo"><svg viewBox="0 0 620 292" role="img" aria-label="Stacked bars of reaction and braking distance for five speeds, growing faster than speed" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Stopping distance on a dry road (grip 0.7, driver reaction 1 s)</text><text x="86" y="64" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">30 km/h</text><rect x="96" y="44" width="28" height="28" rx="4" fill="#f5b85d"/><rect x="124" y="44" width="17" height="28" rx="4" fill="#f18a76"/><text x="148.18608319984466" y="64" fill="#e8edf5" font-size="13" text-anchor="start" font-weight="bold" stroke="none">13 m</text><text x="86" y="108" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">50 km/h</text><rect x="96" y="88" width="46" height="28" rx="4" fill="#f5b85d"/><rect x="142" y="88" width="46" height="28" rx="4" fill="#f18a76"/><text x="196.18356444401297" y="108" fill="#e8edf5" font-size="13" text-anchor="start" font-weight="bold" stroke="none">28 m</text><text x="86" y="152" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">70 km/h</text><rect x="96" y="132" width="64" height="28" rx="4" fill="#f5b85d"/><rect x="160" y="132" width="91" height="28" rx="4" fill="#f18a76"/><text x="259.0131196435987" y="152" fill="#e8edf5" font-size="13" text-anchor="start" font-weight="bold" stroke="none">47 m</text><text x="86" y="196" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">100 km/h</text><rect x="96" y="176" width="92" height="28" rx="4" fill="#f5b85d"/><rect x="188" y="176" width="185" height="28" rx="4" fill="#f18a76"/><text x="381.0675911093852" y="196" fill="#e8edf5" font-size="13" text-anchor="start" font-weight="bold" stroke="none">84 m</text><text x="86" y="240" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">130 km/h</text><rect x="96" y="220" width="119" height="28" rx="4" fill="#f5b85d"/><rect x="215" y="220" width="313" height="28" rx="4" fill="#f18a76"/><text x="536.4942289748609" y="240" fill="#e8edf5" font-size="13" text-anchor="start" font-weight="bold" stroke="none">131 m</text><rect x="96" y="266" width="16" height="12" fill="#f5b85d"/><text x="118" y="277" fill="#91a3bb" font-size="12" text-anchor="start" font-weight="normal" stroke="none">reaction (grows with speed)</text><rect x="350" y="266" width="16" height="12" fill="#f18a76"/><text x="372" y="277" fill="#91a3bb" font-size="12" text-anchor="start" font-weight="normal" stroke="none">braking (grows with speed²)</text></svg><figcaption>Reaction distance rises in a straight line. Braking distance climbs far faster. At 130 km/h the total is ten times that at 30 km/h.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>A car approaches a hazard 70 metres ahead. The driver takes <strong>1 second to react</strong>, and during it the car keeps going at full speed. Then the brakes grip with the friction of the road. You choose the car’s speed and the road’s grip, from ice to dry. The coloured bar shows where the car will stop.</p>
+      <div class="equation">reaction distance = v · t_r        braking distance = v² / (2 · μ · g)        total = the sum<small>The braking formula comes from energy: the movement energy ½mv² must be removed by friction (μ·m·g) acting over the braking distance d. The mass m cancels.</small></div>
+<div data-sim="brake" data-alt="A car approaching a hazard with a bar showing reaction distance and braking distance" data-caption="Amber: distance covered while the driver reacts. Red: braking distance. The hazard is 70 m ahead."></div><div class="try"><h3>Try this</h3><ol><li>At <strong>50 km/h</strong> on a dry road (grip 0.70) the car stops about 28 m after the driver sees the hazard, well short of it.</li><li>Raise the speed to <strong>100 km/h</strong>. Twice the speed, but the stopping distance is about three times larger, and the car hits the hazard at about 50 km/h.</li><li>Go back to 50 km/h and reduce the <strong>grip</strong> to 0.40 (wet). The braking part grows by about three-quarters (0.70 ÷ 0.40 = 1.75). Now try 0.10 (ice).</li><li>Find the fastest speed at which the car just stops in time on a dry road. A few km/h more makes it hit.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 244" role="img" aria-label="Bars of braking distance at 50 kilometres per hour on dry, wet and icy roads" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Braking distance at 50 km/h: the road matters</text><text x="120" y="70" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">dry  (μ ≈ 0.7)</text><rect x="130" y="48" width="59" height="32" rx="5" fill="#67d4d0"/><text x="196.99120323177408" y="70" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">14 m</text><text x="120" y="126" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">wet  (μ ≈ 0.4)</text><rect x="130" y="104" width="103" height="32" rx="5" fill="#f5b85d"/><text x="241.23460565560464" y="126" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">25 m</text><text x="120" y="182" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">ice  (μ ≈ 0.1)</text><rect x="130" y="160" width="413" height="32" rx="5" fill="#f18a76"/><text x="550.9384226224186" y="182" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">98 m</text><text x="310" y="228" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">Halve the grip, double the braking distance (0.7 to 0.4 is ×1.75).</text></svg><figcaption>The same car, the same speed, three roads. The braking distance is inversely proportional to grip.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>The square, and the cancellation</h2>
+      <p>Your moving car carries movement energy, ½mv². To stop, the brakes must turn all of it into heat. Friction removes energy at a steady rate per metre: the force μmg times the distance. Set the two equal and the distance comes out as v²/(2μg), proportional to the <em>square</em> of the speed. Double v and the distance goes up by four. Treble it and by nine.</p>
+      <p>Notice what is missing from the formula: the mass. A heavy lorry has more energy to get rid of, but its tyres press harder on the road and so grip proportionally harder. The two cancel, just as weight and inertia cancelled in free fall. (In real life a heavy vehicle <em>does</em> take longer, but because brakes, tyres and heat limits are designed for lighter loads, not because of the physics here.)</p>
+      <h3>Why speed limits aren’t arbitrary</h3>
+      <p>Going from 50 to 60 km/h feels trivial. But the braking distance rises by 44% (from 14 to 20 m on a dry road), and the speed at which you would hit an obstacle that only just was avoided at 50 is not 10 km/h more but more than 30 km/h. Small changes in speed produce big changes in outcome because the physics is squared.</p><div class="callout key"><p class="beat">The surprise</p><p>Intuition treats speed as a straight line, but the energy a car must lose is a curve. A pedestrian struck at 50 km/h faces roughly four times the movement energy of one struck at 25 km/h, and that, not the speed itself, is what injures.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> cars on the road are braking in a way this chapter predicts. Anti-lock systems pulse the brakes several times a second to keep the tyres at the edge of grip, and automatic emergency braking, which is required on new cars in the EU, uses radar or cameras to apply them before a driver has finished reacting. Road designers compute “stopping sight distance” from exactly these two terms, reaction plus braking, to decide how far ahead a driver must be able to see.</p></div><ul class="apps"><li><strong>Accident reconstruction</strong>Investigators estimate speed from skid-mark length, v ≈ √(254·μ·d) in km/h with d in metres.</li><li><strong>Road and junction design</strong>Sight distances and speed limits are set from stopping distances.</li><li><strong>Anti-lock brakes and traction control</strong>Keep the wheels at peak friction instead of sliding.</li><li><strong>Tyres and road surfaces</strong>Compounds and textures are tuned to raise μ, especially when wet.</li><li><strong>Aircraft landing</strong>Runway lengths are chosen from landing-roll distances computed in the same way.</li><li><strong>Automatic emergency braking</strong>Systems decide when braking must start, using the formula in reverse.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>Real friction is not a single number: it varies with speed, tyre temperature, load and surface, and the best braking occurs just before the wheels lock. Here the grip is constant, the road is flat, and the brakes apply their full force instantly. Reaction time is fixed at one second (real values range from about 0.7 to 1.5 s or more), and the hazard is a fixed 70 m away. The model also ignores the weight shifting forward onto the front wheels under braking, and air drag, which helps slightly at high speed.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Braking distance grows with speed squared.</strong> Twice as fast needs four times the distance.</li><li><strong>Reaction distance grows with speed.</strong> Both parts matter, and the second one is invisible to the driver.</li><li><strong>Grip sets the scale.</strong> Halve it and the braking distance doubles.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Coefficient of friction (μ)</dt><dd>The ratio of friction force to the force pressing surfaces together.</dd><dt>Reaction distance</dt><dd>The distance travelled between seeing a hazard and applying the brakes.</dd><dt>Braking distance</dt><dd>The distance travelled while the brakes slow the vehicle.</dd><dt>ABS</dt><dd>Anti-lock braking system, which prevents wheels locking.</dd></dl><ul class="refs"><li>G. Amontons, “De la résistance causée dans les machines,” <em>Mémoires de l’Académie royale des sciences</em> (1699).</li><li>C.-A. de Coulomb, “Théorie des machines simples,” (1785).</li><li>F. P. Bowden and D. Tabor, <em>The Friction and Lubrication of Solids</em> (1950).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

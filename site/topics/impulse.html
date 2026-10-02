@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Impulse: seat belts and airbags — illusion</title>
+  <meta name="description" content="You can’t change how much speed a crash removes. You can change how long it takes. The physics of seat belts, crumple zones and why bending your knees saves them.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-MEC">Motion &amp; forces</a> / MEC09</p>
+    <p class="eyebrow">MEC09 · Motion &amp; forces</p>
+    <h1>Impulse: seat belts and <em>airbags</em></h1>
+    <p class="lede">In 1954 a US Air Force doctor strapped himself into a rocket sled, hit 632 miles an hour, and stopped in under two seconds. He wanted to know how much a human body can take. His answer changed every car on the road.</p>
+    <p class="meta"><span>Reading time ≈ 10 min</span><span>Simulation: Starter (S)</span><span>Video: 6–10 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>To stop, you must lose all your momentum, and that amount is fixed. <strong>Force × time = change in momentum</strong> (the impulse). So the longer the stop takes, the smaller the force. A seat belt, airbag or crumple zone does not remove the crash. It <strong>stretches it out</strong>, turning a violent blow into a firm push.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>On 10 December 1954, in the New Mexico desert, Colonel John Paul Stapp lay strapped into a rocket-powered sled. Behind him was a bank of rockets. A few seconds after ignition he was moving at 632 miles an hour, about 83% of the speed of sound. Then the sled’s scoops hit a water brake and he came to rest in about a second and a half.</p>
+      <p>His eyes filled with blood; his wrists were broken; he was temporarily blind. But he walked away. Doctors of the time were sure that a human being could not survive more than 18 times the force of gravity. Stapp had just taken about 46.</p>
+      <p>The lesson was bigger than the stunt. It was not the speed that nearly killed him; it was how quickly the speed had gone. And that is something engineers can design.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“A crash is as dangerous as the speed”</h2>
+      <p>People say “it was the sudden stop that killed him,” but are often unclear what that means. Speed alone doesn’t hurt: you are moving at 100 km/h on a plane and nothing happens. What matters is the <em>force</em> in the stop, and that depends on how quickly your speed is removed.</p>
+      <p>The same speed, the same change of momentum, can be absorbed gently or violently. The simulation makes you choose how.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">1687</span>Newton states his second law in terms of “motion” (momentum): the change of motion is proportional to the force and the time it acts. We call force times time the <strong>impulse</strong>.</li><li><span class="year">1953</span>John Hetrick receives a US patent for an inflatable cushion to protect car occupants. It is decades ahead of its time.</li><li><span class="year">1954–55</span>John Paul Stapp’s rocket sled runs show that humans survive far greater decelerations than expected, if properly restrained. He starts the annual Stapp Car Crash Conference.</li><li><span class="year">1959</span>Nils Bohlin of Volvo introduces the three-point seat belt. Béla Barényi’s <strong>crumple zone</strong>, patented in 1952, appears on a Mercedes-Benz the same year.</li><li><span class="year">1981–90s</span>Airbags reach production cars and become mandatory in the United States for new cars by the late 1990s.</li></ol><figure class="illo"><svg viewBox="0 0 620 290" role="img" aria-label="Two force-time graphs of equal area: a tall narrow bar for a hard stop and a low wide bar for a seat belt and airbag" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="15" text-anchor="middle" font-weight="bold" stroke="none">Same change in speed, very different pushes</text><line x1="40" y1="200" x2="290" y2="200" stroke="#51627a"/><line x1="40" y1="200" x2="40" y2="40" stroke="#51627a"/><rect x="40" y="50" width="40" height="150" fill="#f18a76" opacity=".35" stroke="#f18a76" stroke-width="2.5"/><text x="165" y="52" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Hard stop</text><text x="165" y="222" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">time →</text><text x="34" y="50" fill="#91a3bb" font-size="12" text-anchor="end" font-weight="normal" stroke="none">force</text><text x="165" y="242" fill="#f18a76" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">short and violent</text><line x1="340" y1="200" x2="590" y2="200" stroke="#51627a"/><line x1="340" y1="200" x2="340" y2="40" stroke="#51627a"/><rect x="340" y="170" width="200" height="30" fill="#67d4d0" opacity=".35" stroke="#67d4d0" stroke-width="2.5"/><text x="465" y="52" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Seat belt and airbag</text><text x="465" y="222" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">time →</text><text x="334" y="50" fill="#91a3bb" font-size="12" text-anchor="end" font-weight="normal" stroke="none">force</text><text x="465" y="242" fill="#67d4d0" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">long and gentle</text><text x="310" y="274" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">Area = force × time = the change in momentum. The areas are equal.</text></svg><figcaption>Impulse is the area under the force–time graph. Stretch the stop and the height (the force) shrinks.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>A 70 kg person is travelling at the speed you choose and must be brought to rest by a cushion of the thickness you choose. The graph shows the deceleration during the stop. Notice that the shaded <strong>area</strong> (change in speed) is the same every time.</p>
+      <div class="equation">impulse = F · Δt = m · Δv        average force  F = m v² / (2 d)        (stopping distance d)<small>For constant deceleration, stopping time Δt = 2d / v and deceleration a = v² / (2d). The force is mass times deceleration.</small></div>
+<div data-sim="impact" data-alt="A person stopping against a cushion of adjustable thickness with a deceleration graph" data-caption="Teal: the person (70 kg). Amber: the cushion. The graph shows how hard and how long the stop is. The motion is shown at 1/20 of real speed."></div><div class="try"><h3>Try this</h3><ol><li>At <strong>50 km/h</strong> with a half-metre cushion the stop takes about 72 ms. The average force is about 13.5 kN, twenty times the body weight.</li><li>Shrink the cushion to <strong>5 cm</strong>, like hitting a dashboard. The stop takes 7 ms, and the force is ten times larger: nearly 200 times the body weight.</li><li>Go back to 50 cm and raise the speed to <strong>100 km/h</strong>. Doubling the speed quadruples the force, because the stop must remove four times the energy over the same distance. The shaded area also doubles, because it measures the speed lost.</li><li>Now compare cushions at one speed: the graph’s shaded area stays the same. A tall thin bar and a low wide bar contain the same change in momentum.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 278" role="img" aria-label="Bars of average force against stopping distance, from 197 times body weight at 5 centimetres to 10 times at one metre" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Average force on a 70 kg person stopping from 50 km/h</text><text x="130" y="70" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">0.05 m</text><rect x="140" y="48" width="315" height="32" rx="4" fill="#f18a76"/><text x="462.61975056946176" y="70" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">197 × body weight</text><text x="130" y="122" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">0.20 m</text><rect x="140" y="100" width="79" height="32" rx="4" fill="#f18a76"/><text x="226.65493764236544" y="122" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">49 × body weight</text><text x="130" y="174" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">0.50 m</text><rect x="140" y="152" width="31" height="32" rx="4" fill="#f5b85d"/><text x="179.4619750569462" y="174" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">20 × body weight</text><text x="130" y="226" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">1.00 m</text><rect x="140" y="204" width="16" height="32" rx="4" fill="#67d4d0"/><text x="163.7309875284731" y="226" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">10 × body weight</text><text x="310" y="262" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">The distance over which you stop is everything.</text></svg><figcaption>Average force against stopping distance, at 50 km/h. Ten times the distance gives one-tenth of the force.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>You can’t reduce the impulse. You can stretch it.</h2>
+      <p>To go from 50 km/h to zero, your body must lose a fixed amount of momentum, 70 kg × 13.9 m/s ≈ 970 N·s. There is no way around it. What you can choose is how that impulse is delivered. Divide 970 N·s by 7 milliseconds and you need a force of 135,000 newtons. Divide it by 72 milliseconds and you need 13,500. The person is the same, the crash the same, the force a tenth.</p>
+      <p>That is all a seat belt (which stretches a little and spreads the load across the strong bones of the chest and pelvis), an airbag (which cushions the head over tens of milliseconds) and a crumple zone (which lets the car’s front crush progressively, so that the cabin stops over half a metre or more) are doing. They are time-extending devices.</p>
+      <h3>The same trick everywhere</h3>
+      <p>A cricket fielder pulls their hands back as they catch a hard ball. A person landing from a jump bends their knees. A parachutist rolls on landing. A boxer rolls with a punch. A foam helmet liner crushes. Every one of these takes the same momentum and delivers it over a longer time.</p><div class="callout key"><p class="beat">The surprise</p><p>Speed alone doesn’t decide how hard a crash is. The stopping distance does. A car that crumples over a metre is kinder than one that stops over five centimetres, even if both are going the same speed.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> every car you can see parked outside is carrying a stack of time-stretching devices: belts, bags, crumple zones and head restraints, all tuned by crash tests run in laboratories every day. Federal estimates credit seat belts with saving on the order of fifteen thousand lives a year in the United States alone. And every time you bend your knees getting off a step, you are doing the same thing with your own legs.</p></div><ul class="apps"><li><strong>Cars</strong>Crumple zones, seat belts, airbags and padded dashboards are designed from the impulse equation.</li><li><strong>Helmets and sports pads</strong>Foam liners crush over a few centimetres to lengthen an impact.</li><li><strong>Packaging</strong>Foam and air cushions protect fragile goods by extending the time of a drop’s stop.</li><li><strong>Athletics</strong>Landing mats, soft knees and shoe cushioning all work the same way.</li><li><strong>Aircraft and spacecraft</strong>Energy-absorbing seats and landing gear; capsules land with crushable structures.</li><li><strong>Crash investigation</strong>Impulse links crash damage and speed change for reconstruction.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>The deceleration here is perfectly constant (a flat bar), but real crashes are spiky. Peak forces are well above the averages shown. The person is a 70 kg point, so the model says nothing about which body part takes the load or how long the human body can tolerate it, which depends on direction, duration, body part and the person. “Stopping distance” bundles belt stretch, crush and bag together. The averages here are for explanation, not a prediction of injury.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Impulse = force × time = change in momentum.</strong> The change is fixed by the speed and mass.</li><li><strong>Longer stop, smaller force.</strong> Ten times the distance, a tenth of the force.</li><li><strong>Safety devices stretch time.</strong> Belts, bags, crumple zones, foam and bent knees all do the same job.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Impulse</dt><dd>Force multiplied by the time it acts; equal to the change in momentum.</dd><dt>Crumple zone</dt><dd>A part of a vehicle designed to deform progressively in a crash.</dd><dt>g</dt><dd>The pull of gravity; a deceleration of 10 g is ten times it.</dd><dt>Average force</dt><dd>The total impulse divided by the duration of the stop.</dd></dl><ul class="refs"><li>I. Newton, <em>Principia</em> (1687), Law II.</li><li>J. P. Stapp, “Human exposures to linear deceleration,” USAF Technical Report (1951–1955).</li><li>N. Bohlin, “Three-point seat belt,” US Patent 3,043,625 (1962).</li><li>B. Barényi, crumple-zone patent, DE 854157 (1952).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

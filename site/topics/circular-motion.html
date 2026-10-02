@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Circular motion and centripetal force — illusion</title>
+  <meta name="description" content="Is there an outward force on a turning car? There isn’t, and the feeling of being thrown outward is your body trying to go straight. The physics of a spinning ride, a washing machine and a swung bucket.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-MEC">Motion &amp; forces</a> / MEC06</p>
+    <p class="eyebrow">MEC06 · Motion &amp; forces</p>
+    <h1>Circular motion and <em>centripetal</em> force</h1>
+    <p class="lede">On a spinning fairground ride, the floor drops away and riders stay pinned to the wall as if glued there. It feels as if an invisible hand is pushing them outward. It isn’t. The wall is pushing inward, and that is the whole story.</p>
+    <p class="meta"><span>Reading time ≈ 10 min</span><span>Simulation: Moderate (M)</span><span>Video: 8–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>Anything moving in a circle is constantly being pulled <strong>inward</strong>, because its direction changes even if its speed doesn’t. That inward pull, the <strong>centripetal force</strong>, is whatever does the pulling: a string, a wall, gravity. Seen from the ground, there is no outward force on the object. If the pull vanishes, the object flies off <strong>straight</strong>, along the tangent.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>The ride is called the Rotor. You step into a large upright drum and press your back against the wall. The door closes. The drum starts to spin, faster and faster, and then, with a clunk, the floor drops away beneath you.</p>
+      <p>You don’t fall. You stay pinned flat to the wall, feet dangling in empty space, held in place by what feels like a powerful outward force, as if gravity had turned sideways. Riders sometimes giggle, sometimes scream, and occasionally try to lift an arm and find they cannot.</p>
+      <p>The ride has been delighting people since the late 1940s. But the explanation people give for it is often the wrong way round, and sorting out which way is right is the key to understanding every spinning thing.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“A turning object is pushed outward”</h2>
+      <p>When a car rounds a bend, you are pushed against the door. When a bucket of water is swung overhead, the water presses against the bottom. When you spin on a roundabout, you feel flung outward. Everyone has felt a force that seems to throw things away from the centre, and it even has a name: <em>centrifugal force</em>.</p>
+      <p>There is a subtle mistake in this. The feeling is real, but the force pushing you outward is not. The simulation lets you test it: spin a ball on a string, then cut the string and see where the ball goes.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">1659</span>Christiaan Huygens works out how strongly a body moving in a circle must be pulled to stay on it: v²/r per unit mass. It is published in his <em>Horologium Oscillatorium</em> in 1673.</li><li><span class="year">1679</span>Robert Hooke writes to Newton suggesting that a planet’s orbit is straight-line motion bent into a curve by a pull towards the Sun.</li><li><span class="year">1684–87</span>Newton coins the word <strong>centripetal</strong> (“centre-seeking”) for the inward force, and builds the theory of orbits on it in the <em>Principia</em>.</li><li><span class="year">1835</span>Gaspard-Gustave Coriolis analyses forces that appear in rotating frames, giving rigorous meaning to the “fictitious” outward force felt on a roundabout.</li><li><span class="year">1940s</span>The Rotor ride appears in Germany, turning the physics into a fairground attraction.</li></ol><figure class="illo"><svg viewBox="0 0 680 286" role="img" aria-label="A ball at four points on a circle with tangent velocity arrows and inward pull arrows" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Going round a circle: velocity along, acceleration in</text><circle cx="310" cy="150" r="90" stroke="#3a4b65" stroke-width="2" stroke-dasharray="5 6"/><circle cx="310" cy="150" r="5" fill="#e8edf5"/><circle cx="400.0" cy="150.0" r="8" fill="#f5b85d"/><path d="M400.0 150.0L400.0 200.0" stroke="#67d4d0" stroke-width="3.5"/><path d="M400.0 200.0L396.1 191.9L403.9 191.9Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><path d="M400.0 150.0L354.0 150.0" stroke="#f18a76" stroke-width="3.5"/><path d="M354.0 150.0L362.1 146.1L362.1 153.9Z" fill="#f18a76" stroke="#f18a76" stroke-width="1"/><circle cx="310.0" cy="240.0" r="8" fill="#f5b85d"/><path d="M310.0 240.0L260.0 240.0" stroke="#67d4d0" stroke-width="3.5"/><path d="M260.0 240.0L268.1 236.1L268.1 243.9Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><path d="M310.0 240.0L310.0 194.0" stroke="#f18a76" stroke-width="3.5"/><path d="M310.0 194.0L313.9 202.1L306.1 202.1Z" fill="#f18a76" stroke="#f18a76" stroke-width="1"/><circle cx="220.0" cy="150.0" r="8" fill="#f5b85d"/><path d="M220.0 150.0L220.0 100.0" stroke="#67d4d0" stroke-width="3.5"/><path d="M220.0 100.0L223.9 108.1L216.1 108.1Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><path d="M220.0 150.0L266.0 150.0" stroke="#f18a76" stroke-width="3.5"/><path d="M266.0 150.0L257.9 153.9L257.9 146.1Z" fill="#f18a76" stroke="#f18a76" stroke-width="1"/><circle cx="310.0" cy="60.0" r="8" fill="#f5b85d"/><path d="M310.0 60.0L360.0 60.0" stroke="#67d4d0" stroke-width="3.5"/><path d="M360.0 60.0L351.9 63.9L351.9 56.1Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><path d="M310.0 60.0L310.0 106.0" stroke="#f18a76" stroke-width="3.5"/><path d="M310.0 106.0L306.1 97.9L313.9 97.9Z" fill="#f18a76" stroke="#f18a76" stroke-width="1"/><rect x="460" y="86" width="14" height="10" fill="#67d4d0"/><text x="480" y="96" fill="#67d4d0" font-size="13" text-anchor="start" font-weight="normal" stroke="none">velocity (along the path)</text><rect x="460" y="112" width="14" height="10" fill="#f18a76"/><text x="480" y="122" fill="#f18a76" font-size="13" text-anchor="start" font-weight="normal" stroke="none">pull (towards the centre)</text><text x="310" y="270" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">The speed stays the same. The direction keeps changing, and that needs an inward pull.</text></svg><figcaption>The speed is constant, but the direction keeps turning. Something has to pull inward at every instant.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>A ball is whirled round on a string, seen from above. The <strong style="color:#67d4d0">teal</strong> arrow is its velocity, along the path. The <strong style="color:#f18a76">red</strong> arrow is the pull of the string, always towards the centre. Pick the speed and the string length. Then press <strong>Cut the string</strong>.</p>
+      <div class="equation">acceleration  a = v² / r  (towards the centre)        centripetal force  F = m · v² / r<small>Double the speed and the force needed is four times as large. Halve the radius and it doubles. The force is not a new kind of force: it is the name for whatever pulls inward.</small></div>
+<div data-sim="circle" data-alt="A ball swung on a string in a circle with velocity and string-pull arrows and a cut-the-string button" data-caption="Teal: velocity. Red: the string’s inward pull. Press the button to cut the string and watch the ball’s path. Shown at 60% of real speed."></div><div class="try"><h3>Try this</h3><ol><li>Watch the arrows. The velocity arrow is always along the circle; the pull arrow always points to the centre. They are at right angles.</li><li>Raise the <strong>speed</strong> from 5 to 10 m/s. The pull needed goes from 12.5 N to 50 N: four times, because force goes as speed squared.</li><li>Shorten the <strong>string</strong> at the same speed. The pull rises: a tighter circle needs a harder pull.</li><li>Press <strong>Cut the string</strong>. The ball does <em>not</em> fly outward. It shoots off in a straight line along the direction it was moving. Press Restore string and try again.</li></ol></div><figure class="illo"><svg viewBox="0 0 660 282" role="img" aria-label="Two panels showing a ball released from a circle: moving outward along the radius is crossed out, moving straight along the tangent is correct" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">The string is cut. Which way does the ball go?</text><circle cx="160" cy="170" r="60" stroke="#3a4b65" stroke-width="2" stroke-dasharray="5 6"/><circle cx="160" cy="170" r="5" fill="#e8edf5"/><circle cx="198.6" cy="124.0" r="8" fill="#f5b85d"/><path d="M198.6 124.0L237.1 78.1" stroke="#f18a76" stroke-width="4"/><path d="M237.1 78.1L234.9 86.8L228.9 81.8Z" fill="#f18a76" stroke="#f18a76" stroke-width="1"/><line x1="214" y1="88" x2="230" y2="104" stroke="#fff" stroke-width="3"/><line x1="214" y1="104" x2="230" y2="88" stroke="#fff" stroke-width="3"/><text x="160" y="262" fill="#f18a76" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">flung outward (it doesn’t)</text><text x="160" y="48" fill="#e8edf5" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">What many people expect</text><circle cx="470" cy="170" r="60" stroke="#3a4b65" stroke-width="2" stroke-dasharray="5 6"/><circle cx="470" cy="170" r="5" fill="#e8edf5"/><circle cx="508.6" cy="124.0" r="8" fill="#f5b85d"/><path d="M508.6 124.0L585.2 188.3" stroke="#67d4d0" stroke-width="4"/><path d="M585.2 188.3L576.4 186.1L581.5 180.1Z" fill="#67d4d0" stroke="#67d4d0" stroke-width="1"/><text x="470" y="262" fill="#67d4d0" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">straight along the tangent</text><text x="470" y="48" fill="#e8edf5" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">What actually happens</text></svg><figcaption>The test of the outward-force idea. When the pull stops, the ball goes straight, along the tangent.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Why the path bends</h2>
+      <p>Newton’s first law says an object moves in a straight line at a steady speed unless a force acts on it. A ball going round a circle isn’t doing that: its direction is always changing. So there <em>must</em> be a force, and it must point towards the inside of the curve to bend the path that way. That inward force, whatever supplies it, is the centripetal force. For a swung ball it is the string, for the Moon it is gravity, for a car on a bend it is friction between the tyres and the road.</p>
+      <p>If the string is cut, the inward force vanishes and the ball obeys the first law: it goes straight, along the tangent, at the speed it had at that instant.</p>
+      <h3>So what is the outward feeling?</h3>
+      <p>The sensation of being thrown outward is your body trying to go straight on, while the car, the wall, or the roundabout seat keeps turning and pushes you inward. You feel that push as pressure on the side of your body. In the Rotor, the wall is pushing you inward, with a force around three times your weight, hard enough that the friction between you and the wall can hold you up when the floor drops. Nothing flings you outward.</p><div class="callout key"><p class="beat">The surprise</p><p>The outward “force” is not a force at all. It is inertia: the tendency of everything to carry on in a straight line. What you feel is the real force, pushing you inward and forcing you to turn.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> the spin cycle of a washing machine is turning at roughly 1,000 to 1,400 revolutions per minute, which pulls the clothes inward with about 300 times the pull of gravity at the drum wall, while the water, which has nothing to hold it, flies off through the holes. Medical laboratories are spinning blood samples in centrifuges to separate their parts. And astronaut trainees are being whirled in a centrifuge to experience launch forces.</p></div><ul class="apps"><li><strong>Washing machines and centrifuges</strong>The container pulls the clothes or sample inward while liquid escapes in a straight line through the holes.</li><li><strong>Roads and railways</strong>Banked bends supply the inward force that a car or train needs to turn.</li><li><strong>Orbits</strong>Gravity is the centripetal force that keeps the Moon and satellites going round.</li><li><strong>Amusement rides</strong>Loops and spinners work by making the track, the wall or the seat push inward.</li><li><strong>Medicine and biology</strong>Centrifuges separate blood components and spin down cells and DNA.</li><li><strong>Aviation and spaceflight</strong>Pilots and astronauts are trained for the forces of turning, which feel like extra weight.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>This is a top view with no gravity, so the string stays horizontal and the ball is a point on a massless, unstretchable string. The ball keeps a constant speed forever (no air drag), and the 0.5 kg mass is fixed. After the cut, the ball is shown moving in a perfectly straight line, which is accurate only in the absence of gravity and air. The animation is slowed to 60% of real speed. A Rotor’s numbers (about three times your weight) are rough, since designs vary.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Turning needs an inward pull.</strong> The direction changes, so there must be a force.</li><li><strong>No outward force, seen from the ground.</strong> What you feel is inertia plus a push inward. (In the spinning frame, people use an outward “centrifugal” force as bookkeeping; it is not a separate push.)</li><li><strong>Cut the pull and it goes straight.</strong> Along the tangent, not outward.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Centripetal force</dt><dd>The inward force that makes an object move in a circle, supplied by tension, friction, gravity or a wall.</dd><dt>Centripetal acceleration</dt><dd>The inward acceleration, v² / r.</dd><dt>Tangent</dt><dd>The straight line that touches a circle at a point, in the direction of motion there.</dd><dt>Centrifugal “force”</dt><dd>The apparent outward push felt in a rotating frame, a result of inertia.</dd></dl><ul class="refs"><li>C. Huygens, <em>Horologium Oscillatorium</em> (1673).</li><li>R. Hooke, letter to I. Newton, 6 January 1680 (1679 in the old calendar).</li><li>I. Newton, <em>Principia</em> (1687), Definitions and Book I.</li><li>G.-G. Coriolis, “Sur les équations du mouvement relatif des systèmes de corps” (1835).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

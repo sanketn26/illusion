@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Angular momentum: the spinning skater — illusion</title>
+  <meta name="description" content="A skater pulls in their arms and speeds up, with no push at all. The conservation law behind pirouettes, cats landing on their feet, and pulsars blinking thirty times a second.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-MEC">Motion &amp; forces</a> / MEC14</p>
+    <p class="eyebrow">MEC14 · Motion &amp; forces</p>
+    <h1>Angular momentum: the <em>spinning</em> skater</h1>
+    <p class="lede">A figure skater starts a slow spin, draws in their arms, and whirls into a blur, with nothing to push on and no one to help. The secret is a conserved quantity that is to rotation what momentum is to straight-line motion.</p>
+    <p class="meta"><span>Reading time ≈ 10 min</span><span>Simulation: Moderate (M)</span><span>Video: 8–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>Spinning things carry <strong>angular momentum</strong>: how much mass there is, how far it is from the axis, and how fast it turns. With no outside twist, that amount cannot change. So if the skater brings their mass <strong>closer to the axis</strong>, the spin rate must <strong>go up</strong> to compensate. Pulling the hands in from full stretch to the chest gives about five times the spin rate.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>On the ice, a skater begins to spin with their arms stretched wide, turning about once a second. Slowly, deliberately, they draw their arms in against their chest. The spin quickens. By the time their hands are tight against their body they are turning four or five times a second, a blur of costume. Then they open their arms, and the spin slows again.</p>
+      <p>Nobody pushed. The ice is nearly frictionless; the skater’s blades are on a tiny patch. Nothing external is giving them extra twist. And yet the spinning is plainly faster. Where did the speed come from?</p>
+      <p>It came from a quantity that nature keeps constant and that a skater, without knowing the physics, has mastered: angular momentum.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“To spin faster, something must push you”</h2>
+      <p>Momentum in a straight line works as expected: to go faster, something has to push you. So it is natural to think the same of spinning. A skater who spins faster must be getting a boost from somewhere.</p>
+      <p>But for rotation there is a second way to change speed. You can keep the same “amount of spin” and change how it is shared between <em>how fast</em> and <em>how spread out</em>. The simulation lets you slide the skater’s arms and watch the trade.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">1609</span>Johannes Kepler announces that a planet sweeps out equal areas in equal times, so it moves fastest when it is closest to the Sun. Nobody yet knows why.</li><li><span class="year">1687</span>Newton proves, as the very first result in the <em>Principia</em>, that equal areas follow whenever the force points to a fixed centre: it is conservation of angular momentum.</li><li><span class="year">1750s</span>Leonhard Euler works out the laws of rotation for a solid body, including how a spinning body responds to twist.</li><li><span class="year">1918</span>Emmy Noether proves that conservation of angular momentum comes from a symmetry of nature: the laws of physics don’t depend on which direction you face.</li><li><span class="year">1967–68</span>Jocelyn Bell Burnell discovers pulsars, and Thomas Gold explains them: spinning neutron stars, spun up by the collapse of their cores.</li></ol><figure class="illo"><svg viewBox="0 0 620 290" role="img" aria-label="Top views of a skater with arms out spinning slowly and with arms in spinning much faster" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Same skater, same spin “amount”: only the arms change</text><circle cx="150" cy="130" r="95" fill="#1a2b42" stroke="#2e4766"/><line x1="70" y1="130" x2="230" y2="130" stroke="#f5b85d" stroke-width="7" stroke-linecap="round"/><circle cx="70" cy="130" r="9" fill="#67d4d0"/><circle cx="230" cy="130" r="9" fill="#67d4d0"/><circle cx="150" cy="130" r="22" fill="#e8edf5"/><path d="M 77.9 79.5 A 88 88 0 0 1 90.0 65.6" stroke="#67d4d0" stroke-width="3"/><text x="150" y="252" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">arms out</text><text x="150" y="272" fill="#67d4d0" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">1 turn per second</text><circle cx="470" cy="130" r="95" fill="#1a2b42" stroke="#2e4766"/><line x1="450" y1="130" x2="490" y2="130" stroke="#f5b85d" stroke-width="7" stroke-linecap="round"/><circle cx="450" cy="130" r="9" fill="#67d4d0"/><circle cx="490" cy="130" r="9" fill="#67d4d0"/><circle cx="470" cy="130" r="22" fill="#e8edf5"/><path d="M 397.9 79.5 A 88 88 0 0 1 410.0 65.6" stroke="#f5b85d" stroke-width="3"/><path d="M 417.0 59.7 A 88 88 0 0 1 432.8 50.2" stroke="#f5b85d" stroke-width="3"/><path d="M 441.4 46.8 A 88 88 0 0 1 459.3 42.7" stroke="#f5b85d" stroke-width="3"/><path d="M 468.5 42.0 A 88 88 0 0 1 486.8 43.6" stroke="#f5b85d" stroke-width="3"/><path d="M 495.7 45.8 A 88 88 0 0 1 512.7 53.0" stroke="#f5b85d" stroke-width="3"/><text x="470" y="252" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">arms in</text><text x="470" y="272" fill="#f5b85d" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">4.75 turns per second</text><text x="310" y="138" fill="#91a3bb" font-size="36" text-anchor="middle" font-weight="normal" stroke="none">→</text></svg><figcaption>Pulling the arms in shrinks the spread of mass and the spin rate climbs to compensate.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>You see a skater from above, spinning at a speed set by one rule: the angular momentum, L, stays constant (59.7 in these units). <strong>Arms</strong> sets how far the hands are from the axis. The bars show the “spread of mass” (moment of inertia), the spin rate, and their product.</p>
+      <div class="equation">angular momentum  L = I · ω      I = I_body + 2 m r²         if L is constant:  ω = L / I<small>I (moment of inertia) measures how far the mass is from the axis, weighted by distance squared. ω is the spin rate. With no outside twist, L cannot change.</small></div>
+<div data-sim="skater" data-alt="A skater seen from above with adjustable arm length and readouts of moment of inertia, spin rate and angular momentum" data-caption="Teal: hands. Amber: arms. White: body. The bars show how the spread of mass and the spin rate trade off while their product stays fixed."></div><div class="try"><h3>Try this</h3><ol><li>Start with the arms <strong>stretched out</strong>. The skater turns about once per second. The “spread of mass” bar is long and the spin bar is short.</li><li>Drag <strong>Arms</strong> down towards 0. The spread of mass shrinks about 5-fold, and the spin rate rises to nearly <strong>5 turns per second</strong>.</li><li>Look at the white <strong>angular momentum</strong> bar. It never moves. Everything else may change; this is conserved.</li><li>Check the <strong>movement energy</strong> bar. It rises as the arms come in: the skater is doing work to pull their arms inward.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 290" role="img" aria-label="A large slowly spinning stellar core collapsing into a tiny fast-spinning neutron star" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">The same law, a star’s size: spin up by shrinking</text><circle cx="150" cy="130" r="86" fill="#3a5b86" stroke="#9fb3cc" stroke-width="2"/><text x="150" y="136" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">core of a star</text><text x="150" y="250" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">thousands of km across</text><text x="150" y="270" fill="#67d4d0" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">turns once in days</text><circle cx="460" cy="130" r="7" fill="#f5b85d"/><circle cx="460" cy="130" r="14" fill="none" stroke="#f5b85d" stroke-width="2"/><circle cx="460" cy="130" r="24" fill="none" stroke="#f5b85d" stroke-width="1.5" opacity=".55"/><text x="460" y="190" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">neutron star</text><text x="460" y="250" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">about 20 km across</text><text x="460" y="270" fill="#f5b85d" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">turns tens of times a second</text><path d="M260.0 130.0L400.0 130.0" stroke="#ffffff" stroke-width="4"/><path d="M400.0 130.0L391.9 133.9L391.9 126.1Z" fill="#ffffff" stroke="#ffffff" stroke-width="1"/><text x="330" y="112" fill="#fff" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">collapse</text></svg><figcaption>The same law at a cosmic scale (illustrative numbers). A star’s core shrinks to a tiny ball and spins up enormously.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>The seesaw of spin</h2>
+      <p>Angular momentum is the product of two things: how spread out the mass is, and how fast it turns. Hold the product fixed and the two are on a seesaw. Bring the mass inward and the spin rate must rise to keep the product the same. Because the “spread” counts the <em>square</em> of distance from the axis, halving the arm radius cuts the arms’ share of it by four. With the body’s share added in, the whole drops about five-fold between arms out and arms in, and the spin rate rises five-fold to match. That is why the effect is so dramatic.</p>
+      <p>It is also why the energy goes up. The skater has to pull their arms inward against the tendency of their hands to keep moving outward, and that takes effort (see <a href="circular-motion.html">circular motion</a>). The extra movement energy of the spin is exactly the work the skater did.</p>
+      <h3>The same trick everywhere</h3>
+      <p>A diver tucks into a ball to somersault and opens out to slow down for a clean entry. A cat in free fall turns its body by pulling in and extending its legs in turn, landing on its feet while angular momentum stays zero overall. A hurricane spins faster as air is drawn towards its centre. And a star’s core, collapsing from thousands of kilometres across to about twenty, spins up by a factor of tens of thousands, which is why the neutron star at the centre of the Crab Nebula turns about thirty times a second.</p><div class="callout key"><p class="beat">The surprise</p><p>You can speed up a spin without any outside push, just by reshaping yourself. The conserved quantity is angular momentum, and the shape of the thing decides how that is divided between “how fast” and “how spread out.”</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> the International Space Station is using large gyroscopes, “control moment gyroscopes,” to turn itself around without burning any fuel: it tilts the axes of spinning wheels, and the station turns the other way to keep the total fixed. The Crab pulsar, the remains of a star that exploded in 1054, is spinning about thirty times per second. And somewhere a figure skater is pulling in their arms to reach five or six turns a second.</p></div><ul class="apps"><li><strong>Figure skating, diving and gymnastics</strong>Athletes change their spin by changing their shape.</li><li><strong>Spacecraft and satellites</strong>Reaction wheels and control moment gyroscopes turn a spacecraft with no fuel.</li><li><strong>Astronomy</strong>Pulsars, planetary orbits and galaxies all obey angular-momentum conservation.</li><li><strong>Weather</strong>Air drawn inward spins faster, one reason hurricanes and tornadoes get so intense.</li><li><strong>Cats and animals</strong>A falling cat rotates its body by changing its shape, with zero total angular momentum.</li><li><strong>Engines and flywheels</strong>A flywheel stores rotational kinetic energy (and carries angular momentum), and smooths out an engine’s pulses.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>The skater is modelled as a fixed round body with two point-mass hands on stick-thin arms, and the arms are the only thing that changes. A real skater also tucks their legs and shifts their torso. The ice has no friction, and the skater’s spinning leg is ignored. The display is slowed to a quarter of real speed so the turns don’t blur. The pulsar picture is illustrative: real collapses involve many other changes. The numbers in the bars are in made-up but self-consistent units.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Spin has a conserved amount.</strong> Angular momentum = spread of mass × spin rate.</li><li><strong>Pull in and speed up.</strong> Hands from full stretch to the chest gives about five times the spin rate.</li><li><strong>No push needed.</strong> Reshaping alone changes the spin rate, though it costs work.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Angular momentum (L)</dt><dd>The rotational equivalent of momentum: L = I × ω.</dd><dt>Moment of inertia (I)</dt><dd>How hard something is to spin, set by how far its mass is from the axis.</dd><dt>Angular velocity (ω)</dt><dd>The spin rate, in radians per second.</dd><dt>Torque</dt><dd>A twist that can change angular momentum.</dd></dl><ul class="refs"><li>J. Kepler, <em>Astronomia nova</em> (1609).</li><li>I. Newton, <em>Principia</em> (1687), Book I, Proposition 1.</li><li>E. Noether, “Invariante Variationsprobleme” (1918).</li><li>A. Hewish, S. J. Bell, et al., “Observation of a rapidly pulsating radio source,” <em>Nature</em> 217 (1968).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

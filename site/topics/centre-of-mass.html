@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Centre of mass — illusion</title>
+  <meta name="description" content="A messy, lumpy object has one special point where all its weight can be pictured as acting. Balance a hammer, hang a shape, and understand how a high jumper clears a bar their body does not.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-MEC">Motion &amp; forces</a> / MEC10</p>
+    <p class="eyebrow">MEC10 · Motion &amp; forces</p>
+    <h1>The centre of <em>mass</em></h1>
+    <p class="lede">At the 1968 Olympics a young American cleared a high-jump bar head-first and backwards, and won gold. His centre of mass may have passed underneath the bar. The idea of a single point that represents a whole body is one of the most useful in physics.</p>
+    <p class="meta"><span>Reading time ≈ 9 min</span><span>Simulation: Starter (S)</span><span>Video: 5–9 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>Every object, however lumpy, acts as if all its mass were concentrated at one point: the <strong>centre of mass</strong>. It is where you can balance the object on a finger, it always hangs straight below a pivot, and when you throw the object, it follows a simple smooth path no matter how the object tumbles.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>In October 1968, in the thin air of Mexico City, a 21-year-old engineering student named Dick Fosbury approached the high-jump bar, curved round in a smooth arc, and went over it <em>backwards</em>, head first, with his back arched like a rainbow. The crowd laughed. The jump was 2.24 metres, an Olympic record. Fosbury won the gold medal. Within a decade almost every high jumper in the world was copying what became known as the Fosbury flop.</p>
+      <p>The straddle-style jumpers before him went over the bar face-down with their bodies wrapped around it. Fosbury’s trick is subtle. By arching his body round the bar, he kept more of his mass below it. His arms, his hips and his legs went over the bar at different moments, but his <em>centre of mass</em>, the single point that tracks the whole body’s path, could pass under it.</p>
+      <p>That is the power of the idea: a flailing body, reduced to a single point.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“The middle of an object is where its weight acts”</h2>
+      <p>Most of us picture the centre of an object as its geometric middle. For a ball or a ruler that is right. But for a hammer, whose head is far heavier than its handle, the balance point is nowhere near the middle. For a high jumper in an arch, the centre of mass can sit <em>outside the body altogether</em>.</p>
+      <p>The centre of mass is not the middle of the shape. It is the average position of the <em>mass</em>. The simulation lets you find it by hand.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">c. 250 BCE</span>Archimedes, in <em>On the Equilibrium of Planes</em>, works out where to balance flat shapes and shows that a shape behaves as if its weight acts at one point.</li><li><span class="year">1687</span>Newton proves, in a corollary to his laws, that the centre of mass of a system moves as if all its mass were there, and that internal forces cannot change its motion.</li><li><span class="year">1800s</span>Engineers use it to design ships, cranes and bridges: a ship’s stability depends on where its centre of mass sits relative to the buoyant force.</li><li><span class="year">1968</span>Dick Fosbury wins Olympic gold with the “flop”, which keeps the jumper’s centre of mass low relative to the bar.</li><li><span class="year">Today</span>Aircraft loading, vehicle design, and walking robots all revolve around keeping the centre of mass in the right place.</li></ol><figure class="illo"><svg viewBox="0 0 620 250" role="img" aria-label="A high jumper arching over a bar with the centre of mass marked as passing close to or beneath the bar" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">The Fosbury flop: the body goes over the bar, the centre of mass doesn’t have to</text><line x1="60" y1="190" x2="600" y2="190" stroke="#51627a" stroke-width="3"/><line x1="300" y1="150" x2="300" y2="190" stroke="#8ea2ba" stroke-width="3"/><rect x="170" y="84" width="260" height="6" fill="#f18a76"/><rect x="165" y="84" width="8" height="106" fill="#51627a"/><rect x="427" y="84" width="8" height="106" fill="#51627a"/><polyline points="190.0,160.0 230.0,120.0 270.0,100.0 310.0,92.0 350.0,100.0 390.0,118.0 420.0,148.0" stroke="#f5b85d" stroke-width="12" /><circle cx="203" cy="164" r="12" fill="#f5b85d"/><circle cx="310" cy="106" r="6" fill="#ffffff" stroke="#10192a" stroke-width="2"/><line x1="310" y1="106" x2="310" y2="84" stroke="#ffffff" stroke-dasharray="3 3"/><text x="440" y="96" fill="#f18a76" font-size="13" text-anchor="start" font-weight="bold" stroke="none">bar</text><line x1="310" y1="113" x2="310" y2="146" stroke="#ffffff" stroke-width="1.5"/><text x="310" y="162" fill="#ffffff" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">centre of mass</text><text x="310" y="232" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">Arch the back and the weight hangs below the body. The centre of mass can pass under the bar.</text></svg><figcaption>The Fosbury flop in outline. The body arches over the bar while the centre of mass (white dot) stays close to the bar, or beneath it.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>A flat shape of uniform thickness hangs from a point you choose. Gravity pulls on the whole shape, and it swings until its centre of mass is directly <em>below</em> the pivot. A dashed line is drawn straight down from the pivot. Hang it from a second point and a second line is drawn. The centre of mass is where the two lines cross.</p>
+      <div class="equation">centre of mass  =  Σ (mass × position) ÷ Σ mass         (the mass-weighted average position)<small>For a uniform flat shape this is the “centroid”: the average position of its area. It always lies where lines drawn straight down from any hanging point intersect.</small></div>
+<div data-sim="com" data-alt="A flat shape that can be hung from any point, with plumb lines drawn after it settles" data-caption="Click on the shape to hang it from that point. Dashed amber lines are drawn straight down once it settles. They cross at the centre of mass."></div><div class="try"><h3>Try this</h3><ol><li>Wait for the shape to swing and settle. A dashed line appears, straight down from the hanging point. The centre of mass is somewhere along it.</li><li>Click on the shape at a <strong>different point</strong> to hang it from there. A second line appears, and a white dot marks where the two lines cross.</li><li>Click right <em>on the white dot</em>. The shape no longer swings: hung from its centre of mass, it balances at any angle.</li><li>Press <strong>Show centre of mass</strong> and check that the teal ring sits exactly where the lines crossed. Then try the other shapes.</li></ol></div><figure class="illo"><svg viewBox="0 0 680 280" role="img" aria-label="Two hung copies of an L-shape with vertical plumb lines, and a third copy where the lines drawn through both pivots cross at the centre of mass" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="15" text-anchor="middle" font-weight="bold" stroke="none">Finding the centre of mass by hanging</text><polygon points="150.0,58.0 256.3,177.6 218.9,210.8 152.5,136.1 85.2,195.9 45.4,151.0" fill="#6e5a3c" stroke="#cdb88a" stroke-width="2"/><line x1="150" y1="58" x2="150" y2="240" stroke="#f5b85d" stroke-width="2" stroke-dasharray="6 5"/><circle cx="150" cy="58" r="5" fill="#fff"/><text x="150" y="262" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">hang from one corner</text><polygon points="324.9,216.3 330.0,56.4 380.0,58.0 376.8,157.9 466.8,160.8 464.8,220.8" fill="#6e5a3c" stroke="#cdb88a" stroke-width="2"/><line x1="380" y1="58" x2="380" y2="240" stroke="#f5b85d" stroke-width="2" stroke-dasharray="6 5"/><circle cx="380" cy="58" r="5" fill="#fff"/><text x="380" y="262" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">hang from another point</text><polygon points="490.0,60.0 650.0,60.0 650.0,110.0 550.0,110.0 550.0,200.0 490.0,200.0" fill="#6e5a3c" stroke="#cdb88a" stroke-width="2"/><line x1="472.0" y1="44.0" x2="603.7" y2="161.1" stroke="#f5b85d" stroke-width="2" stroke-dasharray="6 5"/><line x1="680.0" y1="109.0" x2="459.7" y2="116.1" stroke="#f5b85d" stroke-width="2" stroke-dasharray="6 5"/><circle cx="549.9" cy="113.2" r="7" fill="#fff" stroke="#10192a" stroke-width="2"/><text x="580" y="262" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">lines cross at the centre</text></svg><figcaption>The hanging method. Each hang adds one plumb line, and the centre of mass is where they cross.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Why the lines cross at the right place</h2>
+      <p>Gravity pulls on every part of the shape at once, but its total effect is as if one force pulled at the centre of mass. A hanging object only stops swinging when that single force lies directly under the pivot, because then it doesn’t twist the object any more. So after settling, the centre of mass must be on the vertical line through the pivot. Do it twice and the point is pinned down.</p>
+      <p>If the pivot is <em>at</em> the centre of mass, there is nothing for gravity to twist, and the object stays at any angle. That is why you can balance a hammer on one finger at exactly one place, and nowhere else.</p>
+      <h3>One point, many uses</h3>
+      <p>The centre of mass has an even bigger property. Throw a spinning hammer into the air. The head and handle tumble in a complicated way, but the centre of mass follows a perfect smooth parabola, exactly as if the whole object were a single particle. Internal forces can shuffle the parts around; they cannot move the centre of mass. That is why a gymnast in the air can twist and tuck all they like: the centre of mass has already been decided at take-off.</p><div class="callout key"><p class="beat">The surprise</p><p>A complicated body, with limbs, parts and internal forces, has a single simple point that obeys the simplest laws of motion. Everything else about its motion can be treated separately.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> the Earth and the Moon are circling a point about 4,700 kilometres from the Earth’s centre, the centre of mass of the pair, which lies inside the Earth. Nearby, airline load planners are checking that every flight’s cargo, fuel and passengers put the aircraft’s centre of mass inside a narrow permitted range. And humanoid robots are recomputing, hundreds of times a second, whether their centre of mass is still above their feet.</p></div><ul class="apps"><li><strong>Aircraft and ships</strong>Loading must keep the centre of mass inside the stable range.</li><li><strong>Vehicles</strong>Low centres of mass make sports cars harder to roll over than tall vans.</li><li><strong>Sport</strong>High jumpers, divers and gymnasts manage their centres of mass in the air.</li><li><strong>Robotics</strong>Walking and balancing robots track the centre of mass relative to their feet.</li><li><strong>Space</strong>The Earth–Moon pair, and binary stars, orbit around a common centre of mass.</li><li><strong>Furniture and architecture</strong>Anything tall has to keep its centre of mass above its base.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>The shapes are flat, uniform plates, so each point has the same mass per area. In real objects the mass is unevenly spread and three-dimensional. The swinging includes some artificial damping so it settles quickly. A real hanging object would take longer to stop, and friction at the pivot would matter. “Centre of mass” and “centre of gravity” are the same point in the uniform gravity of everyday life, but they differ for very large objects.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>The centre of mass is the average position of the mass.</strong> Not necessarily the middle of the shape.</li><li><strong>A hanging object settles with it directly below the pivot.</strong> Hang from two points and the lines cross there.</li><li><strong>Internal forces cannot move it.</strong> Only outside forces change the path of the centre of mass.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Centre of mass</dt><dd>The mass-weighted average position of all the parts of an object.</dd><dt>Centroid</dt><dd>The centre of mass of a uniform flat shape; the average position of its area.</dd><dt>Plumb line</dt><dd>A line hanging straight down under gravity.</dd><dt>Barycentre</dt><dd>The common centre of mass of two or more bodies, such as the Earth and the Moon.</dd></dl><ul class="refs"><li>Archimedes, <em>On the Equilibrium of Planes</em> (c. 250 BCE).</li><li>I. Newton, <em>Principia</em> (1687), Corollaries to the Laws of Motion.</li><li>D. Fosbury and J. Boxer, <em>Fosbury Flop</em> (various reports of the 1968 Olympic final).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

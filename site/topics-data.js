@@ -116,8 +116,8 @@ window.ILLUSION_CATALOG = {
    "title": "Orders of magnitude",
    "level": "S",
    "domain": "FND",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "orders-of-magnitude",
    "needs": [],
    "illusion": "Our feel for very big and very small is poor",
    "hook": "Zooming from the Earth down to an atom, ten times at a time."
@@ -162,8 +162,8 @@ window.ILLUSION_CATALOG = {
    "title": "Vectors: adding pushes",
    "level": "S",
    "domain": "FND",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "vectors",
    "needs": [],
    "illusion": "Forces add like arrows, not like numbers",
    "hook": "Two people pull a sled at an angle."
@@ -195,8 +195,8 @@ window.ILLUSION_CATALOG = {
    "title": "Vector fields: arrows everywhere",
    "level": "S",
    "domain": "FND",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "vector-fields",
    "needs": [
     "FND07"
    ],
@@ -208,8 +208,8 @@ window.ILLUSION_CATALOG = {
    "title": "Speed versus acceleration",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "speed-and-acceleration",
    "needs": [],
    "illusion": "Speed and acceleration feel like one thing",
    "hook": "A car cruising at 100 km/h versus one pulling away from a light."
@@ -219,8 +219,8 @@ window.ILLUSION_CATALOG = {
    "title": "Free fall: heavy and light together",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "free-fall",
    "needs": [
     "MEC01"
    ],
@@ -232,8 +232,8 @@ window.ILLUSION_CATALOG = {
    "title": "Projectile motion",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "projectile-motion",
    "needs": [
     "MEC02",
     "FND07"
@@ -246,8 +246,8 @@ window.ILLUSION_CATALOG = {
    "title": "Newton's laws: force changes motion",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "newtons-laws",
    "needs": [
     "FND07",
     "MEC01"
@@ -260,8 +260,8 @@ window.ILLUSION_CATALOG = {
    "title": "Friction and braking distance",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "friction-and-braking",
    "needs": [
     "MEC04"
    ],
@@ -273,8 +273,8 @@ window.ILLUSION_CATALOG = {
    "title": "Circular motion and centripetal force",
    "level": "M",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "circular-motion",
    "needs": [
     "MEC04"
    ],
@@ -286,8 +286,8 @@ window.ILLUSION_CATALOG = {
    "title": "Conservation of momentum",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "momentum",
    "needs": [
     "MEC04"
    ],
@@ -299,8 +299,8 @@ window.ILLUSION_CATALOG = {
    "title": "Elastic and inelastic collisions",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "collisions",
    "needs": [
     "MEC07"
    ],
@@ -312,8 +312,8 @@ window.ILLUSION_CATALOG = {
    "title": "Impulse: seat belts and airbags",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "impulse",
    "needs": [
     "MEC07"
    ],
@@ -325,8 +325,8 @@ window.ILLUSION_CATALOG = {
    "title": "Centre of mass",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "centre-of-mass",
    "needs": [],
    "illusion": "A messy system has a simple summary",
    "hook": "Balancing a hammer on one finger."
@@ -336,8 +336,8 @@ window.ILLUSION_CATALOG = {
    "title": "Energy conservation: the roller coaster",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "energy-conservation",
    "needs": [
     "MEC04"
    ],
@@ -349,8 +349,8 @@ window.ILLUSION_CATALOG = {
    "title": "Potential-energy landscapes",
    "level": "M",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "potential-energy-landscapes",
    "needs": [
     "MEC11"
    ],
@@ -362,8 +362,8 @@ window.ILLUSION_CATALOG = {
    "title": "Torque and levers",
    "level": "S",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "torque-and-levers",
    "needs": [
     "MEC04"
    ],
@@ -375,8 +375,8 @@ window.ILLUSION_CATALOG = {
    "title": "Angular momentum: the spinning skater",
    "level": "M",
    "domain": "MEC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "angular-momentum",
    "needs": [
     "MEC13"
    ],
@@ -443,12 +443,12 @@ window.ILLUSION_CATALOG = {
    "title": "Springs and Hooke's law",
    "level": "S",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "springs",
    "needs": [
     "MEC04"
    ],
-   "illusion": "Stretch twice, pull twice",
+   "illusion": "A bigger stretch takes longer to come back",
    "hook": "A bathroom scale."
   },
   {
@@ -456,8 +456,8 @@ window.ILLUSION_CATALOG = {
    "title": "Pendulums and simple harmonic motion",
    "level": "S",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "pendulums",
    "needs": [
     "MEC04"
    ],
@@ -469,8 +469,8 @@ window.ILLUSION_CATALOG = {
    "title": "Damping: how a suspension smooths bumps",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "damping",
    "needs": [
     "OSC02"
    ],
@@ -482,8 +482,8 @@ window.ILLUSION_CATALOG = {
    "title": "Resonance",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "resonance",
    "needs": [
     "OSC02"
    ],
@@ -495,8 +495,8 @@ window.ILLUSION_CATALOG = {
    "title": "Coupled pendulums",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "coupled-pendulums",
    "needs": [
     "OSC02"
    ],
@@ -532,8 +532,8 @@ window.ILLUSION_CATALOG = {
    "title": "What sets a wave's speed",
    "level": "S",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "wave-speed",
    "needs": [
     "OSC07"
    ],
@@ -545,8 +545,8 @@ window.ILLUSION_CATALOG = {
    "title": "Superposition",
    "level": "S",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "superposition",
    "needs": [
     "OSC07"
    ],
@@ -584,8 +584,8 @@ window.ILLUSION_CATALOG = {
    "title": "Harmonics and timbre",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "harmonics-and-timbre",
    "needs": [
     "OSC11"
    ],
@@ -597,8 +597,8 @@ window.ILLUSION_CATALOG = {
    "title": "Fourier decomposition",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "fourier-decomposition",
    "needs": [
     "OSC09"
    ],
@@ -610,8 +610,8 @@ window.ILLUSION_CATALOG = {
    "title": "Beats",
    "level": "S",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "beats",
    "needs": [
     "OSC09"
    ],
@@ -623,8 +623,8 @@ window.ILLUSION_CATALOG = {
    "title": "The Doppler effect",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "doppler-effect",
    "needs": [
     "OSC07"
    ],
@@ -636,8 +636,8 @@ window.ILLUSION_CATALOG = {
    "title": "Wave packets and group velocity",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "wave-packets",
    "needs": [
     "OSC13"
    ],
@@ -649,8 +649,8 @@ window.ILLUSION_CATALOG = {
    "title": "Dispersion",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "dispersion",
    "needs": [
     "OSC16"
    ],
@@ -662,8 +662,8 @@ window.ILLUSION_CATALOG = {
    "title": "Reflection, transmission and echoes",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "reflection-and-echoes",
    "needs": [
     "OSC08"
    ],
@@ -675,8 +675,8 @@ window.ILLUSION_CATALOG = {
    "title": "Diffraction: waves bend round corners",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "diffraction",
    "needs": [
     "OSC10"
    ],
@@ -701,8 +701,8 @@ window.ILLUSION_CATALOG = {
    "title": "Sampling and aliasing",
    "level": "M",
    "domain": "OSC",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "sampling-and-aliasing",
    "needs": [
     "OSC13"
    ],
@@ -2356,8 +2356,8 @@ window.ILLUSION_CATALOG = {
    "title": "The inverse-square law",
    "level": "S",
    "domain": "GRV",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "inverse-square-law",
    "needs": [],
    "illusion": "Twice as far means half as strong",
    "hook": "A lamp seen from twice as far."
@@ -2367,8 +2367,8 @@ window.ILLUSION_CATALOG = {
    "title": "Orbits: falling around the Earth",
    "level": "S",
    "domain": "GRV",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "orbits",
    "needs": [
     "MEC03",
     "GRV01"
@@ -2381,8 +2381,8 @@ window.ILLUSION_CATALOG = {
    "title": "Weightlessness in orbit",
    "level": "S",
    "domain": "GRV",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "weightlessness",
    "needs": [
     "GRV03"
    ],
@@ -2394,8 +2394,8 @@ window.ILLUSION_CATALOG = {
    "title": "Kepler's laws",
    "level": "M",
    "domain": "GRV",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "keplers-laws",
    "needs": [
     "GRV03"
    ],
@@ -2407,8 +2407,8 @@ window.ILLUSION_CATALOG = {
    "title": "Escape velocity",
    "level": "M",
    "domain": "GRV",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "escape-velocity",
    "needs": [
     "GRV03",
     "MEC11"
@@ -2448,8 +2448,8 @@ window.ILLUSION_CATALOG = {
    "title": "Tides",
    "level": "M",
    "domain": "GRV",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "tides",
    "needs": [
     "GRV01",
     "GRV02"
@@ -2462,8 +2462,8 @@ window.ILLUSION_CATALOG = {
    "title": "Seasons, moon phases and eclipses",
    "level": "S",
    "domain": "GRV",
-   "status": "idea",
-   "slug": "",
+   "status": "shipped",
+   "slug": "seasons-and-eclipses",
    "needs": [],
    "illusion": "Seasons come from distance to the Sun",
    "hook": "December is cold in the north and hot in the south."
@@ -3796,7 +3796,47 @@ window.ILLUSION_CATALOG = {
   "OSC11",
   "EMG02",
   "GRV01",
+  "FND03",
+  "FND07",
+  "FND10",
+  "MEC01",
+  "MEC02",
+  "MEC03",
+  "MEC04",
+  "MEC05",
+  "MEC06",
+  "MEC07",
+  "MEC08",
+  "MEC09",
+  "MEC10",
+  "MEC11",
+  "MEC12",
+  "MEC13",
+  "MEC14",
+  "OSC01",
+  "OSC02",
+  "OSC03",
+  "OSC04",
+  "OSC05",
+  "OSC08",
+  "OSC09",
+  "OSC12",
+  "OSC13",
+  "OSC14",
+  "OSC15",
+  "OSC16",
+  "OSC17",
+  "OSC18",
+  "OSC19",
+  "OSC21",
   "FLU06",
+  "GRV02",
+  "GRV03",
+  "GRV04",
+  "GRV05",
+  "GRV06",
+  "GRV09",
+  "GRV10",
   "CAS01"
  ]
 };

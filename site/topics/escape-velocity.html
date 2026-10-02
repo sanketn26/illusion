@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Escape velocity — illusion</title>
+  <meta name="description" content="How fast must you go to leave the Earth for good? One number, 11.2 kilometres a second, from an energy picture. Plus why rockets don’t need to reach it all at once.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-GRV">Gravity &amp; orbits</a> / GRV06</p>
+    <p class="eyebrow">GRV06 · Gravity &amp; orbits</p>
+    <h1>Escape <em>velocity</em></h1>
+    <p class="lede">In 1865 Jules Verne sent his heroes to the Moon in a capsule fired from a giant cannon in Florida. His numbers were startlingly good. His crew would not have survived the first second.</p>
+    <p class="meta"><span>Reading time ≈ 10 min</span><span>Simulation: Moderate (M)</span><span>Video: 8–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>Gravity is a hill of stored energy. To <strong>climb out for good</strong>, you need enough movement energy to reach the top. For the Earth that takes a launch speed of <strong>11.2 km/s</strong>, whatever you throw and in any direction that does not run into the ground (ignoring air). Below that, you always fall back. Rockets get away at much lower speeds, because they can keep pushing as they climb.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>In Jules Verne’s 1865 novel <em>From the Earth to the Moon</em>, a gun club in Baltimore decides to fire a projectile at the Moon. They cast an enormous cannon, the Columbiad, nine hundred feet long, deep into the ground in Florida, and pack it with enough guncotton to launch a capsule with three men aboard at twelve thousand yards per second, about eleven kilometres a second.</p>
+      <p>It is a remarkable guess. Eleven kilometres a second is almost exactly the speed needed to leave the Earth, a figure that physicists were only beginning to compute. Verne also chose Florida, near where NASA would build its launch sites a century later, because it is far south and near the equator, where the Earth’s spin helps.</p>
+      <p>Nearly everything about the plan was physically sound. Except for one detail: what the cannon would do to the people inside.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“You can leave Earth if you just keep going”</h2>
+      <p>In science fiction, spaceships “break free of gravity” by building up speed until they pass some invisible line. And if you think of gravity as a force that weakens with distance, it seems that any speed should work eventually: if you just keep going upward, the pull will fade, and you will be free.</p>
+      <p>The trouble is “keep going.” Gravity never switches off; it only weakens. So the question is whether it weakens quickly enough that you can outrun it. The simulation lets you fire a projectile straight up at different speeds and see.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">1687</span>Newton’s cannonball thought experiment shows that a fast enough shot will never fall back.</li><li><span class="year">1783–96</span>John Michell and Pierre-Simon Laplace calculate the speed needed to escape a body and note that for a heavy enough star it could exceed the speed of light, the first idea of a black hole.</li><li><span class="year">1865</span>Jules Verne’s <em>From the Earth to the Moon</em> uses a cannon and an escape speed of about 11 km/s.</li><li><span class="year">1903</span>Konstantin Tsiolkovsky works out the rocket equation, showing how a rocket can reach high speeds by throwing mass out the back.</li><li><span class="year">1959</span>The Soviet probe Luna 1 becomes the first spacecraft to reach escape speed, passing the Moon and entering orbit around the Sun.</li></ol><figure class="illo"><svg viewBox="0 0 620 284" role="img" aria-label="Bars of escape speed for the Moon, Mars, Earth, Jupiter and the Sun" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Escape speed from the surface (km/s, logarithmic bars)</text><text x="110" y="66" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">Moon</text><rect x="120" y="46" width="56" height="28" rx="4" fill="#67d4d0"/><text x="182.4865435584768" y="66" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">2.38</text><text x="110" y="108" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">Mars</text><rect x="120" y="88" width="105" height="28" rx="4" fill="#67d4d0"/><text x="231.23519775838912" y="108" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">5.03</text><text x="110" y="150" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">Earth</text><rect x="120" y="130" width="157" height="28" rx="4" fill="#f5b85d"/><text x="283.3245129792525" y="150" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">11.19</text><text x="110" y="192" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">Jupiter</text><rect x="120" y="172" width="266" height="28" rx="4" fill="#67d4d0"/><text x="392.1775448592824" y="192" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">59.5</text><text x="110" y="234" fill="#e8edf5" font-size="14" text-anchor="end" font-weight="bold" stroke="none">Sun</text><rect x="120" y="214" width="419" height="28" rx="4" fill="#67d4d0"/><text x="544.5955442897555" y="234" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">617.5</text><text x="310" y="270" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">A heavier or smaller world is harder to leave. Earth: 11.2 km/s, about 40,000 km/h.</text></svg><figcaption>Escape speeds. It is easier to leave a small world than a big one, and the Sun’s is more than fifty times Earth’s.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>The picture shows gravity as an <strong>energy well</strong>. Height is how much energy it takes to climb to each distance from the Earth’s centre. A projectile is launched straight up from the ground at the speed you choose, and its total energy (movement plus stored) is the dashed amber line. It can only go where the curve is below that line. If the line is above the top of the well, nothing can stop it.</p>
+      <div class="equation">½ v² − G M / r  =  total energy        escape:  total energy ≥ 0        so  v_escape = √(2 G M / R)<small>At the Earth’s surface, v_escape = 11.2 km/s. It does not depend on the projectile’s mass, or (ignoring the air) its direction.</small></div>
+<div data-sim="escape" data-alt="A projectile launched upward from Earth with a potential-energy well curve and total-energy line" data-caption="The curve is the Earth’s gravity well. The dashed line is your total energy. The ball shows the projectile’s distance. Time runs 3,600 times faster than real."></div><div class="try"><h3>Try this</h3><ol><li>Launch at <strong>8 km/s</strong>. The projectile climbs to about 6,700 km above the ground, stops, and falls back. The energy line meets the curve there.</li><li>Try <strong>10 km/s</strong>. It climbs to nearly five Earth radii before returning. It takes hours, but it comes back.</li><li>Try <strong>11.0 km/s</strong>. It goes far beyond the edge of the chart, but the energy line still meets the curve and it is still doomed to return.</li><li>Now try <strong>11.5 km/s</strong>. The energy line sits above the top of the well. Nothing stops the projectile and it never comes back.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 268" role="img" aria-label="Bars of g-force: Apollo launch 4, fighter jet 9, rocket sled 46 and Verne’s cannon 22,500, on a logarithmic scale" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Why Jules Verne’s cannon would have killed his crew</text><text x="205" y="66" fill="#e8edf5" font-size="13" text-anchor="end" font-weight="bold" stroke="none">Apollo launch (peak)</text><rect x="215" y="46" width="41" height="30" rx="4" fill="#67d4d0"/><text x="261.94007941030145" y="66" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">4 g</text><text x="205" y="112" fill="#e8edf5" font-size="13" text-anchor="end" font-weight="bold" stroke="none">Fighter jet, hard turn</text><rect x="215" y="92" width="65" height="30" rx="4" fill="#67d4d0"/><text x="285.8884906418741" y="112" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">9 g</text><text x="205" y="158" fill="#e8edf5" font-size="13" text-anchor="end" font-weight="bold" stroke="none">Colonel Stapp’s rocket sled</text><rect x="215" y="138" width="113" height="30" rx="4" fill="#f5b85d"/><text x="334.06753255434705" y="158" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">46 g</text><text x="205" y="204" fill="#e8edf5" font-size="13" text-anchor="end" font-weight="bold" stroke="none">Verne’s 270 m cannon</text><rect x="215" y="184" width="296" height="30" rx="4" fill="#f18a76"/><text x="516.9484112315727" y="204" fill="#e8edf5" font-size="14" text-anchor="start" font-weight="bold" stroke="none">22,500 g</text><text x="310" y="252" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">Reaching 11 km/s inside a 270 m barrel needs about 22,000 times the pull of gravity.</text></svg><figcaption>Verne’s capsule would have needed 22,000 g in the barrel: far beyond what any person can survive.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Climbing out of a hill of energy</h2>
+      <p>Lifting something away from the Earth requires work against gravity, and gravity’s pull weakens with distance, so the total energy needed is finite. Add up the work from the surface to infinity and you get exactly G M m / R for a mass m. A projectile with at least that much movement energy can get to infinity (with nothing left over), and one with less cannot. Setting ½ m v² equal to G M m / R, the mass cancels and the speed is 11.2 km/s.</p>
+      <p>Because it is an energy statement, it doesn’t care about direction: a shot fired sideways at 11.2 km/s also escapes (it just follows a parabola). And because the mass cancels, a pebble and a spacecraft have the same escape speed. A larger planet, or a smaller one of the same mass, deepens the well and raises the number: the Moon 2.4 km/s, Mars 5.0, Jupiter 59.5.</p>
+      <h3>Why rockets do not need 11.2 km/s</h3>
+      <p>Escape speed is for a projectile that is launched once and then coasts. A rocket keeps firing its engines as it climbs, adding energy continuously, so it can leave at any speed at all, just very slowly if it wants. Real spacecraft go fast anyway, to save fuel, but the 11.2 km/s figure is a speed limit for the cannonball, not for the rocket.</p><div class="callout key"><p class="beat">The surprise</p><p>Gravity weakens as 1/r², but the work to escape adds up to a finite amount. You can leave a planet entirely with a finite push. The same Newtonian idea, applied to light, hinted at “dark stars” whose escape speed exceeds the speed of light; the real explanation of black holes needs general relativity.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> the Earth is losing hydrogen to space at about three kilograms every second. The lightest atoms in the upper air, moving fast in the tail of the speed distribution, occasionally exceed escape speed and leave for good. And Voyager 1, launched in 1977, is more than 24 billion kilometres away and travelling at about 17 km/s, enough to leave the Sun’s grip too, since the Sun’s escape speed that far out is only a few kilometres per second.</p></div><ul class="apps"><li><strong>Space missions</strong>Every interplanetary mission begins with an escape-speed calculation.</li><li><strong>Planetary atmospheres</strong>Small, warm planets lose their light gases. That is why the Moon has no air and Earth has little hydrogen.</li><li><strong>Black holes</strong>A black hole is a region bounded by an event horizon, from which nothing escapes. The Newtonian escape-speed argument is only a rough hint of it.</li><li><strong>Rocket design</strong>Escape speed sets the energy budget, which the rocket equation turns into a fuel mass.</li><li><strong>Geometry of orbits</strong>Orbits at exactly escape speed are parabolas, the boundary between bound and unbound.</li><li><strong>Meteors and impacts</strong>Objects falling from far away arrive at least at the escape speed.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>The launch is a single push straight up from the surface, with no air, no rocket thrust, and the Earth is a non-rotating ball of fixed gravity. Real launches climb through thick air, which slows them, and gain a little from the Earth’s spin. The time is shown 3,600 times faster than real life so that the climb takes seconds. The chart ends at 14 Earth radii, so shots that go further than that run off its edge. Only motion straight away from the Earth is shown.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Gravity is an energy hill.</strong> Escape means having enough energy to climb it all.</li><li><strong>11.2 km/s from Earth.</strong> Independent of mass, and of direction.</li><li><strong>Rockets can go slower.</strong> They keep pushing, so they never need the full speed at once.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Escape velocity</dt><dd>The minimum launch speed to leave a body’s gravity without further push.</dd><dt>Gravity well</dt><dd>A picture of gravitational potential energy as a hole in a landscape.</dd><dt>Bound orbit</dt><dd>An orbit that returns, with total energy less than zero.</dd><dt>Parabolic orbit</dt><dd>The boundary orbit, at exactly escape speed.</dd></dl><ul class="refs"><li>J. Verne, <em>De la Terre à la Lune</em> (1865).</li><li>J. Michell, “On the means of discovering the distance, magnitude, &c. of the fixed stars,” <em>Philosophical Transactions</em> (1784).</li><li>K. E. Tsiolkovsky, “Exploration of cosmic space by means of reaction devices” (1903).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

@@ -92,3 +92,5 @@
 @media(prefers-reduced-motion:reduce){.now .beat::before{animation:none}}
 .controls label{white-space:nowrap}.controls output{min-width:64px}
 @media(max-width:760px){.story{padding-left:16px}.story p{font-size:18px!important}.controls{gap:10px}}
+
+.equation{white-space:pre-wrap}.equation small{white-space:normal}

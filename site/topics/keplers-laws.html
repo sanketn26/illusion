@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Kepler’s laws — illusion</title>
+  <meta name="description" content="A planet speeds up as it nears the Sun. Eight minutes of arc, a rejected circle, and the three laws that Newton later explained.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-GRV">Gravity &amp; orbits</a> / GRV05</p>
+    <p class="eyebrow">GRV05 · Gravity &amp; orbits</p>
+    <h1><em>Kepler’s</em> laws</h1>
+    <p class="lede">Johannes Kepler spent years trying to fit a circle to the orbit of Mars and was off by an amount so small you could barely see it. He refused to ignore it, and in doing so, reinvented astronomy.</p>
+    <p class="meta"><span>Reading time ≈ 10 min</span><span>Simulation: Moderate (M)</span><span>Video: 8–12 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>Planets move on <strong>ellipses</strong> with the Sun at one focus. A planet sweeps out <strong>equal areas in equal times</strong>, so it moves fastest when closest to the Sun. And the <strong>square of a planet’s year</strong> is proportional to the <strong>cube of its distance</strong>: the same rule fits every planet.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>When the Danish astronomer Tycho Brahe died in 1601, he left behind something no one had ever had: thirty years of planetary observations accurate to about one minute of arc, around a thirtieth of the width of the Moon. His young assistant Johannes Kepler inherited them, and set himself the task of working out the true orbit of Mars.</p>
+      <p>For years Kepler tried circles, with the Earth and Mars on shifted circular tracks. After a long and brutal set of calculations he found a circle that fitted nearly all of Tycho’s data, except for two places where it was off by eight minutes of arc. Eight minutes is a fraction of a degree: about a quarter of the width of the full Moon.</p>
+      <p>A less honest man would have called it a good fit. Kepler wrote later: “If I had believed that we could ignore these eight minutes, I would have patched up my hypothesis accordingly. But, since it was not permissible to ignore, those eight minutes pointed the road to a complete reformation of astronomy.” The orbit was not a circle at all.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“Planets move at a steady pace on perfect circles”</h2>
+      <p>For two thousand years the heavens were thought to be made of perfect circles at constant speed. It was beautiful, simple, and what everyone expected. Even Copernicus kept the circles.</p>
+      <p>The planets don’t do this. They speed up as they near the Sun and slow as they move away, along squashed circles called ellipses. The simulation lets you stretch an orbit and watch what happens to the speed.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">1576–1601</span>Tycho Brahe builds an observatory on the island of Hven and records the positions of the planets with unprecedented accuracy.</li><li><span class="year">1609</span>Kepler publishes his first two laws in <em>Astronomia Nova</em>: orbits are ellipses, and a planet sweeps out equal areas in equal times.</li><li><span class="year">1619</span>In <em>Harmonices Mundi</em>, Kepler announces the third law: the square of the orbital period is proportional to the cube of the orbit’s size.</li><li><span class="year">1687</span>Newton shows that all three laws follow from an inverse-square pull. The second law is conservation of angular momentum.</li><li><span class="year">1758</span>Halley’s comet returns on schedule, as predicted from Newton’s laws sixteen years after Halley’s death.</li></ol><figure class="illo"><svg viewBox="0 0 620 350" role="img" aria-label="An elliptical orbit with two wedges of equal area, a short wide one near the Sun and a long thin one far away" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="15" text-anchor="middle" font-weight="bold" stroke="none">Equal times, equal areas</text><ellipse cx="250" cy="175" rx="160" ry="128.0" stroke="#3a4b65" stroke-width="2" fill="none"/><polygon points="346.0,175.0 410.0,175.0 409.8,168.3 409.1,161.7 408.1,155.2 406.6,148.8 404.8,142.6 402.6,136.5 400.1,130.7 397.3,125.1 394.3,119.7 391.1,114.6 387.6,109.7 384.0,105.1 380.3,100.7 376.5,96.6 372.6,92.7 368.6,89.0 364.5,85.6 360.4,82.4 356.3,79.3 352.1,76.5 348.0,73.8 343.8,71.3 339.6,69.0 335.5,66.8" fill="#f5b85d" opacity=".55" stroke="#fff" stroke-width="1"/><polygon points="346.0,175.0 92.0,155.1 91.6,156.7 91.4,158.4 91.1,160.0 90.9,161.7 90.7,163.3 90.5,165.0 90.3,166.7 90.2,168.3 90.1,170.0 90.1,171.7 90.0,173.3 90.0,175.0 90.0,176.7 90.1,178.3 90.1,180.0 90.2,181.7 90.3,183.3 90.5,185.0 90.7,186.7 90.9,188.3 91.1,190.0 91.4,191.6 91.6,193.3 92.0,194.9" fill="#67d4d0" opacity=".55" stroke="#fff" stroke-width="1"/><circle cx="346.0" cy="175" r="9" fill="#ffd27a"/><text x="430" y="135" fill="#f5b85d" font-size="13" text-anchor="start" font-weight="bold" stroke="none">near the Sun:</text><text x="430" y="153" fill="#f5b85d" font-size="13" text-anchor="start" font-weight="normal" stroke="none">short, wide wedge</text><text x="100" y="245" fill="#67d4d0" font-size="13" text-anchor="start" font-weight="bold" stroke="none">far away: a long,</text><text x="100" y="263" fill="#67d4d0" font-size="13" text-anchor="start" font-weight="normal" stroke="none">thin wedge</text><text x="310" y="335" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">Both wedges are the same slice of the year and have the same area, so the planet is faster when near.</text></svg><figcaption>The second law in a picture. In the same time, the planet covers a long arc near the Sun and a short arc far from it.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>A planet moves around the Sun. You can <strong>stretch the orbit</strong> (the eccentricity, <em>e</em>) and choose <strong>which planet</strong>. The coloured wedges are twelve equal slices of time. The speed readout uses the real motion of the chosen planet. The table at the right lists the real data for the six classical planets.</p>
+      <div class="equation">1)  ellipse, Sun at a focus     2)  equal areas in equal times     3)  T² = a³  (T in years, a in AU)<small>The second law means the planet moves fastest at its closest point (perihelion). The ratio of the fastest to slowest speeds is (1 + e)/(1 − e).</small></div>
+<div data-sim="kepler" data-alt="A planet orbiting on an ellipse with twelve equal-time wedges and a table of planetary data" data-caption="The Sun is the yellow dot at one focus. Each wedge is one twelfth of the year. The table gives real orbit sizes and years for the six classical planets."></div><div class="try"><h3>Try this</h3><ol><li>Set the stretch to 0. The orbit is a circle, the wedges are identical, and the planet’s speed never changes.</li><li>Increase the stretch to about 0.6. The wedges near the Sun are short and wide, the ones far away long and thin, yet <strong>all have the same area</strong>.</li><li>Watch the speed readout. The planet moves several times faster at its nearest point than its farthest.</li><li>Look at the table’s last column: <strong>year² ÷ a³ is 1.00 for every planet</strong>, from Mercury to Saturn. That is the third law.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 300" role="img" aria-label="Log-log plot of six planets’ year lengths against their distances from the Sun, lying on a straight line of slope 1.5" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Orbit size and year length for the six classical planets</text><rect x="90" y="48" width="440" height="200" stroke="#3a4b65"/><line x1="84" y1="247" x2="524" y2="54" stroke="#f5b85d" stroke-dasharray="6 5" stroke-width="2"/><circle cx="114.2" cy="233.5" r="6" fill="#67d4d0"/><text x="123.15137211271266" y="251.46748139313704" fill="#91a3bb" font-size="11" text-anchor="start" font-weight="normal" stroke="none">Mercury</text><circle cx="188.8" cy="200.9" r="6" fill="#67d4d0"/><text x="197.81257790170693" y="218.87869385653002" fill="#91a3bb" font-size="11" text-anchor="start" font-weight="normal" stroke="none">Venus</text><circle cx="227.5" cy="184.0" r="6" fill="#67d4d0"/><text x="236.5" y="202.0" fill="#91a3bb" font-size="11" text-anchor="start" font-weight="normal" stroke="none">Earth</text><circle cx="277.8" cy="162.1" r="6" fill="#67d4d0"/><text x="286.7973535757715" y="180.05259071064935" fill="#91a3bb" font-size="11" text-anchor="start" font-weight="normal" stroke="none">Mars</text><circle cx="424.5" cy="98.1" r="6" fill="#67d4d0"/><text x="433.46062006693313" y="116.06736642421473" fill="#91a3bb" font-size="11" text-anchor="start" font-weight="normal" stroke="none">Jupiter</text><circle cx="497.1" cy="66.5" r="6" fill="#67d4d0"/><text x="506.062190194203" y="84.46491882021368" fill="#91a3bb" font-size="11" text-anchor="start" font-weight="normal" stroke="none">Saturn</text><text x="310.0" y="276" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">distance from the Sun (AU, logarithmic)</text><text x="30" y="148.0" fill="#91a3bb" font-size="12" text-anchor="middle" stroke="none" transform="rotate(-90 30 148.0)">year length (Earth years, log)</text><text x="100" y="66" fill="#f5b85d" font-size="12" text-anchor="start" font-weight="normal" stroke="none">dashed line: T² = a³</text></svg><figcaption>The third law: on a log-log plot the planets fall on a straight line. Double the distance and the year gets 2.8 times longer.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Three laws, one cause</h2>
+      <p>Kepler found the laws from data, without knowing why they held. Newton supplied the why. If the Sun pulls with a force that falls as the inverse square of distance (<a href="inverse-square-law.html">the previous chapter</a>), then every one of Kepler’s laws follows: ellipses, equal areas, and the 2-to-3 power relationship.</p>
+      <p>The second law is the most surprising. “Equal areas in equal times” is the same statement as conservation of angular momentum, the rule you saw with the spinning skater: as a planet moves nearer the Sun its “radius” shrinks, so it must speed up, just as the skater speeds up by pulling in their arms. The force of the Sun points along the line to the planet, so it exerts no twist, and the angular momentum cannot change.</p>
+      <h3>One constant for the whole family</h3>
+      <p>The third law says something remarkable: the ratio T²/a³ is the same for every planet. Planets that differ in size, mass and distance are all instances of one rule, with one constant set by the Sun’s mass. Measure the year and orbit of any moon or planet around any star, and you can weigh the star. Astronomers use this every day to find the masses of stars and distant planets.</p><div class="callout key"><p class="beat">The surprise</p><p>A small, stubborn discrepancy, eight minutes of arc, was enough to overturn two thousand years of circles. Real physics is often hiding in the part of the data that doesn’t quite fit.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> NASA’s Parker Solar Probe is flying round the Sun on an orbit that takes just 88 days, and at its closest approach it is moving at about 190 kilometres per second, the fastest humans have ever sent anything. That is Kepler’s second law at work. Earth itself is also fastest in early January, when it is nearest the Sun, at about 30.3 km/s against 29.3 km/s in July.</p></div><ul class="apps"><li><strong>Space missions</strong>Mission planners use the laws to schedule launches and gravity assists.</li><li><strong>Weighing stars and planets</strong>The third law turns an orbit’s size and period into the mass of what it circles.</li><li><strong>Exoplanets</strong>The period of a planet’s transits tells astronomers how far it is from its star.</li><li><strong>Comets and asteroids</strong>Halley’s comet, with a period of about 76 years, is predicted by the same laws; it is next due in 2061.</li><li><strong>Satellites</strong>Every satellite obeys the same three laws around the Earth.</li><li><strong>Calendars and seasons</strong>Earth’s changing speed makes the seasons slightly unequal in length.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>The planet moves on an exact ellipse around a fixed Sun, with no other planets pulling on it. Real orbits are slightly disturbed by neighbours, and the ellipses slowly turn. Real planets have very small eccentricities (Earth’s is 0.017, and Mercury’s 0.21), so the large values of the slider are what-if cases, not real planets. The animation runs at an easy speed, one lap per 12 seconds, for every planet, so it does not show their real relative years; those are in the table. The twelve wedges are exact slices of the true motion.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Ellipses, not circles.</strong> The Sun sits at one focus.</li><li><strong>Equal areas in equal times.</strong> A planet speeds up as it nears the Sun.</li><li><strong>T² ∝ a³.</strong> One rule for every planet, set by the central mass.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Ellipse</dt><dd>A squashed circle; the path of a planet.</dd><dt>Eccentricity (e)</dt><dd>How squashed an ellipse is: 0 for a circle, close to 1 for a long thin one.</dd><dt>Perihelion / aphelion</dt><dd>The closest and farthest points of an orbit around the Sun.</dd><dt>AU</dt><dd>The astronomical unit: the average Earth–Sun distance, about 150 million km.</dd></dl><ul class="refs"><li>J. Kepler, <em>Astronomia nova</em> (1609) and <em>Harmonices mundi</em> (1619).</li><li>I. Newton, <em>Principia</em> (1687), Book I, Propositions 1 and 11 and Book III.</li><li>NASA, <em>Parker Solar Probe</em> mission pages (perihelion speed and orbital period).</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

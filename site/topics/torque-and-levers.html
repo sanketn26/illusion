@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Torque and levers — illusion</title>
+  <meta name="description" content="Archimedes said he could move the Earth with a long enough lever. The one idea, torque, explains seesaws, wrenches, door handles and why your biceps has to pull nine times harder than the load.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-MEC">Motion &amp; forces</a> / MEC13</p>
+    <p class="eyebrow">MEC13 · Motion &amp; forces</p>
+    <h1>Torque and <em>levers</em></h1>
+    <p class="lede">A crowbar slid under a car’s corner lets one person lift something much heavier than they could ever raise by hand. Archimedes is said to have claimed that, given a long enough lever and somewhere to stand, he could move the world.</p>
+    <p class="meta"><span>Reading time ≈ 9 min</span><span>Simulation: Starter (S)</span><span>Video: 5–9 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p>A force’s power to <strong>turn</strong> something depends on both how big it is and <strong>how far from the pivot</strong> it acts. That twisting effect is the <strong>torque</strong>: force × distance. A lever balances when the twists on its two sides are equal, so a small force far from the pivot can balance a large force close to it.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>Try opening a heavy door by pushing on it close to the hinge. It barely moves, and you have to lean on it with all your weight. Now push at the handle, as far from the hinge as it goes. A finger will do.</p>
+      <p>You are pushing with the same force in both cases. The difference is where you apply it. The further from the hinge, the more effect the same push has. Builders discovered this a long time before anyone wrote it down. Egyptian stone-movers used long wooden levers to shift blocks too heavy to lift. Archimedes, around 250 BCE, was the first to say exactly <em>how much</em> advantage a lever gives.</p>
+      <p>His answer is one of the neatest rules in physics, and it is still how every wrench, seesaw and crane works.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“A small force can’t balance a big one”</h2>
+      <p>If force is all that matters, a 100 N push could never hold up a 1000 N weight. And it can’t, if both act at the same distance from the pivot. But a pivot adds a second ingredient: <em>distance</em>. A weight close to the pivot has little leverage; a push far from it has plenty.</p>
+      <p>The simulation sets up a seesaw. Your job is to find where a light weight balances a heavy one.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">c. 250 BCE</span>Archimedes, in <em>On the Equilibrium of Planes</em>, proves the law of the lever: two weights balance when they are inversely proportional to their distances from the pivot.</li><li><span class="year">4th century CE</span>The mathematician Pappus records the famous boast: “Give me a place to stand and I will move the Earth.”</li><li><span class="year">1687</span>Pierre Varignon and Isaac Newton extend the idea: the turning effect (“moment”) of a force is the force multiplied by its perpendicular distance from the pivot.</li><li><span class="year">1884</span>James Thomson, brother of Lord Kelvin, proposes the word <strong>torque</strong> (from the Latin for “twist”) for the turning effect of a force.</li></ol><figure class="illo"><svg viewBox="0 0 620 306" role="img" aria-label="A crowbar lever with a 100 newton push on a long arm balancing a 1000 newton load on a short arm" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">A crowbar: a small push over a long arm lifts a big weight over a short arm</text><line x1="40" y1="226" x2="600" y2="226" stroke="#3a4b65" stroke-width="2"/><polygon points="130,196 112,226 148,226" fill="#51627a"/><rect x="60" y="186" width="500" height="10" rx="5" fill="#cdb88a"/><rect x="62" y="134" width="56" height="52" rx="4" fill="#f18a76"/><text x="90" y="165" fill="#10192a" font-size="13" text-anchor="middle" font-weight="bold" stroke="none">1000 N</text><path d="M530.0 118.0L530.0 182.0" stroke="#f5b85d" stroke-width="4"/><path d="M530.0 182.0L526.1 173.9L533.9 173.9Z" fill="#f5b85d" stroke="#f5b85d" stroke-width="1"/><text x="530" y="108" fill="#f5b85d" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">100 N</text><line x1="90" y1="244" x2="130" y2="244" stroke="#f18a76" stroke-width="3"/><line x1="130" y1="244" x2="530" y2="244" stroke="#f5b85d" stroke-width="3"/><text x="110" y="264" fill="#f18a76" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">load arm 0.2 m</text><text x="330" y="264" fill="#f5b85d" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">effort arm 2.0 m</text><text x="310" y="292" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">100 N × 2.0 m = 1000 N × 0.2 m. The twists match, so the lever balances.</text></svg><figcaption>A crowbar in a picture. Ten times the arm length gives ten times the lifting power.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>A plank rests on a pivot. On the left, a <strong style="color:#67d4d0">40 kg</strong> weight sits 2.0 m from the pivot. On the right, you choose the weight and its distance. Each weight twists the plank by its <em>weight × distance</em>. If the left twist is bigger, the left side goes down; if the right is, the right does. When they are equal, the plank balances.</p>
+      <div class="equation">torque = force × perpendicular distance from the pivot        balance:  m_L · d_L = m_R · d_R<small>Torque is measured in newton-metres (N·m). For weights, the force is mass × 9.81, so equal mass × distance means equal torque.</small></div>
+<div data-sim="lever" data-alt="A seesaw plank with a fixed weight on the left and an adjustable weight and distance on the right" data-caption="Teal: fixed 40 kg weight at 2.0 m. Amber: your weight, set by the sliders. The plank tilts towards the larger twist."></div><div class="try"><h3>Try this</h3><ol><li>Start with <strong>20 kg at 3.0 m</strong>. The left side goes down: 40 × 2.0 = 80 beats 20 × 3.0 = 60.</li><li>Set the right weight to <strong>40 kg at 2.0 m</strong>. The plank levels and the display says <em>Balanced</em>.</li><li>Now try <strong>80 kg at 1.0 m</strong>. An 80 kg weight balances a 40 kg weight, because it is half the distance.</li><li>Finally try <strong>30 kg at 3.0 m</strong>. The small weight at the long distance beats the heavier one on the left.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 266" role="img" aria-label="A forearm lever with the biceps close to the elbow pulling 260 newtons to hold a 30 newton load at the hand" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="310" y="20" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Your forearm is a lever that gives away strength</text><circle cx="110" cy="130" r="9" fill="#fff"/><text x="110" y="160" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">elbow (pivot)</text><rect x="110" y="122" width="400" height="16" rx="8" fill="#cdb88a"/><path d="M150.0 124.0L150.0 60.0" stroke="#f5b85d" stroke-width="4"/><path d="M150.0 60.0L153.9 68.1L146.1 68.1Z" fill="#f5b85d" stroke="#f5b85d" stroke-width="1"/><text x="158" y="52" fill="#f5b85d" font-size="14" text-anchor="start" font-weight="bold" stroke="none">biceps pulls 260 N</text><text x="170" y="184" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">4 cm from the elbow</text><path d="M500.0 122.0L500.0 188.0" stroke="#f18a76" stroke-width="4"/><path d="M500.0 188.0L496.1 179.9L503.9 179.9Z" fill="#f18a76" stroke="#f18a76" stroke-width="1"/><text x="490" y="210" fill="#f18a76" font-size="14" text-anchor="end" font-weight="bold" stroke="none">30 N (a 3 kg load)</text><text x="360" y="184" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">hand: 35 cm from the elbow</text><text x="310" y="252" fill="#91a3bb" font-size="13" text-anchor="middle" font-weight="normal" stroke="none">The muscle is attached close to the joint, so it pulls about nine times harder than the load.</text></svg><figcaption>Not every lever is a help. In the forearm, the muscle works at a big disadvantage to give the hand speed and reach.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Distance is a multiplier</h2>
+      <p>The rule that comes out of the seesaw is simple: the twist is force times distance, and a lever balances when the twists match. A 100 N push at 2 metres makes the same twist as 1000 N at 0.2 metres. The lever has traded distance for force. This is the entire idea behind a crowbar, a wrench, a pair of scissors, a nutcracker and a wheelbarrow.</p>
+      <p>It isn’t free. When you push the long end of the crowbar down 10 centimetres, the short end rises by only one. The work you put in (force times distance moved) equals the work you get out. A lever can’t give you energy; it only lets you swap a large force over a small distance for a small force over a large one.</p>
+      <h3>Levers that give away strength</h3>
+      <p>Your forearm is a lever with the muscle attached very close to the pivot. To hold a 3 kg load at your hand, the biceps must pull about nine times harder than the load. That seems a poor design, but what you gain is speed and reach: a small movement of the muscle swings the hand a long way, which is why you can throw.</p><div class="callout key"><p class="beat">The surprise</p><p>Strength and distance can be swapped, but never created. A lever doesn’t make energy, it trades. Every machine, from a screw jack to a bicycle’s gears, is a way of making that trade.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> your forearm is acting as a lever, if you are holding a phone, with a muscle pulling about nine times the phone’s weight. A tower crane rising over a building site is balanced by a huge concrete counterweight on its short arm, so that the long arm can carry a load without toppling over. And every door handle you touch has been put as far from the hinge as it will go for exactly the reason in this chapter.</p></div><ul class="apps"><li><strong>Hand tools</strong>Wrenches, crowbars, scissors, nutcrackers and pliers are all levers.</li><li><strong>Cranes and balances</strong>A counterweight on a short arm balances a load on a long one.</li><li><strong>The human body</strong>Muscles and bones form levers, usually trading strength for speed and reach.</li><li><strong>Doors and handles</strong>Handles go far from the hinge to give maximum torque.</li><li><strong>Vehicles</strong>Brake pedals, gear levers and steering wheels multiply force by leverage.</li><li><strong>Weighing</strong>A beam balance compares two weights by their equal twists.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>The plank is weightless and perfectly rigid and the weights are points that sit exactly on it. The pivot has no friction, the plank is stopped at 14° from level as if it hit the ground, and the weights always push straight down, so at this small tilt “distance” simply means distance along the plank. Real planks bend and have their own weight. The animation is damped so that the plank settles quickly.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Torque = force × distance from the pivot.</strong> It measures turning power.</li><li><strong>Balance means equal torques.</strong> A small force far away can match a big force close in.</li><li><strong>Levers trade, they don’t create.</strong> What you gain in force you lose in distance.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Torque</dt><dd>The turning effect of a force: force multiplied by its perpendicular distance from the pivot.</dd><dt>Pivot (fulcrum)</dt><dd>The point a lever turns about.</dd><dt>Mechanical advantage</dt><dd>The ratio of the load force to the effort force; for a lever, the ratio of the two arm lengths.</dd><dt>Moment</dt><dd>Another word for torque, common in engineering.</dd></dl><ul class="refs"><li>Archimedes, <em>On the Equilibrium of Planes</em> (c. 250 BCE).</li><li>Pappus of Alexandria, <em>Synagoge</em> (Collection), Book VIII (4th century CE).</li><li>P. Varignon, <em>Projet d’une nouvelle mécanique</em> (1687).</li><li>J. Thomson, in a paper to the British Association (1884), introducing “torque”.</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>

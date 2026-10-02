@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Speed versus acceleration — illusion</title>
+  <meta name="description" content="You feel acceleration, never speed. Why steady 900 km/h feels like sitting still, and how a graph from the 14th century unlocked it.">
+  <link rel="stylesheet" href="../style.css">
+  <script src="../sims.js" defer></script>
+  <script src="../topics-data.js" defer></script>
+  <script src="../chapter.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../index.html">illusion<span class="dot">.</span></a><nav><a href="../index.html#library">Library</a><a href="../roadmap.html">Roadmap</a></nav></header>
+  <article class="chapter">
+    <p class="crumbs"><a href="../index.html">Library</a> / <a href="../roadmap.html#d-MEC">Motion &amp; forces</a> / MEC01</p>
+    <p class="eyebrow">MEC01 · Motion &amp; forces</p>
+    <h1>Speed versus <em>acceleration</em></h1>
+    <p class="lede">At 900 km/h your coffee sits perfectly still on the tray. On the takeoff run, at a quarter of that speed, you are pressed into your seat. Speed is invisible to your body. What it feels is something else.</p>
+    <p class="meta"><span>Reading time ≈ 10 min</span><span>Simulation: Starter (S)</span><span>Video: 6–10 min</span></p>
+
+    <div class="glance"><h2>The 30-second version</h2><p><strong>Speed</strong> is how fast your position changes. <strong>Acceleration</strong> is how fast your <em>velocity</em> changes (speeding up, braking or turning; on this chapter’s straight road, how fast your speed changes). They are different things, and you can only feel the second. Motion at constant velocity, however fast, feels like rest. A steady acceleration makes your distance grow with the <strong>square</strong> of time: twice as long, four times as far.</p></div>
+    <ul class="toc"><li><a href="#story">Story</a></li><li><a href="#illusion">Illusion</a></li><li><a href="#genesis">Genesis</a></li><li><a href="#model">Model &amp; simulation</a></li><li><a href="#reveal">Reveal</a></li><li><a href="#applications">Where it shows up</a></li><li><a href="#lies">Where it lies</a></li><li><a href="#remember">Remember</a></li><li><a href="#deeper">Go deeper</a></li></ul>
+
+    <section id="story" class="story">
+      <p class="beat">0 · The story</p>
+      <p>You are on an airliner, cruising at 11,000 metres. Outside it is moving at about 900 kilometres an hour, fast enough to cross a country in an afternoon. Inside, you pour a cup of coffee. It pours perfectly straight. A pencil dropped on the floor falls straight down. Nothing in the cabin tells you that you are moving at all.</p>
+      <p>Twenty minutes earlier, on the takeoff run, the aircraft was moving at a quarter of that speed. But you were shoved hard back into your seat. The coffee, had you tried to pour it, would have slid.</p>
+      <p>Same body, same plane, wildly different feelings. The difference is not speed. It is <em>change of velocity</em>, and giving it its own name, and its own picture, is what turned the study of motion into a science.</p>
+    </section>
+
+    <section id="illusion">
+      <p class="beat">1 · The illusion</p>
+      <h2>“Fast is the same as ‘being pushed hard’”</h2>
+      <p>In everyday language, “speed” and “power” and “force” blur together: a fast car feels powerful. But the body feels <em>pushing</em>, not <em>moving</em>. Constant velocity is silent. Only when your velocity changes (speeding up, braking, turning) do you feel it.</p>
+      <p>To think clearly about motion you have to separate three things: where something is, how fast that is changing, and how fast <em>that</em> is changing. The two cars in the simulation will make it concrete.</p>
+    </section>
+
+    <section id="genesis">
+      <p class="beat">2 · Where the idea came from</p>
+<ol class="timeline"><li><span class="year">1330s</span>At Merton College, Oxford, a group of scholars known as the Calculators separate speed from its rate of change (along a straight line), and prove the “mean speed theorem”: steady acceleration covers the same distance as steady motion at the average speed.</li><li><span class="year">c. 1350</span>Nicole Oresme in Paris draws it: time along one axis, speed along the other. It is one of the first graphs ever made.</li><li><span class="year">1604–38</span>Galileo rolls balls down gentle slopes and times them with water clocks. Distances grow as the square of the time, the “odd-number rule” (1, 3, 5, 7…), published in <em>Two New Sciences</em> (1638).</li><li><span class="year">1680s</span>Newton, with calculus, makes “rate of change” precise. Velocity is the rate of change of position; acceleration is the rate of change of velocity.</li></ol><figure class="illo"><svg viewBox="0 0 620 250" role="img" aria-label="Two speed-time graphs: a flat line with a rectangle of area for steady speed and a ramp with a triangle for steady acceleration" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="300" y="22" fill="#e8edf5" font-size="15" text-anchor="middle" font-weight="bold" stroke="none">Distance is the area under the speed-time graph</text><line x1="50" y1="200" x2="270" y2="200" stroke="#51627a"/><line x1="50" y1="200" x2="50" y2="60" stroke="#51627a"/><rect x="50" y="120" width="176.0" height="80" fill="#67d4d0" opacity=".35" stroke="#67d4d0" stroke-width="2.5"/><text x="138.0" y="164" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">area = 15 × 8 = 120 m</text><text x="160.0" y="222" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">time (8 s)</text><text x="160.0" y="44" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="normal" stroke="none">Cruising at 15 m/s</text><text x="44" y="70" fill="#91a3bb" font-size="12" text-anchor="end" font-weight="normal" stroke="none">speed</text><line x1="340" y1="200" x2="560" y2="200" stroke="#51627a"/><line x1="340" y1="200" x2="340" y2="60" stroke="#51627a"/><polygon points="340,200 516.0,200 516.0,72" fill="#f5b85d" opacity=".35" stroke="#f5b85d" stroke-width="2.5"/><text x="461.0" y="174" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">area = ½ × 8 × 16 = 64 m</text><text x="450.0" y="222" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">time (8 s)</text><text x="450.0" y="44" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="normal" stroke="none">Speeding up from rest</text><text x="334" y="70" fill="#91a3bb" font-size="12" text-anchor="end" font-weight="normal" stroke="none">speed</text></svg><figcaption>Oresme’s idea: on a speed-time graph, the area under the line is the distance travelled.</figcaption></figure>
+    </section>
+
+    <section id="model">
+      <p class="beat">3 · The model</p>
+      <p>Two cars race along a straight road. <strong style="color:#67d4d0">Car A</strong> cruises at a steady 15 m/s (54 km/h). <strong style="color:#f5b85d">Car B</strong> starts from rest and speeds up steadily. You choose how fast. The graphs record each car’s speed and distance as the run goes on.</p>
+      <div class="equation">speed:  v = a · t        distance:  s = ½ · a · t²        (steady acceleration from rest)<small>a = acceleration, in metres per second per second (m/s²). For steady motion at speed v: distance = v · t. The run is shown at double speed.</small></div>
+<div data-sim="kine" data-alt="Two cars on a road, one cruising and one accelerating, with speed and distance graphs below" data-caption="Teal: Car A, steady 15 m/s. Amber: Car B, accelerating from rest. The bottom graphs show speed and distance against time."></div><div class="try"><h3>Try this</h3><ol><li>Watch the <strong>speed graph</strong>. Car A’s line is flat: it never changes speed. Car B’s is a rising slope. The slope <em>is</em> the acceleration.</li><li>Look at the <strong>distance graph</strong>. A’s line is straight. B’s curves upward, slowly at first, then faster and faster.</li><li>Notice the instant B overtakes A (marked on the graph). Is B faster than A at that moment? Yes, much faster: it has already caught up and passed A’s speed.</li><li>Raise the acceleration. B overtakes sooner, but at the moment of overtaking it is going <em>exactly twice</em> as fast as A.</li></ol></div><figure class="illo"><svg viewBox="0 0 620 245" role="img" aria-label="Bars of lengths 1, 3, 5 and 7 units for successive seconds, with totals 1, 4, 9 and 16" font-size="13" fill="none" stroke-linecap="round" stroke-linejoin="round"><text x="300" y="22" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">Galileo’s inclined plane: in equal times, a rolling ball covers 1, 3, 5, 7… units</text><rect x="40" y="80" width="30" height="34" rx="5" fill="#67d4d0" opacity=".8"/><text x="55.0" y="102" fill="#10192a" font-size="16" text-anchor="middle" font-weight="bold" stroke="none">1</text><text x="55.0" y="136" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">second 1</text><rect x="70" y="80" width="90" height="34" rx="5" fill="#f5b85d" opacity=".8"/><text x="115.0" y="102" fill="#10192a" font-size="16" text-anchor="middle" font-weight="bold" stroke="none">3</text><text x="115.0" y="136" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">second 2</text><rect x="160" y="80" width="150" height="34" rx="5" fill="#67d4d0" opacity=".8"/><text x="235.0" y="102" fill="#10192a" font-size="16" text-anchor="middle" font-weight="bold" stroke="none">5</text><text x="235.0" y="136" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">second 3</text><rect x="310" y="80" width="210" height="34" rx="5" fill="#f5b85d" opacity=".8"/><text x="415.0" y="102" fill="#10192a" font-size="16" text-anchor="middle" font-weight="bold" stroke="none">7</text><text x="415.0" y="136" fill="#91a3bb" font-size="12" text-anchor="middle" font-weight="normal" stroke="none">second 4</text><line x1="40" y1="170" x2="520" y2="170" stroke="#e8edf5" stroke-width="1.5"/><line x1="70" y1="164" x2="70" y2="176" stroke="#e8edf5" stroke-width="2"/><text x="70" y="196" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">1</text><line x1="160" y1="164" x2="160" y2="176" stroke="#e8edf5" stroke-width="2"/><text x="160" y="196" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">4</text><line x1="310" y1="164" x2="310" y2="176" stroke="#e8edf5" stroke-width="2"/><text x="310" y="196" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">9</text><line x1="520" y1="164" x2="520" y2="176" stroke="#e8edf5" stroke-width="2"/><text x="520" y="196" fill="#e8edf5" font-size="14" text-anchor="middle" font-weight="bold" stroke="none">16</text><text x="300" y="226" fill="#91a3bb" font-size="14" text-anchor="middle" font-weight="normal" stroke="none">Total distances after 1, 2, 3, 4 seconds: 1, 4, 9, 16: the squares of the time.</text></svg><figcaption>Equal time slices give 1, 3, 5, 7… The running totals are the squares: distance grows as time squared.</figcaption></figure>
+    </section>
+
+    <section id="reveal">
+      <p class="beat">4 · The reveal</p>
+      <h2>Slopes and areas</h2>
+      <p>The two graphs hold the whole idea. On a <strong>position</strong> graph, the slope is the speed. On a <strong>speed</strong> graph, the slope is the acceleration, and the <em>area</em> under the line is the distance travelled. Oresme’s insight in 1350 was that you could see the distance as an area: for steady acceleration from rest it is a triangle, with area ½ × base × height, and that is where the half in ½at² comes from.</p>
+      <p>The overtaking moment shows a nice fact. Car B passes A when the two distances are equal, which happens at <em>t</em> = 2v/a. At that moment B’s speed is a × t = 2v, exactly double A’s. To catch a cruiser you have to be going faster than it by the time you get there, because you started behind in speed as well as in position.</p>
+      <h3>What you feel</h3>
+      <p>Your inner ear and the pressure of your seat sense one thing: acceleration. That is why steady motion feels like sitting still, why a smooth lift feels like nothing until it starts or stops, and why the moment you press the accelerator you are pushed back. “g-force” is just acceleration measured in units of the pull of gravity.</p><div class="callout key"><p class="beat">The surprise</p><p>The most basic quantity we feel, acceleration, has no unit of its own in daily speech. Once you can draw it, as the slope of a speed graph, motion stops being a blur and becomes a shape you can read.</p></div>
+    </section>
+
+    <section id="applications">
+      <p class="beat">5 · Where it shows up</p>
+<div class="now"><p class="beat">Happening right now</p><p><strong>Right now</strong> the accelerometer in your phone is measuring acceleration, not speed. It cannot tell if you are standing still or cruising at a steady 900 km/h on a plane: a steady velocity gives no signal. What it measures is the push of its own case on its inner parts, which is about 1 g even when the phone lies on a table (a freely falling phone reads about zero). That steady reading is how it knows which way is down for screen rotation, and the changes in it are what step counters count. A jet airliner on its takeoff run is typically accelerating at about 2 to 3 m/s² for 25 to 40 seconds; an elevator’s start is gentler, around 1 m/s². Formula 1 cars brake at around five times the pull of gravity, which is why the drivers train their necks.</p></div><ul class="apps"><li><strong>Cars and trains</strong>Comfort is mostly about acceleration: smooth starts and stops, gentle bends.</li><li><strong>Flight</strong>Pilots feel and control “g” by pulling out of dives and in turns.</li><li><strong>Smartphones and fitness trackers</strong>Accelerometers measure motion and detect steps, falls and orientation.</li><li><strong>Safety design</strong>Seats, airbags and crash tests care about peak acceleration, not speed.</li><li><strong>Space launch</strong>Rockets limit acceleration so that astronauts and cargo can survive the climb.</li><li><strong>Amusement rides</strong>Roller coasters are built to deliver controlled changes in acceleration, which is what thrills.</li></ul>
+    </section>
+
+    <section id="lies">
+      <p class="beat">6 · Where the simulation lies</p>
+<div class="callout lies"><p class="beat">Honest limits</p><p>Real cars don’t accelerate steadily: drag grows with speed and engines change gear, so acceleration shrinks as speed rises. Here Car B keeps accelerating at the same rate, and at the highest settings it reaches speeds that no road car could hold for that long. The road is perfectly straight and the run is shown at double speed. The graphs describe motion along one line only, so they leave out turning, which also involves acceleration.</p></div>
+    </section>
+
+    <section id="remember">
+      <p class="beat">Remember</p>
+      <h2>Three things to take away</h2>
+      <ol><li><strong>Speed is not acceleration.</strong> Speed: how fast position changes. Acceleration: how fast velocity changes, by speed, direction or both.</li><li><strong>You feel acceleration only.</strong> Constant velocity, however large, feels like rest.</li><li><strong>Steady acceleration means distance ∝ t².</strong> Twice as long gets you four times as far.</li></ol>
+    </section>
+
+    <section id="deeper">
+      <p class="beat">Go deeper</p>
+      <h2>Glossary and sources</h2>
+<dl class="glossary"><dt>Speed</dt><dd>How quickly position changes, in metres per second.</dd><dt>Acceleration</dt><dd>How quickly velocity (speed and direction) changes, in metres per second per second. Along a straight road it is the rate of change of signed speed.</dd><dt>g</dt><dd>The acceleration of free fall at the Earth’s surface, about 9.8 m/s².</dd><dt>Mean speed theorem</dt><dd>Steady acceleration covers the same distance as moving steadily at the average speed.</dd></dl><ul class="refs"><li>N. Oresme, <em>Tractatus de configurationibus qualitatum et motuum</em> (c. 1350).</li><li>Galileo Galilei, <em>Discorsi e dimostrazioni matematiche intorno a due nuove scienze</em> (1638).</li><li>W. Heytesbury, <em>Regulae solvendi sophismata</em> (c. 1335), on the Merton rule.</li></ul>
+    </section>
+
+    <nav class="pager" aria-label="Chapters"><a href="../index.html#library">← Library</a><a href="../index.html#library">Library →</a></nav>
+  </article>
+  <footer><span>illusion · A simulation is a controlled lens, not proof.</span><a href="https://github.com/sanketn26/illusion">Source ↗</a></footer>
+</body>
+</html>
